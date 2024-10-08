@@ -13,13 +13,11 @@ function Treatment() {
         {name: 'Spine', img: '/Spine.jpg'},
         {name: 'Spine', img: '/Spine.jpg'},
         {name: 'Spine', img: '/Spine.jpg'},
-        {name: 'Spine', img: '/Spine.jpg'},
-        {name: 'Spine', img: '/Spine.jpg'},
         // {name: '', img: ''},
     ];
-    
+
     useEffect(()=> {
-        document.querySelector('.scroll-container').style.width = `${(document.querySelector('.item').offsetWidth+175) * items.length}px`;
+        document.querySelector('.scroll-container').style.width = `${(document.querySelector('.item').offsetWidth+155) * items.length}px`;
     }, [[items.length]])
 
     function nextItem() {
@@ -41,24 +39,29 @@ function Treatment() {
     }
 
     return (
-        <div className="relative">
-            <h2 className="text-center text-4xl text-cyan-900 font-serif font-bold my-9">Browse by Specialist</h2>
-            <button onClick={nextItem} className="absolute left-4 top-[125px] bg-white text-xl font-bold border border-slate-800 rounded-md pb-1">{'<'}</button>
-            <div className="container overflow-x-auto">
-                <div className="scroll-container flex gap-28 px-[56px]">
+        <div className="border-b border-dotted border-gray-500 rounded-b-lg mb-16 w-[98vw] m-auto">
+            <div className="flex justify-between bg-blue-600 rounded-t-lg mt-9 mb-5 overflow-hidden items-center px-2">
+                <h2 className="text-4xl text-white font-serif font-bold py-1" style={{fontFamily: `"Ubuntu", sans-serif`, fontWeight: '700', fontStyle: 'italic'}}>Browse by Specialist</h2>
+                <div>
+                    <button onClick={nextItem} className="w-8 bg-cyan-200 text-xl font-bold rounded-full pb-1 mr-4">{'<'}</button>
+                    <button onClick={prevItem} className="w-8 bg-cyan-200 text-xl font-bold rounded-full pb-1 ">{'>'}</button>
+                </div>
+            </div>
+
+            <div className="container overflow-x-auto m-auto">
+                <div className="scroll-container flex gap-20 px-[30px]">
                 {
                     items.map((item, idx) => {
                         return (
-                            <div key={idx} className="item block">
-                                <img src={item.img} alt="" className="w-36 rounded-3xl" />
-                                <p className="text-center font-bold">{item.name}</p>
+                            <div key={idx} className="item block shadow-[2px_2px_5px_gray] rounded-xl p-2 m-2">
+                                <img src={item.img} alt="" className="w-36 rounded-xl shadow-[2px_2px_5px_gray]" />
+                                <p className="text-center font-bold pt-3 pb-1">{item.name}</p>
                             </div>
                         );
                     })
                 }
                 </div>
             </div>
-                <button onClick={prevItem} className="absolute left-[97vw] bottom-[92px] bg-white text-xl font-bold border border-slate-800 rounded-md pb-1">{'>'}</button>
         </div>
     )
 }
