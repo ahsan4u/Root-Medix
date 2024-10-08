@@ -5,7 +5,7 @@ function Poster() {
 
     return (
         <>
-            <div className="h-[100vh] bg-[url('/poster.jpg')] flex justify-end items-center" style={{backgroundSize: '100% 100%'}}>
+            <div className="aspect-[16/7.5] w-full bg-[url('/poster.jpg')] flex justify-end items-center" style={{backgroundSize: '100% 100%'}}>
                 
                 <div className="w-72 mr-32 mt-7">
                     <UserInfo/>
