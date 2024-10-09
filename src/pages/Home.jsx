@@ -1,15 +1,13 @@
 import React from "react";
-import Topbar from '../components/Topbar';
-import Navbar from '../components/navbar';
+import Navbar from '../components/Navbar';
 import Poster from '../components/Poster';
 import Treatment from "../components/Treatment";
-import BestHospital from "../components/bestHospital";
+import BestHospital from "../components/BestHospital";
 
 function Home() {
 
     return (
         <>
-            <Topbar/>
             <Navbar/>
             <Poster/>
             <Treatment/>

@@ -98,7 +98,7 @@ function UserInfo() {
                 className="block m-auto w-[80%] mt-2 py-1 text-sm outline-none bg-transparent border-b-2 border-blue-400 placeholder-slate-500"/>
                 
                 <div className="m-auto w-[80%] flex mt-2 mb-6">
-                    <p className="std border-b-2 border-blue-400 mr-1 w-[18%] text-sm py-1">{formData.std || 'STD'}</p>
+                    <p className="std border-b-2 border-blue-400 mr-1 w-[18%] text-sm py-1">{formData.std}</p>
                     <input type="number"
                     autoComplete="off"
                     value={formData.contact}
