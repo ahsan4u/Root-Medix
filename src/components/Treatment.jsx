@@ -5,9 +5,12 @@ function Treatment() {
     const items = [
         {name: 'Cardiology',        img: '/T-cardiology.jpg'},
         {name: 'Spine',             img: '/T-spine.jpg'},
-        {name: 'Spine',             img: '/T-spine2.png'},
         {name: 'Gastroenterology',  img: '/T-gastroenterology.jpg'},
-        {name: 'Orthopadic',        img: '/T-spine.png'},
+        {name: 'Orthopadic',        img: '/T-orthopadic.png'},
+        {name: 'Urology',           img: '/T-urology.png'},
+        {name: 'Urology',           img: '/T-urology.png'},
+        {name: 'Urology',           img: '/T-urology.png'},
+        {name: 'Urology',           img: '/T-urology.png'},
         {name: 'Urology',           img: '/T-urology.png'},
     ];
 

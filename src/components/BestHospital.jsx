@@ -2,10 +2,10 @@ import React, { useEffect } from "react";
 
 function BestHospital() {
     const items = [
-        {name: 'Fortis Hospital',          img: '/hospital1.jpg',   place: 'New Delhi'},
-        {name: 'Fortis Escorts Heart',     img: '/hospital2.jpg',   place: 'New Delhi'},
-        {name: 'Fortis Vasant Kunj',       img: '/hospital3.jpg',   place: 'New Delhi'},
-        {name: 'Fortis Memorial Research', img: '/hospital4.jpg',   place: 'New Delhi'},
+        {name: 'Max Hospital, Saket',   img: '/max-saket.jpg',      place: 'New Delhi'},
+        {name: 'BLK Max Hospital',      img: '/blk-max.jpg',        place: 'New Delhi'},
+        {name: 'Max Hospital Dwarka',   img: '/max-dwarka.jpg',     place: 'New Delhi'},
+        {name: 'Aakash Hospital',       img: '/aakash-dwarka.jpg',  place: 'New Delhi'},
     ];
     const cardWidth = 312;
     useEffect(()=> {
@@ -58,13 +58,6 @@ function BestHospital() {
                     }
                     </div>
                 </div>
-            </div>
-
-            <div className="flex justify-between w-[92vw] m-auto mb-44">
-                <div className="border-2 border-slate-800 rounded-xl aspect-[16/12] w-[23%]"></div>
-                <div className="border-2 border-slate-800 rounded-xl aspect-[16/12] w-[23%]"></div>
-                <div className="border-2 border-slate-800 rounded-xl aspect-[16/12] w-[23%]"></div>
-                <div className="border-2 border-slate-800 rounded-xl aspect-[16/12] w-[23%]"></div>
             </div>
         </>
     )

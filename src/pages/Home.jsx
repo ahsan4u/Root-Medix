@@ -3,6 +3,7 @@ import Navbar from '../components/Navbar';
 import Poster from '../components/Poster';
 import Treatment from "../components/Treatment";
 import BestHospital from "../components/BestHospital";
+import OurServices from "../components/OurServices";
 
 function Home() {
 
@@ -12,6 +13,7 @@ function Home() {
             <Poster/>
             <Treatment/>
             <BestHospital/>
+            <OurServices/>
         </>
     )
 }
