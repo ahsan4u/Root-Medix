@@ -48,7 +48,7 @@ function OurServices() {
                             return (
                                 <div key={idx} className="bestHospital block w-64 shadow-[2px_2px_5px_gray] rounded-xl m-2 overflow-hidden cursor-pointer">
                                     <img src={item.img} alt="" className="w-[100%] aspect-[16/9] object-cover" />
-                                    <p className="bestHospital-text text-center text-2xl font-bold m-1 py-1 rounded-xl text-cyan-900 transition-colors duration-[0.5s]">{item.name}</p>
+                                    <p className="bestHospital-text text-center text-2xl font-bold m-1 py-1 rounded-lg text-cyan-900 transition-colors duration-[0.5s]">{item.name}</p>
                                 </div>
                             );
                         })

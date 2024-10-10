@@ -124,11 +124,10 @@ function UserInfo() {
                 ${isLoading ? 'bg-gradient-to-r from-blue-800 via-cyan-700 to-blue-800' : 'bg-gradient-to-r from-blue-700 via-cyan-600 to-blue-700'}`}
                 >{isLoading ? 'Sending...' : 'Submit'}</button>
                 
-                <p className="w-[79%] text-center m-auto text-sm font-semibold mt-3">By submitting the form I agree to the Terms and Conditions and Privacy Policy of MedCare.</p>
+                <p className="w-[79%] text-center m-auto text-sm font-semibold mt-3">By submitting this form,<br/> I agree to Root Medix's Terms & Privacy Policy.</p>
             </form>
             <Massage open={activeAlert} alertMsg='We Will get in touch with you soon !'/>
         </div>
     )
 }
-
 export default UserInfo;
