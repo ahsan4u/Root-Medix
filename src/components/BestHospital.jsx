@@ -2,10 +2,10 @@ import React, { useEffect } from "react";
 
 function BestHospital() {
     const items = [
-        {name: 'Fortis Hospital', img: '/hospital1.jpg', place: 'New Delhi'},
-        {name: 'Fortis Escorts Heart', img: '/hospital2.jpg', place: 'New Delhi'},
-        {name: 'Fortis Vasant Kunj', img: '/hospital3.jpg', place: 'New Delhi'},
-        {name: 'Fortis Memorial Research', img: '/hospital4.jpg', place: 'New Delhi'},
+        {name: 'Fortis Hospital',          img: '/hospital1.jpg',   place: 'New Delhi'},
+        {name: 'Fortis Escorts Heart',     img: '/hospital2.jpg',   place: 'New Delhi'},
+        {name: 'Fortis Vasant Kunj',       img: '/hospital3.jpg',   place: 'New Delhi'},
+        {name: 'Fortis Memorial Research', img: '/hospital4.jpg',   place: 'New Delhi'},
     ];
     const cardWidth = 312;
     useEffect(()=> {

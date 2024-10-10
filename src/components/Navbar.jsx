@@ -8,8 +8,8 @@ function Navbar() {
         const marginDiv = document.querySelector('.forMargin');
         const navBar = document.querySelector('.navBar');
         if(window.scrollY >= topBar.offsetHeight) {
-            marginDiv.style.marginTop = `${navBar.offsetHeight-1}px`;
-            navBar.style.cssText = 'position: fixed; top: 0; background: rgba(255, 255, 255, 0.821)';
+            marginDiv.style.marginTop = `${navBar.offsetHeight}px`;
+            navBar.style.cssText = 'position: fixed; top: 0; background: rgba(255, 255, 255, 0.121); backdrop-filter: blur(6px);';
         } else {
             navBar.style.cssText = '';
             marginDiv.style.marginTop = `0`;
@@ -37,7 +37,7 @@ function Navbar() {
                 </div>
             </div>
 
-            <ol className='navBar flex gap-4 pl-4  py-2 font-serif text-lg bg-white w-full transition-colors duration-[0.5s] z-10'>
+            <ol className='navBar flex gap-4 pl-4  py-1 font-serif text-lg bg-white w-full transition-colors duration-[0.5s] z-10'>
                 <li className='bg-gradient-to-r from-blue-200 via-cyan-100 to-blue-200  hover:bg-gradient-to-r hover:from-blue-300 hover:via-cyan-200 hover:to-blue-300 border border-gray-400 rounded-full px-6 py-[3px] cursor-pointer'><HomeIcon className='text-blue-900'/></li>
                 <li className='bg-gradient-to-r from-blue-200 via-cyan-100 to-blue-200  hover:bg-gradient-to-r hover:from-blue-300 hover:via-cyan-200 hover:to-blue-300 border border-gray-400 rounded-full px-4 py-1 cursor-pointer'>Doctor</li>
                 <li className='bg-gradient-to-r from-blue-200 via-cyan-100 to-blue-200  hover:bg-gradient-to-r hover:from-blue-300 hover:via-cyan-200 hover:to-blue-300 border border-gray-400 rounded-full px-4 py-1 cursor-pointer'>Hospital</li>
@@ -45,7 +45,7 @@ function Navbar() {
                 <li className='bg-gradient-to-r from-blue-200 via-cyan-100 to-blue-200  hover:bg-gradient-to-r hover:from-blue-300 hover:via-cyan-200 hover:to-blue-300 border border-gray-400 rounded-full px-4 py-1 cursor-pointer'>Medical Visa</li>
                 <li className='bg-gradient-to-r from-blue-200 via-cyan-100 to-blue-200  hover:bg-gradient-to-r hover:from-blue-300 hover:via-cyan-200 hover:to-blue-300 border border-gray-400 rounded-full px-4 py-1 cursor-pointer'>Contact us</li>
                 <li className='bg-gradient-to-r from-blue-200 via-cyan-100 to-blue-200  hover:bg-gradient-to-r hover:from-blue-300 hover:via-cyan-200 hover:to-blue-300 border border-gray-400 rounded-full px-4 py-1 cursor-pointer'>About us</li>
-                <li className='bg-gradient-to-r from-blue-200 via-cyan-100 to-blue-200  hover:bg-gradient-to-r hover:from-blue-300 hover:via-cyan-200 hover:to-blue-300 border border-gray-400 rounded-full px-4 py-1 cursor-pointer'>Blog</li>
+                <li className='bg-gradient-to-r from-blue-200 via-cyan-100 to-blue-200  hover:bg-gradient-to-r hover:from-blue-300 hover:via-cyan-200 hover:to-blue-300 border border-gray-400 rounded-full px-4 py-1 cursor-pointer'>Blogs</li>
             </ol>
             <div className='forMargin'></div>
         </>

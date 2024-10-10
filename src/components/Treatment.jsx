@@ -3,12 +3,12 @@ import { useEffect, useRef } from "react";
 
 function Treatment() {
     const items = [
-        {name: 'Cardiology', img: '/Cardiology.jpg'},
-        {name: 'Spine', img: '/Spine.jpg'},
-        {name: 'Spine', img: '/Spine.jpg'},
-        {name: 'Spine', img: '/Spine.jpg'},
-        {name: 'Spine', img: '/Spine.jpg'},
-        {name: 'Spine', img: '/Spine.jpg'},
+        {name: 'Cardiology',        img: '/T-cardiology.jpg'},
+        {name: 'Spine',             img: '/T-spine.jpg'},
+        {name: 'Spine',             img: '/T-spine2.png'},
+        {name: 'Gastroenterology',  img: '/T-gastroenterology.jpg'},
+        {name: 'Orthopadic',        img: '/T-spine.png'},
+        {name: 'Urology',           img: '/T-urology.png'},
     ];
 
     useEffect(()=> {
@@ -43,7 +43,7 @@ function Treatment() {
                 </div>
             </div>
 
-            <div className="treatment-container overflow-x-auto m-auto">
+            <div className="treatment-container overflow-x-auto mb-4">
                 <div className="scroll-treatment flex gap-8 px-[20px]">
                 {
                     items.map((item, idx) => {
