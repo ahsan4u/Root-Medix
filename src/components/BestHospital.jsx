@@ -7,26 +7,41 @@ function BestHospital() {
         {name: 'Max Hospital Dwarka',   img: '/max-dwarka.jpg',     place: 'New Delhi'},
         {name: 'Aakash Hospital',       img: '/aakash-dwarka.jpg',  place: 'New Delhi'},
     ];
-    const cardWidth = 312;
+
     useEffect(()=> {
-        document.querySelector('.scroll-hospital').style.width = `${cardWidth * items.length}px`;
+        let cardSpace = 0;
+        document.querySelectorAll('.bestHospital').forEach((treatmentCard)=> {
+            const scrollCont = document.querySelector('.hospital-container').offsetWidth;
+            let margin = 0;
+            if(scrollCont < 800) {
+                margin = (scrollCont - (treatmentCard.offsetWidth*2))/4;
+            } else {
+                margin = (scrollCont - (treatmentCard.offsetWidth*4))/8;
+            }
+            treatmentCard.style.marginLeft = `${margin}px`;
+            treatmentCard.style.marginRight = `${margin}px`;
+            cardSpace = treatmentCard.offsetWidth+(2*margin);
+        });
+        document.querySelector('.scroll-hospital').style.width = `${cardSpace * items.length}px`;
     }, [[items.length]])
 
     function nextHospitalScroll() {
+        const scrollValue = document.querySelector('.bestHospital').offsetWidth + (2 * Number(document.querySelector('.bestHospital').style.marginLeft.replace('px', '')));
         let idx = 1;
         const intervalId = setInterval(()=>{
-            document.querySelector('.hospital-container').scrollBy(-6, 0);
-            idx +=6;
-            if(idx >=cardWidth) clearInterval(intervalId);
+            document.querySelector('.hospital-container').scrollBy(-4, 0);
+            idx +=4;
+            if(idx >= scrollValue) clearInterval(intervalId);
         }, 1);
     }
 
     function prevHospitalScroll() {
+        const scrollValue = document.querySelector('.bestHospital').offsetWidth + (2 * Number(document.querySelector('.bestHospital').style.marginLeft.replace('px', '')));
         let idx = 1;
         const intervalId = setInterval(()=>{
-            document.querySelector('.hospital-container').scrollBy(6, 0);
-            idx +=6;
-            if(idx >=cardWidth) clearInterval(intervalId);
+            document.querySelector('.hospital-container').scrollBy(4, 0);
+            idx +=4;
+            if(idx >= scrollValue) clearInterval(intervalId);
         }, 1);
     }
 
@@ -41,16 +56,16 @@ function BestHospital() {
                     </div>
                 </div>
 
-                <div className="hospital-container overflow-x-auto mb-4">
-                    <div className="scroll-hospital flex gap-10 px-[22px]">
+                <div className="hospital-container overflow-x-scroll">
+                    <div className="scroll-hospital">
                     {
                         items.map((item, idx) => {
                             return (
-                                <div key={idx} className="bestHospital block w-64 shadow-[2px_2px_5px_gray] rounded-xl m-2 overflow-hidden cursor-pointer">
+                                <div key={idx} className="bestHospital inline-block w-64 shadow-[2px_2px_5px_gray] rounded-xl my-2 overflow-hidden cursor-pointer">
                                     <img src={item.img} alt="" className="w-[100%] aspect-[16/9] object-cover" />
                                     <div className="bestHospital-text font-bold m-1 px-1 pb-1 text-cyan-900 border rounded-lg transition-colors duration-[0.5s]">
-                                    <p className="">{item.name}{'>'}</p>
-                                    <p className="font-normal text-xs">{item.place}</p>
+                                        <p className="">{item.name}{'>'}</p>
+                                        <p className="font-normal text-xs">{item.place}</p>
                                     </div>
                                 </div>
                             );
