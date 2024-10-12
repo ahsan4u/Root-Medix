@@ -6,6 +6,7 @@ function OurServices() {
         {name: 'Book Oppintment',       img: '/appointment.png'},
         {name: 'Video Consultation',    img: '/video-consultation.png'},
         {name: 'Second Opinion',        img: '/second-openion.png'},
+        {name: 'Second Opinion',        img: '/second-openion.png'},
     ];
     const cardWidth = 312;
     useEffect(()=> {
@@ -49,10 +50,10 @@ function OurServices() {
         <>
             <div className="border-b border-dotted border-gray-500 rounded-b-3xl mb-16 pb-4 w-[98vw] m-auto">
                 <div className="flex justify-between bg-gradient-to-r from-cyan-200 via-blue-300 to-blue-400 rounded-t-lg mt-9 mb-5 overflow-hidden items-center px-3">
-                    <h2 className="text-3xl font-serif font-bold py-1" style={{fontFamily: `"Ubuntu", sans-serif`, fontWeight: '700', fontStyle: 'italic'}}>Our Services</h2>
+                    <h2 className="text-xl sm:text-3xl font-serif font-bold py-1" style={{fontFamily: `"Ubuntu", sans-serif`, fontWeight: '700', fontStyle: 'italic'}}>Our Services</h2>
                     <div className={`${items.length > 4? 'block': 'hidden'}`}>
-                        <button onClick={nextOurServicesScroll} className="w-8 bg-cyan-200 text-xl font-bold shadow-inner shadow-slate-500 active:shadow-slate-700 rounded-full pb-1 mr-4">{'<'}</button>
-                        <button onClick={prevOurServicesScroll} className="w-8 bg-cyan-200 text-xl font-bold shadow-inner shadow-slate-500 active:shadow-slate-700 rounded-full pb-1 ">{'>'}</button>
+                        <button onClick={nextOurServicesScroll} className="w-8 bg-cyan-200 text-xl font-bold shadow-inner shadow-slate-500 active:shadow-slate-700 rounded-lg sm:rounded-full sm:pb-1 mr-4">{'<'}</button>
+                        <button onClick={prevOurServicesScroll} className="w-8 bg-cyan-200 text-xl font-bold shadow-inner shadow-slate-500 active:shadow-slate-700 rounded-lg sm:rounded-full sm:pb-1 ">{'>'}</button>
                     </div>
                 </div>
 
@@ -61,9 +62,9 @@ function OurServices() {
                     {
                         items.map((item, idx) => {
                             return (
-                                <div key={idx} className="ourServices inline-block w-64 shadow-[2px_2px_5px_gray] rounded-xl my-2 overflow-hidden cursor-pointer">
+                                <div key={idx} className="ourServices inline-block sm:w-64 w-[166px] shadow-[2px_2px_5px_gray] rounded-xl my-2 overflow-hidden cursor-pointer">
                                     <img src={item.img} alt="" className="w-[100%] aspect-[16/9] object-cover" />
-                                    <p className="bestHospital-text text-center text-2xl font-bold m-1 py-1 rounded-lg text-cyan-900 transition-colors duration-[0.5s]">{item.name}</p>
+                                    <p className="services-text text-center text-md font-bold m-1 py-1 rounded-lg text-cyan-900 transition-colors duration-[0.5s]">{item.name}</p>
                                 </div>
                             );
                         })

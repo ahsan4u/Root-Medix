@@ -70,11 +70,11 @@ function Treatment() {
 
     return (
         <div className="border-b border-dotted border-gray-500 rounded-b-3xl mb-16 w-[98vw] m-auto">
-            <div className="flex justify-between bg-gradient-to-r from-cyan-200 via-blue-300 to-blue-400 rounded-t-lg mt-9 mb-5 overflow-hidden items-center px-3">
-                <h2 className="text-3xl font-serif font-bold py-1" style={{fontFamily: `"Ubuntu", sans-serif`, fontWeight: '700', fontStyle: 'italic'}}>Browse by Specialist</h2>
+            <div className="flex justify-between bg-gradient-to-r from-cyan-200 via-blue-300 to-blue-400 rounded-t-lg mt-9 sm:mb-5 mb-2 overflow-hidden items-center px-3">
+                <h2 className="sm:text-3xl text-xl font-serif font-bold py-1" style={{fontFamily: `"Ubuntu", sans-serif`, fontWeight: '700', fontStyle: 'italic'}}>Browse by Specialist</h2>
                 <div className={`${items.length > 6? 'block': 'hidden'}`}>
-                    <button onClick={nextTreatment} className="w-8 bg-cyan-200 text-xl font-bold shadow-inner shadow-slate-500 active:shadow-slate-700 rounded-full pb-1 mr-4">{'<'}</button>
-                    <button onClick={prevTreatment} className="w-8 bg-cyan-200 text-xl font-bold shadow-inner shadow-slate-500 active:shadow-slate-700 rounded-full pb-1 ">{'>'}</button>
+                    <button onClick={nextTreatment} className="w-8 bg-cyan-200 text-xl font-bold shadow-inner shadow-slate-500 active:shadow-slate-700 rounded-md sm:rounded-full sm:pb-1 mr-4">{'<'}</button>
+                    <button onClick={prevTreatment} className="w-8 bg-cyan-200 text-xl font-bold shadow-inner shadow-slate-500 active:shadow-slate-700 rounded-md sm:rounded-full sm:pb-1 ">{'>'}</button>
                 </div>
             </div>
 
@@ -83,9 +83,9 @@ function Treatment() {
                 {
                     items.map((item, idx) => {
                         return (
-                            <div key={idx} className="treatment inline-block w-36 cursor-pointer shadow-[2px_2px_5px_gray] rounded-xl p-2 my-2"> {/*total width: 152px */}
+                            <div key={idx} className="treatment inline-block sm:w-36 w-[105px] cursor-pointer shadow-[2px_2px_5px_gray] rounded-xl sm:p-2 p-1 my-2"> {/*total width: 152px */}
                                 <img src={item.img} alt="" className="w-[100%] aspect-[16/17.5] object-cover rounded-lg shadow-[2px_2px_5px_gray]" />
-                                <p className="treatment-name text-[15px] text-center font-bold mt-3 mb-1 pb-1 text-cyan-900 border rounded-lg transition-colors duration-[0.5s]">{item.name}</p>
+                                <p className="treatment-name sm:text-[15px] text-[11px] text-center font-bold sm:mt-3 mt-2 mb-1 sm:p-0 p-1   text-cyan-900 border rounded-lg transition-colors duration-[0.5s]">{item.name}</p>
                             </div>
                         );
                     })

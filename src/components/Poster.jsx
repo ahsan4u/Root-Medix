@@ -5,11 +5,10 @@ function Poster() {
 
     return (
         <>
-            <div className="aspect-[16/7.5] w-full bg-[url('/poster.jpg')] flex justify-end items-center" style={{backgroundSize: '100% 100%'}}>
-                
-                <div className="w-72 mr-32 mt-7">
+            <div className="sm:aspect-[16/7.5] aspect-[16/9] bg-cover bg-center w-full bg-[url('/poster.jpg')] flex justify-end items-center">
+                {window.innerWidth > 640 && (<div className="w-72 mr-32 mt-7">
                     <UserInfo/>
-                </div>
+                </div>)}
             </div>
         </>
     )

@@ -24,3 +24,7 @@ input[type=number]::-webkit-outer-spin-button {
 .scroll-hospital .bestHospital:hover .bestHospital-text {
     background-color: rgba(228, 243, 254, 0.913);
 }
+
+.scroll-services .ourServices:hover .services-text {
+    background-color: rgba(228, 243, 254, 0.913);
+}
