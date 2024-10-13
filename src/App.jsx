@@ -1,11 +1,10 @@
-import { useState } from 'react';
 import Home from './pages/Home';
 import HospitalInfo from './pages/HospitalInfo';
 
 function App() {
   return (
     <>
-      {/* <Home/> */}
+      <Home/>
       <HospitalInfo name='max saket'/>
     </>
   )

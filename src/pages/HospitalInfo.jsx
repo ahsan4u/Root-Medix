@@ -2,11 +2,11 @@ import React from "react";
 import Navbar from "../components/Navbar";
 import { useEffect } from "react";
 import UserInfo from "../components/UserInfo";
-import HospitalData from "../data/HospitalData";
+import hospitalsData from "../data/hospitalsData";
 
 function HospitalInfo({name}) {
 
-    const hospitalInfo = HospitalData[name];
+    const hospitalInfo = hospitalsData[name];
 
     useEffect(() => {
         document.querySelector('body').style.background = '#f7f0f0';

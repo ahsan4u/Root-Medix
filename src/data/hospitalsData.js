@@ -1,4 +1,4 @@
-const HospitalData = {
+const hospitalsData = {
     'max saket':{
         name: 'Max Super Speciality Hospital, Saket',
         location: `Location: Press Enclave Marg, Saket Institutional Area, New Delhi, 110017 Beds: 530+ (including 267 ICU beds) Airport: 13 KM (30-minute drive from Indira Gandhi International Airport).`,
@@ -81,4 +81,4 @@ const HospitalData = {
     }
 };
 
-export default HospitalData;
+export default hospitalsData;
