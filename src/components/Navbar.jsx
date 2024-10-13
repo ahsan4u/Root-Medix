@@ -132,8 +132,8 @@ function Navbar() {
                 </div>
             </div>)}
 
-            <ol className='navBar flex justify-end sm:justify-start w-full sm:transition-colors sm:duration-[0.5s]'>
-            <div className='navBarToggle sm:flex bg-[rgb(82,82,82)] fixed z-10 top-16 sm:static w-0 overflow-hidden opacity-0 sm:opacity-100 sm:w-auto h-full sm:h-auto sm:gap-4 sm:pl-4  sm:py-1 font-serif text-md sm:text-lg sm:bg-[transparent] transition-all duration-500'>
+            <ol className='navBar z-50 flex justify-end sm:justify-start w-full sm:transition-colors sm:duration-[0.5s]'>
+            <div className='navBarToggle sm:flex bg-[rgb(82,82,82)] fixed z-50 top-16 sm:static w-0 overflow-hidden opacity-0 sm:opacity-100 sm:w-auto h-full sm:h-auto sm:gap-4 sm:pl-4  sm:py-1 font-serif text-md sm:text-lg sm:bg-[transparent] transition-all duration-500'>
                 <li className='text-white sm:text-black sm:bg-gradient-to-r sm:from-blue-200 sm:via-cyan-100 sm:to-blue-200  sm:hover:bg-gradient-to-r sm:hover:from-blue-300 sm:hover:via-cyan-200 sm:hover:to-blue-300 border-b border-gray-500 sm:border sm:border-gray-400 sm:rounded-full px-6 py-2 sm:py-[3px] cursor-pointer'><HomeIcon className='sm:text-blue-900'/></li>
                 <li className='text-white sm:text-black sm:bg-gradient-to-r sm:from-blue-200 sm:via-cyan-100 sm:to-blue-200  sm:hover:bg-gradient-to-r sm:hover:from-blue-300 sm:hover:via-cyan-200 sm:hover:to-blue-300 border-b border-gray-500 sm:border sm:border-gray-400 sm:rounded-full px-4 py-2 sm:py-1 cursor-pointer'>Doctor</li>
                 <li className='text-white sm:text-black sm:bg-gradient-to-r sm:from-blue-200 sm:via-cyan-100 sm:to-blue-200  sm:hover:bg-gradient-to-r sm:hover:from-blue-300 sm:hover:via-cyan-200 sm:hover:to-blue-300 border-b border-gray-500 sm:border sm:border-gray-400 sm:rounded-full px-4 py-2 sm:py-1 cursor-pointer'>Hospital</li>
