@@ -1,5 +1,7 @@
 import React from "react";
 import { useEffect, useRef } from "react";
+import WestIcon from '@mui/icons-material/West';
+
 
 function Treatment() {
     const items = [
@@ -72,10 +74,10 @@ function Treatment() {
         <div className="border-b border-dotted border-gray-500 rounded-b-3xl mb-10 sm:mb-16 w-[98vw] m-auto">
             <div className="flex justify-between bg-gradient-to-r from-cyan-200 via-blue-300 to-blue-400 rounded-t-lg mt-9 sm:mb-5 mb-2 overflow-hidden items-center px-3">
                 <h2 className="sm:text-3xl text-xl font-serif font-bold py-1" style={{fontFamily: `"Ubuntu", sans-serif`, fontWeight: '700', fontStyle: 'italic'}}>Browse by Specialist</h2>
-                <div className={`${items.length > 6? 'block': 'hidden'}`}>
-                    <button onClick={nextTreatment} className="w-8 bg-cyan-200 text-xl font-bold shadow-inner shadow-slate-500 active:shadow-slate-700 rounded-md sm:rounded-full sm:pb-1 mr-4">{'<'}</button>
-                    <button onClick={prevTreatment} className="w-8 bg-cyan-200 text-xl font-bold shadow-inner shadow-slate-500 active:shadow-slate-700 rounded-md sm:rounded-full sm:pb-1 ">{'>'}</button>
-                </div>
+                <div className={`${items.length > 6? 'flex': 'hidden'}`}>
+                        <button onClick={nextTreatment} className="w-8 sm:w-11 h-6 sm:h-8 flex justify-center items-center bg-transparent text-xl font-bold shadow-3dUnclicked active:shadow-3dClicked rounded-md sm:rounded-full mr-4"><WestIcon className="text-white w-8 h-full" fontSize="small"/></button>
+                        <button onClick={prevTreatment} className="w-8 sm:w-11 h-6 sm:h-8 flex justify-center items-center bg-transparent text-xl font-bold shadow-3dUnclicked active:shadow-3dClicked rounded-md sm:rounded-full "><WestIcon className="w-8 text-white rotate-180" fontSize="small"/></button>
+                    </div>
             </div>
 
             <div className="treatment-container overflow-x-scroll">
@@ -84,7 +86,7 @@ function Treatment() {
                     items.map((item, idx) => {
                         return (
                             <div key={idx} className="treatment inline-block sm:w-36 w-[105px] cursor-pointer shadow-[2px_2px_5px_gray] rounded-xl sm:p-2 p-1 my-2"> {/*total width: 152px */}
-                                <img src={item.img} alt="" className="w-[100%] aspect-[16/17.5] object-cover rounded-lg shadow-[2px_2px_5px_gray]" />
+                                <img src={`img/${item.img}`} alt="" className="w-[100%] aspect-[16/17.5] object-cover rounded-lg shadow-[2px_2px_5px_gray]" />
                                 <p className="treatment-name sm:text-[15px] text-[11px] text-center font-bold sm:mt-3 mt-2 mb-1 sm:p-0 p-1   text-cyan-900 border rounded-lg transition-colors duration-[0.5s]">{item.name}</p>
                             </div>
                         );

@@ -1,9 +1,12 @@
 import HomeIcon from '@mui/icons-material/Home';
 import SearchIcon from '@mui/icons-material/Search';
-import ReorderIcon from '@mui/icons-material/Reorder';
-import { useEffect } from 'react';
+import Lottie from 'lottie-react';
+import menuEffect from '../animated Icon/menuV2.json';
+import { useEffect, useRef } from 'react';
 
 function Navbar() {
+    const menubarRef = useRef(null);
+
     // Scroll to hide Navbar in mobile view
     useEffect(()=> {
         if(window.innerWidth < 640) {
@@ -36,6 +39,7 @@ function Navbar() {
     }
     
     function toggleNavbar(e) {
+        menubarRef.current.setSpeed(2);
         if(!document.querySelector('.navBarToggle').style.opacity) {
             // First remove the search
             document.querySelector('.MobileSearchCont .inputDiv').style.width = '46px';
@@ -44,15 +48,17 @@ function Navbar() {
             document.querySelector('.MobileSearchCont').style.cssText = 'top: 11px; right: 58px; transition: top 0.5s ease-in-out, right 0.2s ease-in-out;';
             document.querySelector('.langSidebarDiv').style.width = '188px';
             document.querySelector('.MobileSearchCont .inputDiv button').style.margin = null;
-            document.querySelector('.inputDiv').style.border = null;
+            document.querySelector('.MobileSearchCont .inputDiv button').style.background = 'transparent';
             
             document.querySelector('.navBarToggle').style.width= '80vw';
             document.querySelector('.navBarToggle').style.opacity= '1';
-            e.currentTarget.style.background='lightblue';
+
+            menubarRef.current.play();
+            menubarRef.current.playSegments([0, 60], true);
         } else {
             document.querySelector('.navBarToggle').style.width= '0';
             document.querySelector('.navBarToggle').style.opacity= null;
-            document.querySelector('.sidebarBtn').style.background='transparent';
+            menubarRef.current.playSegments([40, 0], true);
         }
     }
 
@@ -66,11 +72,11 @@ function Navbar() {
             document.querySelector('.sidebarBtn').style.background='transparent';
 
             inputDiv.style.width = '98vw';
-            inputDiv.style.background = 'lightcyan';
-            document.querySelector('.langSidebarDiv').style.width = '160px';
+            inputDiv.style.background = 'rgb(82,82,82)';
+            document.querySelector('.langSidebarDiv').style.width = '140px';
             document.querySelector('.MobileSearchCont').style.cssText = 'top: 68px; right: 1vw; transition: top 0.2s ease-in-out, right 0.5s ease-in-out;';
             document.querySelector('.MobileSearchCont .inputDiv button').style.margin = '4px';
-            document.querySelector('.inputDiv').style.border = '1px solid black';
+            document.querySelector('.MobileSearchCont .inputDiv button').style.background = 'white';
             setTimeout(()=> {
                 input.style.display = 'block';
                 input.focus();
@@ -82,16 +88,16 @@ function Navbar() {
             document.querySelector('.MobileSearchCont').style.cssText = 'top: 11px; right: 58px; transition: top 0.5s ease-in-out, right 0.2s ease-in-out;';
             document.querySelector('.langSidebarDiv').style.width = '188px';
             document.querySelector('.MobileSearchCont .inputDiv button').style.margin = null;
-            document.querySelector('.inputDiv').style.border = null;
+            document.querySelector('.MobileSearchCont .inputDiv button').style.background = 'transparent';
         }
     }
     
     return (
         <>
-            <div className="topBar z-20 bg-gradient-to-r from-cyan-200 via-blue-300 to-blue-400 h-16 flex justify-between items-center">
-                <img src="/logo.png" alt="Root-Medix" className=' h-10 ml-0  sm:hue-rotate-90 sm:h-14 sm:ml-2'/>
+            <div className="topBar z-20 bg-gradient-to-r from-cyan-200 via-blue-300 to-blue-400 h-16 flex justify-between items-center sm:pr-3">
+                <img src="img/logo.png" alt="Root-Medix" className=' h-10 ml-0  sm:hue-rotate-90 sm:h-14 sm:ml-2'/>
                 <div className='langSidebarDiv flex justify-between items-center w-[188px] sm:w-[550px] transition-all duration-500'>
-                    <select name="language" id="lang" className='shadow-inner shadow-slate-500 active:shadow-slate-700 outline-none sm:border-none text-center text-xs sm:text-[16px] sm:w-28 w-[75px] h-8 sm:h-10 w rounded-full bg-cyan-200 sm:bg-gradient-to-r sm:from-blue-100 sm:via-cyan-50 sm:to-blue-100'>
+                    <select name="language" id="lang" className='sm:shadow-none shadow-3dUnclicked active:shadow-3dClicked outline-none sm:border-none text-center text-sm sm:text-[16px] sm:w-28 w-[75px] h-10 sm:h-10 w rounded-xl bg-transparent sm:bg-gradient-to-r sm:from-blue-100 sm:via-cyan-50 sm:to-blue-100'>
                         <option value="eng">English</option>
                         <option value="hin">Hindi</option>
                         <option value="arab">Arabic</option>
@@ -107,33 +113,35 @@ function Navbar() {
                     </div>)}
 
                     {window.innerWidth < 640 && (
-                        <button onClick={toggleNavbar} className='sidebarBtn px-2 py-[6px] bg-[rgb(62,161,181)] mr-2 rounded-xl shadow-inner shadow-slate-500 active:shadow-slate-700 z-50 transition-colors duration-500'><ReorderIcon className= 'bg-transparent'/></button>
+                        <button onClick={toggleNavbar} className='sidebarBtn p-[9px] bg-transparent mr-2 rounded-full shadow-3dUnclicked active:shadow-3dClicked z-50 transition-colors duration-500'>
+                            <Lottie lottieRef={menubarRef} animationData={menuEffect} loop={false} autoplay={false} className='w-7 h-7'/>
+                        </button>
                     )}
                 </div>
             </div>
 
             {window.innerWidth < 640 && (
-            <div className='MobileSearchCont fixed top-[11px] right-[58px] z-20'>
-                <div className='inputDiv bg-[lightcyan] rounded-full overflow-hidden w-[46px] flex justify-end items-center transition-all duration-500'>
+                <div className='MobileSearchCont fixed top-[11px] right-[58px] z-20'>
+                <div className='inputDiv rounded-full overflow-hidden w-[46px] flex justify-end items-center transition-all duration-500'>
                     <input type="text"
                     name="search"
                     id="search"
                     placeholder="Search here..."
-                    className='w-[90%] h-12 pl-3 hidden outline-none text-md bg-transparent'/>
-                    <button onClick={MobileSearch} className='border border-slate-500 shadow-inner shadow-slate-500 active:shadow-slate-700 bg-cyan-200 aspect-[1/1] w-11 rounded-full'><SearchIcon className='searchIcon'/></button>
+                    className='w-[90%] text-white h-12 pl-3 hidden outline-none text-md bg-transparent'/>
+                    <button onClick={MobileSearch} className='shadow-3dUnclicked active:shadow-3dClicked bg-transparent aspect-[1/1] w-11 rounded-full transition-colors duration-500'><SearchIcon className='searchIcon'/></button>
                 </div>
             </div>)}
 
             <ol className='navBar flex justify-end sm:justify-start w-full sm:transition-colors sm:duration-[0.5s]'>
-            <div className='navBarToggle sm:flex bg-[rgb(82,82,82)] fixed z-10 top-16 sm:static w-0 overflow-hidden opacity-0 sm:opacity-100 sm:w-auto h-full sm:h-auto sm:gap-4 sm:pl-4  sm:py-1 font-serif text-lg sm:bg-[transparent] transition-all duration-500'>
-                <li className='text-white sm:text-black sm:bg-gradient-to-r sm:from-blue-200 sm:via-cyan-100 sm:to-blue-200  sm:hover:bg-gradient-to-r sm:hover:from-blue-300 sm:hover:via-cyan-200 sm:hover:to-blue-300 border-b border-gray-300 sm:border sm:border-gray-400 sm:rounded-full px-6 py-4 sm:py-[3px] cursor-pointer'><HomeIcon className='sm:text-blue-900'/></li>
-                <li className='text-white sm:text-black sm:bg-gradient-to-r sm:from-blue-200 sm:via-cyan-100 sm:to-blue-200  sm:hover:bg-gradient-to-r sm:hover:from-blue-300 sm:hover:via-cyan-200 sm:hover:to-blue-300 border-b border-gray-300 sm:border sm:border-gray-400 sm:rounded-full px-4 py-4 sm:py-1 cursor-pointer'>Doctor</li>
-                <li className='text-white sm:text-black sm:bg-gradient-to-r sm:from-blue-200 sm:via-cyan-100 sm:to-blue-200  sm:hover:bg-gradient-to-r sm:hover:from-blue-300 sm:hover:via-cyan-200 sm:hover:to-blue-300 border-b border-gray-300 sm:border sm:border-gray-400 sm:rounded-full px-4 py-4 sm:py-1 cursor-pointer'>Hospital</li>
-                <li className='text-white sm:text-black sm:bg-gradient-to-r sm:from-blue-200 sm:via-cyan-100 sm:to-blue-200  sm:hover:bg-gradient-to-r sm:hover:from-blue-300 sm:hover:via-cyan-200 sm:hover:to-blue-300 border-b border-gray-300 sm:border sm:border-gray-400 sm:rounded-full px-4 py-4 sm:py-1 cursor-pointer'>Treatment Cost</li>
-                <li className='text-white sm:text-black sm:bg-gradient-to-r sm:from-blue-200 sm:via-cyan-100 sm:to-blue-200  sm:hover:bg-gradient-to-r sm:hover:from-blue-300 sm:hover:via-cyan-200 sm:hover:to-blue-300 border-b border-gray-300 sm:border sm:border-gray-400 sm:rounded-full px-4 py-4 sm:py-1 cursor-pointer'>Medical Visa</li>
-                <li className='text-white sm:text-black sm:bg-gradient-to-r sm:from-blue-200 sm:via-cyan-100 sm:to-blue-200  sm:hover:bg-gradient-to-r sm:hover:from-blue-300 sm:hover:via-cyan-200 sm:hover:to-blue-300 border-b border-gray-300 sm:border sm:border-gray-400 sm:rounded-full px-4 py-4 sm:py-1 cursor-pointer'>Contact us</li>
-                <li className='text-white sm:text-black sm:bg-gradient-to-r sm:from-blue-200 sm:via-cyan-100 sm:to-blue-200  sm:hover:bg-gradient-to-r sm:hover:from-blue-300 sm:hover:via-cyan-200 sm:hover:to-blue-300 border-b border-gray-300 sm:border sm:border-gray-400 sm:rounded-full px-4 py-4 sm:py-1 cursor-pointer'>About us</li>
-                <li className='text-white sm:text-black sm:bg-gradient-to-r sm:from-blue-200 sm:via-cyan-100 sm:to-blue-200  sm:hover:bg-gradient-to-r sm:hover:from-blue-300 sm:hover:via-cyan-200 sm:hover:to-blue-300 border-b border-gray-300 sm:border sm:border-gray-400 sm:rounded-full px-4 py-4 sm:py-1 cursor-pointer'>Blogs</li>
+            <div className='navBarToggle sm:flex bg-[rgb(82,82,82)] fixed z-10 top-16 sm:static w-0 overflow-hidden opacity-0 sm:opacity-100 sm:w-auto h-full sm:h-auto sm:gap-4 sm:pl-4  sm:py-1 font-serif text-md sm:text-lg sm:bg-[transparent] transition-all duration-500'>
+                <li className='text-white sm:text-black sm:bg-gradient-to-r sm:from-blue-200 sm:via-cyan-100 sm:to-blue-200  sm:hover:bg-gradient-to-r sm:hover:from-blue-300 sm:hover:via-cyan-200 sm:hover:to-blue-300 border-b border-gray-500 sm:border sm:border-gray-400 sm:rounded-full px-6 py-2 sm:py-[3px] cursor-pointer'><HomeIcon className='sm:text-blue-900'/></li>
+                <li className='text-white sm:text-black sm:bg-gradient-to-r sm:from-blue-200 sm:via-cyan-100 sm:to-blue-200  sm:hover:bg-gradient-to-r sm:hover:from-blue-300 sm:hover:via-cyan-200 sm:hover:to-blue-300 border-b border-gray-500 sm:border sm:border-gray-400 sm:rounded-full px-4 py-2 sm:py-1 cursor-pointer'>Doctor</li>
+                <li className='text-white sm:text-black sm:bg-gradient-to-r sm:from-blue-200 sm:via-cyan-100 sm:to-blue-200  sm:hover:bg-gradient-to-r sm:hover:from-blue-300 sm:hover:via-cyan-200 sm:hover:to-blue-300 border-b border-gray-500 sm:border sm:border-gray-400 sm:rounded-full px-4 py-2 sm:py-1 cursor-pointer'>Hospital</li>
+                <li className='text-white sm:text-black sm:bg-gradient-to-r sm:from-blue-200 sm:via-cyan-100 sm:to-blue-200  sm:hover:bg-gradient-to-r sm:hover:from-blue-300 sm:hover:via-cyan-200 sm:hover:to-blue-300 border-b border-gray-500 sm:border sm:border-gray-400 sm:rounded-full px-4 py-2 sm:py-1 cursor-pointer'>Treatment Cost</li>
+                <li className='text-white sm:text-black sm:bg-gradient-to-r sm:from-blue-200 sm:via-cyan-100 sm:to-blue-200  sm:hover:bg-gradient-to-r sm:hover:from-blue-300 sm:hover:via-cyan-200 sm:hover:to-blue-300 border-b border-gray-500 sm:border sm:border-gray-400 sm:rounded-full px-4 py-2 sm:py-1 cursor-pointer'>Medical Visa</li>
+                <li className='text-white sm:text-black sm:bg-gradient-to-r sm:from-blue-200 sm:via-cyan-100 sm:to-blue-200  sm:hover:bg-gradient-to-r sm:hover:from-blue-300 sm:hover:via-cyan-200 sm:hover:to-blue-300 border-b border-gray-500 sm:border sm:border-gray-400 sm:rounded-full px-4 py-2 sm:py-1 cursor-pointer'>Contact us</li>
+                <li className='text-white sm:text-black sm:bg-gradient-to-r sm:from-blue-200 sm:via-cyan-100 sm:to-blue-200  sm:hover:bg-gradient-to-r sm:hover:from-blue-300 sm:hover:via-cyan-200 sm:hover:to-blue-300 border-b border-gray-500 sm:border sm:border-gray-400 sm:rounded-full px-4 py-2 sm:py-1 cursor-pointer'>About us</li>
+                <li className='text-white sm:text-black sm:bg-gradient-to-r sm:from-blue-200 sm:via-cyan-100 sm:to-blue-200  sm:hover:bg-gradient-to-r sm:hover:from-blue-300 sm:hover:via-cyan-200 sm:hover:to-blue-300 border-b border-gray-500 sm:border sm:border-gray-400 sm:rounded-full px-4 py-2 sm:py-1 cursor-pointer'>Blogs</li>
             </div>
             </ol>
 
