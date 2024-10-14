@@ -1,5 +1,5 @@
 import React from "react";
-import { useState } from "react";
+import { useState, useRef } from "react";
 import axios from "axios";
 import Massage from "./massage";
 import STDcode from "../data/STDcode";
@@ -8,6 +8,8 @@ import loadingEffect from '../animated Icon/loading.json';
 
 
 function UserInfo() {
+    const suggestRef = useRef(null);
+    const emailRef = useRef(null);
     const [formData, setFormData] = useState({name: '', email: '', country: '', contact: '', std: '', msg: ''});
     const [isLoading, setIsLoading] = useState(false);
     const [activeAlert, setActiveAlert] = useState(false);
@@ -15,32 +17,29 @@ function UserInfo() {
     function setValue(e) {
         const {name, value} = e.target;
         setFormData((preVal)=> ({...preVal, [name]: value}));
-        if(document.querySelector('#email').textContent.includes('.com')) document.querySelector('#contact').focus();
         
         if(name == 'country') {
             if(value == '') {
-                document.querySelector('.options').innerHTML = '';
+                suggestRef.current.innerHTML = '';
                 setFormData((preVal)=> ({...preVal, std: ''}));
                 return
             }
             const filterd = STDcode.filter(code=> code.name.toLocaleLowerCase().includes(value.toLocaleLowerCase())).slice(0, 5);
-            document.querySelector('.options').innerHTML = '';
+            suggestRef.current.innerHTML = '';
             filterd.forEach((code)=> {
                 const option = document.createElement('div');
                 option.textContent = `⨀ ${code.name}`;
-                option.onmouseover = ()=> { option.style.background = 'gray';}
-                option.onmouseout = ()=> { option.style.background = 'transparent';}
-                option.style.cssText = 'font-size: 14px; padding: 4px 2px; border-bottom: 1px solid #64748b;';
-                document.querySelector('.options').style.width = `${document.querySelector('#name').offsetWidth}px`;
+                option.className = 'text-[14px] px-2 py-[4px] border-b border-[#64748b] hover:bg-[gray]';
+                suggestRef.current.style.width = `${emailRef.current.offsetWidth}px`;
                 if(window.innerWidth < 640) {
-                    option.style.cssText = 'font-size: 20px; padding: 5px 0; border-bottom: 1px solid #64748b;'
+                    option.style.cssText = 'text-[20px] py-[5px] px-2 border-b border-[#64748b] hover:bg-[gray]'
                 }
                 option.onclick = ()=> {
                     setFormData((preVal)=> ({...preVal, [name]: code.name, std: code.code}));
-                    document.querySelector('.options').innerHTML = '';
-                    document.querySelector('#email').focus();
+                    suggestRef.current.innerHTML = '';
+                    emailRef.current.focus();
                 }
-                document.querySelector('.options').appendChild(option);
+                suggestRef.current.appendChild(option);
             })
         }
     }
@@ -70,7 +69,7 @@ function UserInfo() {
     
 
     return (
-        <div className="w-[100%] py-4 bg-gradient-to-b from-white via-blue-50 to-blue-300">
+        <div className="w-[100%] py-4 bg-transparent">
             <h1 className="text-center text-2xl font-serif mb-3">Get free Consultation</h1>
             <form onSubmit={handleSubmit}>
                 <input type="text"
@@ -92,12 +91,13 @@ function UserInfo() {
                     className="block w-[100%] sm:mt-2 mt-5 py-1 text-lg sm:text-sm outline-none bg-transparent border-b-2 border-blue-400 placeholder-slate-500"
                     id="country"/>
                     
-                    <div className="options overflow-hidden px-2 rounded-b-xl absolute bg-[#4d5a6b] text-white"></div>
+                    <div ref={suggestRef} className="options overflow-hidden rounded-b-xl absolute bg-[#4d5a6b] text-white"></div>
                 </div>
                 
                 <input type="text"
-                autoComplete="off"
+                ref={emailRef}  // this is just use for get there width in px to assign it to Option element
                 value={formData.email}
+                autoComplete="off"
                 onChange={setValue}
                 name="email"
                 id="email"

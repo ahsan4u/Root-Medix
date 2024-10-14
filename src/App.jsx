@@ -4,10 +4,10 @@ import HospitalInfo from './pages/HospitalInfo';
 function App() {
   return (
     <>
-      <Home/>
+      {/* <Home/> */}
       <HospitalInfo name='max saket'/>
     </>
   )
 }
 
-export default App
+export default App;

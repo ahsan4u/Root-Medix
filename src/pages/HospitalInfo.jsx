@@ -3,56 +3,73 @@ import Navbar from "../components/Navbar";
 import { useEffect } from "react";
 import UserInfo from "../components/UserInfo";
 import hospitalsData from "../data/hospitalsData";
+import OurServices from "../components/OurServices";
+import BestHospital from "../components/BestHospital";
+import Footer from "../components/footer";
 
 function HospitalInfo({name}) {
 
-    const hospitalInfo = hospitalsData[name];
-
-    useEffect(() => {
-        document.querySelector('body').style.background = '#f7f0f0';
-    }, []);
+  const hospitalInfo = hospitalsData[name];
 
   return (
     <>
       <Navbar />
-        <div className="flex justify-between w-full px-4 py-5 font-mono z-0" style={{ fontFamily: 'Ubuntu, sans-serif', fontWeight: 500 }}>
-            <div className="w-[48%] z-0">
-              <img
-                src={hospitalInfo.img}
-                alt={hospitalInfo.name}
-                className="block sticky top-12 z-0 aspect-[16/11] w-full object-cover rounded-[30px_0_30px_0]"
-              />
-            </div>
+        <div className="flex justify-between w-full px-10 py-5" >
+            <div className="w-[73%] overflow-hidden rounded-lg drop-shadow-xl" style={{fontFamily: `"Convergence", sans-serif`}}>
+              
+              <div className="flex justify-between">
+                <div className="bg-cyan-900 text-white w-[80%]">
+                  <h1 className="text-2xl font-bold mt-5 ml-7" >{hospitalInfo.name}</h1>
+                  <div className="mt-4 ml-7">
+                    <p className="text-sm font-semibold">Location: <span className="font-normal text-xs">{hospitalInfo.location.address}</span></p>
+                    <p className="text-sm font-semibold">Beds: <span className="font-normal text-xs">{hospitalInfo.location.beds}</span></p>
+                    <p className="text-sm font-semibold">Airport: <span className="font-normal text-xs">{hospitalInfo.location.airport}</span></p>
+                  </div>
+                </div>
+                <img src={hospitalInfo.img} alt=""  className="h-44"/>
+              </div>
 
-            <div className="w-[50%] overflow-hidden rounded-lg bg-white">
-              <h1 className="text-3xl text-center text-white font-serif px-1 py-2 mb-4 bg-violet-500">About Hospital</h1>
-              <div className="mx-3">
-                <h1 className="text-2xl font-bold">{hospitalInfo.name}</h1>
-                <p className="text-sm font-semibold">{hospitalInfo.location}</p>
+              <div className=" px-10 bg-[#faf6f6]">
                 {hospitalInfo.contents.map((content, index) => (
                   <div key={index}>
-                    {content.heading && <h2 className="text-xl font-bold mt-4">{content.heading}</h2>}
-                    {content.subHeading && <p className="text-sm font-semibold">{content.subHeading}</p>}
-                    {content.description && <p className="text-sm">{content.description}</p>}
+                    {content.heading && <h2 className="text-xl font-bold pt-4" >{content.heading}</h2>}
+                    {content.subHeading && <p className="text-justify text-sm font-semibold" >{content.subHeading}</p>}
+                    {content.description && <p className="text-justify text-sm">{content.description}</p>}
+                    {content.points && (
+                      <ul className="list-disc px-7" >
+                        {
+                          content.points.map((point, idx)=> {
+                            return(
+                              <li className="text-sm">{point}</li>
+                            )
+                          })
+                        }
+                      </ul>
+                    )}
                   </div>
                 ))}
               </div>
             </div>
+            <div className="w-[25%]">
+              <div className="w-full min-w-72 drop-shadow-xl overflow-hidden rounded-xl sticky top-12 bg-gradient-to-b from-white via-violet-50 to-violet-300">
+                <UserInfo/>
+              </div>
+            </div>
         </div>
         
-        <div className="flex justify-center items-center my-28">
-            <div className="w-[50%]">
-                <h2 className="text-xl font-bold mt-4">Contact Us</h2>
+        <div className=" mt-8 flex justify-center">
+            <div className="w-[90%] border border-black rounded-lg p-4">
+                <h2 className="text-xl font-bold">Contact Us</h2>
                 <p className="text-sm">{hospitalInfo.name}</p>
-                <p className="text-sm">{hospitalInfo.contactInfo}</p>
+                <p className="text-justify text-sm">{hospitalInfo.contactInfo}</p>
                 <p className="text-sm">Phone: +918090124099</p>
                 <p className="text-sm">Email: noman@gmail.com</p>
                 <p className="text-sm">Website: www.rootmedix.com</p>
             </div>
-            <div className="w-[25%] overflow-hidden rounded-xl">
-                <UserInfo/>
-            </div>
         </div>
+        <OurServices/>
+        <BestHospital/>
+        <Footer/>
     </>
   );
 }
