@@ -1,5 +1,5 @@
 const hospitalsData = {
-    'max saket':{
+    'maxsaket':{
         name: 'Max Super Speciality Hospital, Saket',
         img: '/img/max-saket.jpg',
         contactInfo: `1-2, Press Enclave Marg, Saket Institutional Area, New Delhi, 110017`,

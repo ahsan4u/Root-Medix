@@ -1,13 +1,14 @@
 import React, { useEffect } from "react";
 import WestIcon from '@mui/icons-material/West';
+import { Link } from "react-router-dom";
+
 
 function BestHospital() {
     const items = [
-        {name: 'Max Hospital, Saket',   img: '/max-saket.jpg',      place: 'New Delhi'},
-        {name: 'BLK Max Hospital',      img: '/blk-max.jpg',        place: 'New Delhi'},
-        {name: 'Max Hospital Dwarka',   img: '/max-dwarka.jpg',     place: 'New Delhi'},
-        {name: 'Aakash Hospital',       img: '/aakash-dwarka.jpg',  place: 'New Delhi'},
-        {name: 'Aakash Hospital',       img: '/aakash-dwarka.jpg',  place: 'New Delhi'},
+        {name: 'Max Hospital, Saket',   img: '/img/max-saket.jpg',      place: 'New Delhi', link: 'maxsaket'},
+        {name: 'BLK Max Hospital',      img: '/img/blk-max.jpg',        place: 'New Delhi', link: 'blkmax'},
+        {name: 'Max Hospital Dwarka',   img: '/img/max-dwarka.jpg',     place: 'New Delhi', link: 'maxdwarka'},
+        {name: 'Aakash Hospital',       img: '/img/aakash-dwarka.jpg',  place: 'New Delhi', link: 'aakash'},
     ];
 
     useEffect(()=> {
@@ -63,13 +64,15 @@ function BestHospital() {
                     {
                         items.map((item, idx) => {
                             return (
-                                <div key={idx} className="bestHospital inline-block sm:w-64 w-[166px] shadow-[2px_2px_5px_gray] rounded-lg sm:rounded-xl my-2 overflow-hidden cursor-pointer">
-                                    <img src={`img/${item.img}`} alt="" className="w-[100%] aspect-[16/9] object-cover" />
-                                    <div className="bestHospital-text font-bold m-1 px-1 pb-1 text-cyan-900 border rounded-md sm:rounded-lg transition-colors duration-[0.5s]">
-                                        <p className="text-xs">{item.name}{'>'}</p>
-                                        <p className="font-normal text-xs">{item.place}</p>
+                                <Link to={`hospital/${item.link}`}>
+                                    <div key={idx} className="bestHospital inline-block sm:w-64 w-[166px] shadow-[2px_2px_5px_gray] rounded-lg sm:rounded-xl my-2 overflow-hidden cursor-pointer">
+                                        <img src={item.img} alt="" className="w-[100%] aspect-[16/9] object-cover" />
+                                        <div className="bestHospital-text font-bold m-1 px-1 pb-1 text-cyan-900 border rounded-md sm:rounded-lg transition-colors duration-[0.5s]">
+                                            <p className="text-xs">{item.name}{'>'}</p>
+                                            <p className="font-normal text-xs">{item.place}</p>
+                                        </div>
                                     </div>
-                                </div>
+                                </Link>
                             );
                         })
                     }

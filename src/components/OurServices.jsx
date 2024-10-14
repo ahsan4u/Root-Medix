@@ -3,11 +3,10 @@ import WestIcon from '@mui/icons-material/West';
 
 function OurServices() {
     const items = [
-        {name: 'Talk To Expert',        img: '/talkToExpert.png'},
-        {name: 'Book Oppintment',       img: '/appointment.png'},
-        {name: 'Video Consultation',    img: '/video-consultation.png'},
-        {name: 'Second Opinion',        img: '/second-openion.png'},
-        {name: 'Second Opinion',        img: '/second-openion.png'},
+        {name: 'Talk To Expert',        img: '/img/talkToExpert.png'},
+        {name: 'Book Oppintment',       img: '/img/appointment.png'},
+        {name: 'Video Consultation',    img: '/img/video-consultation.png'},
+        {name: 'Second Opinion',        img: '/img/second-openion.png'},
     ];
     const cardWidth = 312;
     useEffect(()=> {
@@ -64,7 +63,7 @@ function OurServices() {
                         items.map((item, idx) => {
                             return (
                                 <div key={idx} className="ourServices inline-block sm:w-64 w-[166px] shadow-[2px_2px_5px_gray] rounded-xl my-2 overflow-hidden cursor-pointer">
-                                    <img src={`img/${item.img}`} alt="" className="w-[100%] aspect-[16/9] object-cover" />
+                                    <img src={item.img} alt="" className="w-[100%] aspect-[16/9] object-cover" />
                                     <p className="services-text text-center text-md font-bold m-1 py-1 rounded-lg text-cyan-900 transition-colors duration-[0.5s]">{item.name}</p>
                                 </div>
                             );

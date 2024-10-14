@@ -5,18 +5,18 @@ import WestIcon from '@mui/icons-material/West';
 
 function Treatment() {
     const items = [
-        {name: 'Cardiology',        img: '/T-cardiology.jpg'},
-        {name: 'Spine',             img: '/T-spine.jpg'},
-        {name: 'Gastroenterology',  img: '/T-gastroenterology.jpg'},
-        {name: 'Orthopadic',        img: '/T-orthopadic.png'},
-        {name: 'Urology',           img: '/T-urology.png'},
-        {name: 'Urology',           img: '/T-urology.png'},
-        {name: 'Urology',           img: '/T-urology.png'},
-        {name: 'Urology',           img: '/T-urology.png'},
-        {name: 'Urology',           img: '/T-urology.png'},
-        {name: 'Urology',           img: '/T-urology.png'},
-        {name: 'Urology',           img: '/T-urology.png'},
-        {name: 'Urology',           img: '/T-urology.png'},
+        {name: 'Cardiology',        img: '/img/T-cardiology.jpg'},
+        {name: 'Spine',             img: '/img/T-spine.jpg'},
+        {name: 'Gastroenterology',  img: '/img/T-gastroenterology.jpg'},
+        {name: 'Orthopadic',        img: '/img/T-orthopadic.png'},
+        {name: 'Urology',           img: '/img/T-urology.png'},
+        {name: 'Urology',           img: '/img/T-urology.png'},
+        {name: 'Urology',           img: '/img/T-urology.png'},
+        {name: 'Urology',           img: '/img/T-urology.png'},
+        {name: 'Urology',           img: '/img/T-urology.png'},
+        {name: 'Urology',           img: '/img/T-urology.png'},
+        {name: 'Urology',           img: '/img/T-urology.png'},
+        {name: 'Urology',           img: '/img/T-urology.png'},
     ];
 
 /* 
@@ -86,7 +86,7 @@ function Treatment() {
                     items.map((item, idx) => {
                         return (
                             <div key={idx} className="treatment inline-block sm:w-36 w-[105px] cursor-pointer shadow-[2px_2px_5px_gray] rounded-xl sm:p-2 p-1 my-2"> {/*total width: 152px */}
-                                <img src={`img/${item.img}`} alt="" className="w-[100%] aspect-[16/17.5] object-cover rounded-lg shadow-[2px_2px_5px_gray]" />
+                                <img src={item.img} alt="" className="w-[100%] aspect-[16/17.5] object-cover rounded-lg shadow-[2px_2px_5px_gray]" />
                                 <p className="treatment-name sm:text-[15px] text-[11px] text-center font-bold sm:mt-3 mt-2 mb-1 sm:p-0 p-1   text-cyan-900 border rounded-lg transition-colors duration-[0.5s]">{item.name}</p>
                             </div>
                         );
