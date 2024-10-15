@@ -37,9 +37,9 @@ function HospitalInfo({ name }) {
           <div className=" px-2 sm:px-10 bg-[#faf6f6]">
             {hospitalInfo.contents.map((content, index) => (
               <div key={index}>
-                {content.heading && <h2 className="text-sm sm:text-xl font-bold pt-4 sm:pt-8 pb-1 text-blue-950">{content.heading}</h2>}
-                {content.subHeading && <p className="sm:text-justify text-cyan-950 text-sm sm:text-sm pl-1" >{content.subHeading}</p>}
-                {content.description && <p className="sm:text-justify text-cyan-950 text-sm sm:text-sm pl-1">{content.description}</p>}
+                {content.heading && <h2 className="text-sm sm:text-xl font-bold pt-4 sm:pt-8 text-blue-950">{content.heading}</h2>}
+                {content.subHeading && <p className="sm:text-justify text-cyan-950 text-sm sm:text-sm pl-1 pt-1" >{content.subHeading}</p>}
+                {content.description && <p className={`sm:text-justify text-cyan-950 text-sm sm:text-sm pl-1 pt-1 ${!content.subHeading && !content.heading &&('pt-3')}`}>{content.description}</p>}
                 {content.points && (
                   <ul className="list-disc pl-5 mt-2" >
                     {
@@ -57,7 +57,7 @@ function HospitalInfo({ name }) {
             <div className="w-[85%] py-6">
               <h2 className="text-xl font-bold text-[#111b3d]">Contact Us</h2>
               <p className="ml-1 text-sm text-[#0c232c]">{hospitalInfo.name}</p>
-              <p className="ml-1 text-sm text-[#0c232c] text-justify">{hospitalInfo.contactInfo}</p>
+              <p className="ml-1 text-sm text-[#0c232c] text-justify">{hospitalInfo.location.address}</p>
               <p className="ml-1 text-sm text-[#2b190c]">Phone: <span className="text-blue-950">+918090124099</span></p>
               <p className="ml-1 text-sm text-[#2b190c]">Email: <span className="text-blue-950">noman@gmail.com</span></p>
               <p className="ml-1 text-sm text-[#2b190c]">Website: <span className="text-blue-950">www.rootmedix.com</span></p>

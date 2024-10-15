@@ -94,17 +94,7 @@ function UserInfo() {
                     <div ref={suggestRef} className="options overflow-hidden rounded-b-xl absolute bg-[#4d5a6b] text-white"></div>
                 </div>
                 
-                <input type="text"
-                ref={emailRef}  // this is just use for get there width in px to assign it to Option element
-                value={formData.email}
-                autoComplete="off"
-                onChange={setValue}
-                name="email"
-                id="email"
-                placeholder="Email Address"
-                className="block m-auto w-[80%] sm:mt-2 mt-5 py-1 text-lg sm:text-sm outline-none bg-transparent border-b-2 border-blue-400 placeholder-slate-500"/>
-                
-                <div className="m-auto w-[80%] flex sm:mt-2 mt-5 mb-6">
+                <div className="m-auto w-[80%] flex sm:mt-2 mt-5">
                     <p className="std border-b-2 border-blue-400 mr-1 w-[18%] text-lg sm:text-sm py-1">{formData.std}</p>
                     <input type="number"
                     autoComplete="off"
@@ -115,7 +105,17 @@ function UserInfo() {
                     placeholder="Contact Number"
                     className="block w-[80%] py-1 pl-1 text-lg sm:text-sm outline-none bg-transparent border-b-2 border-blue-400 placeholder-slate-500"/>
                 </div>
-
+                
+                <input type="text"
+                ref={emailRef}  // this is just use for get there width in px to assign it to Option element
+                value={formData.email}
+                autoComplete="off"
+                onChange={setValue}
+                name="email"
+                id="email"
+                placeholder="Email Address"
+                className="block m-auto w-[80%] mb-6 sm:mt-2 mt-5 py-1 text-lg sm:text-sm outline-none bg-transparent border-b-2 border-blue-400 placeholder-slate-500"/>
+                
                 <textarea
                 value={formData.msg}
                 onChange={setValue}
