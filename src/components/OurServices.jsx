@@ -8,7 +8,6 @@ function OurServices() {
         {name: 'Video Consultation',    img: '/img/video-consultation.png'},
         {name: 'Second Opinion',        img: '/img/second-openion.png'},
     ];
-    const cardWidth = 312;
     useEffect(()=> {
         let cardSpace = 0;
         document.querySelectorAll('.ourServices').forEach((treatmentCard)=> {

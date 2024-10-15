@@ -4,6 +4,9 @@ import WestIcon from '@mui/icons-material/West';
 
 
 function Treatment() {
+    const treatmentsRef = useRef([]);
+    const scrollTreatmentRef = useRef(null);
+    const treatmentContainer = useRef(null);
     const items = [
         {name: 'Cardiology',        img: '/img/T-cardiology.jpg'},
         {name: 'Spine',             img: '/img/T-spine.jpg'},
@@ -29,8 +32,8 @@ function Treatment() {
 
     useEffect(()=> {
         let cardSpace = 0;
-        document.querySelectorAll('.treatment').forEach((treatmentCard)=> {
-            const scrollCont = document.querySelector('.treatment-container').offsetWidth;
+        treatmentsRef.current.forEach((treatmentCard)=> {
+            const scrollCont = treatmentContainer.current.offsetWidth;
             let margin = 0;
             if(scrollCont < 700) {
                 margin = (scrollCont - (treatmentCard.offsetWidth*3))/6;
@@ -47,26 +50,27 @@ function Treatment() {
             treatmentCard.style.marginRight = `${margin}px`;
             cardSpace = treatmentCard.offsetWidth+(2*margin);
         });
-        document.querySelector('.scroll-treatment').style.width = `${cardSpace * items.length}px`;
+        scrollTreatmentRef.current.style.width = `${cardSpace * items.length}px`;
     }, [[items.length]])
 
     function nextTreatment() {
-        const scrollValue = document.querySelector('.treatment').offsetWidth + (2 * Number(document.querySelector('.treatment').style.marginLeft.replace('px', '')));
-        let idx = 1;
+        const scrollValue = treatmentsRef.current[0].offsetWidth +1 + (2 * Number(treatmentsRef.current[0].style.marginLeft.replace('px', '')));
+        console.log(scrollValue)
+        let idx = 2;
         const intervalId = setInterval(()=>{
-            document.querySelector('.treatment-container').scrollBy(-4, 0);
-            idx +=4;
-            if(idx >= scrollValue) clearInterval(intervalId);
+            treatmentContainer.current.scrollBy(-2, 0);
+            idx +=2;
+            if(idx >= scrollValue+0.9) clearInterval(intervalId);
         }, 1);
     }
     
     function prevTreatment() {
-        const scrollValue = document.querySelector('.treatment').offsetWidth + (2 * Number(document.querySelector('.treatment').style.marginLeft.replace('px', '')));
-        let idx = 1;
+        const scrollValue = treatmentsRef.current[0].offsetWidth + (2 * (treatmentsRef.current[0].style.marginLeft.replace('px', '')));
+        let idx = 2;
         const intervalId = setInterval(()=>{
-            document.querySelector('.treatment-container').scrollBy(4, 0);
-            idx +=4;
-            if(idx >= scrollValue) clearInterval(intervalId);
+            treatmentContainer.current.scrollBy(2, 0);
+            idx +=2;
+            if(idx >= scrollValue+0.9) clearInterval(intervalId);
         }, 1);
     }
 
@@ -80,12 +84,12 @@ function Treatment() {
                     </div>
             </div>
 
-            <div className="treatment-container overflow-x-scroll">
-                <div className="scroll-treatment">
+            <div ref={treatmentContainer} className="treatment-container overflow-x-scroll">
+                <div ref={scrollTreatmentRef} className="scroll-treatment">
                 {
                     items.map((item, idx) => {
                         return (
-                            <div key={idx} className="treatment inline-block sm:w-36 w-[105px] cursor-pointer shadow-[2px_2px_5px_gray] rounded-xl sm:p-2 p-1 my-2"> {/*total width: 152px */}
+                            <div key={idx} ref={elmnt=>treatmentsRef.current[idx]=elmnt} className="treatment inline-block sm:w-36 w-[105px] cursor-pointer shadow-[2px_2px_5px_gray] rounded-xl sm:p-2 p-1 my-2"> {/*total width: 152px */}
                                 <img src={item.img} alt="" className="w-[100%] aspect-[16/17.5] object-cover rounded-lg shadow-[2px_2px_5px_gray]" />
                                 <p className="treatment-name sm:text-[15px] text-[11px] text-center font-bold sm:mt-3 mt-2 mb-1 sm:p-0 p-1   text-cyan-900 border rounded-lg transition-colors duration-[0.5s]">{item.name}</p>
                             </div>

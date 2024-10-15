@@ -5,11 +5,6 @@ function Footer() {
 
     return(
         <>
-            {window.innerWidth < 640 && (
-            <div className="overflow-hidden rounded-[20px] border border-dotted border-[#64748b] w-[100vw] sm:mt-2 sm:mb-0 mb-20 m-auto">
-                <UserInfo/>
-            </div>)}
-
             <div className="footer-container text-white bg-[rgb(61,61,61)]">
                 <button className='block m-auto text-xl rounded-full bg-[rgb(62,161,181)] px-8 py-2 relative bottom-5' style={{fontFamily: `"Ubuntu", sans-serif`, fontWeight: '500'}}>Consultant</button>
                 <div className="link-column grid sm:grid-cols-4 grid-cols-1 pb-10 justify-items-center">

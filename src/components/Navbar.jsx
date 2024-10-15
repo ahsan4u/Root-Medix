@@ -3,6 +3,7 @@ import SearchIcon from '@mui/icons-material/Search';
 import Lottie from 'lottie-react';
 import menuEffect from '../animated Icon/menuV2.json';
 import { useEffect, useRef } from 'react';
+import { Link } from 'react-router-dom';
 
 function Navbar() {
     const menubarRef = useRef(null);
@@ -27,11 +28,10 @@ function Navbar() {
                 marginDiv.style.marginTop = `${navBar.offsetHeight}px`;
                 navBar.style.cssText = 'position: fixed; top: 0; background: rgba(255, 255, 255, 0.121); backdrop-filter: blur(6px);';
             } else {
-                navBar.style.cssText = '';
                 marginDiv.style.marginTop = `0`;
+                navBar.style.cssText = '';
             }
         } else {
-            
             if(document.querySelector('.navBarToggle').style.opacity == '1') {
                 window.scrollTo(window.scrollX, window.scrollY);
             }
@@ -45,7 +45,7 @@ function Navbar() {
             document.querySelector('.MobileSearchCont .inputDiv').style.width = '46px';
             document.querySelector('.MobileSearchCont .inputDiv').style.background = 'transparent';
             document.querySelector('.MobileSearchCont .inputDiv input').style.display = 'none';
-            document.querySelector('.MobileSearchCont').style.cssText = 'top: 11px; right: 58px; transition: top 0.5s ease-in-out, right 0.2s ease-in-out;';
+            document.querySelector('.MobileSearchCont').style.cssText = 'top: 11px; right: 62px; transition: top 0.5s ease-in-out, right 0.2s ease-in-out;';
             document.querySelector('.langSidebarDiv').style.width = '188px';
             document.querySelector('.MobileSearchCont .inputDiv button').style.margin = null;
             document.querySelector('.MobileSearchCont .inputDiv button').style.background = 'transparent';
@@ -85,7 +85,7 @@ function Navbar() {
             inputDiv.style.width = '46px';
             input.style.display = 'none';
             inputDiv.style.background = 'transparent';
-            document.querySelector('.MobileSearchCont').style.cssText = 'top: 11px; right: 58px; transition: top 0.5s ease-in-out, right 0.2s ease-in-out;';
+            document.querySelector('.MobileSearchCont').style.cssText = 'top: 11px; right: 62px; transition: top 0.5s ease-in-out, right 0.2s ease-in-out;';
             document.querySelector('.langSidebarDiv').style.width = '188px';
             document.querySelector('.MobileSearchCont .inputDiv button').style.margin = null;
             document.querySelector('.MobileSearchCont .inputDiv button').style.background = 'transparent';
@@ -121,7 +121,7 @@ function Navbar() {
             </div>
 
             {window.innerWidth < 640 && (
-                <div className='MobileSearchCont fixed top-[11px] right-[58px] z-20'>
+                <div className='MobileSearchCont fixed top-[11px] right-[62px] z-20'>
                 <div className='inputDiv rounded-full overflow-hidden w-[46px] flex justify-end items-center transition-all duration-500'>
                     <input type="text"
                     name="search"
@@ -134,14 +134,14 @@ function Navbar() {
 
             <ol className='navBar z-50 flex justify-end sm:justify-start w-full sm:transition-colors sm:duration-[0.5s]'>
             <div className='navBarToggle sm:flex bg-[rgb(82,82,82)] fixed z-50 top-16 sm:static w-0 overflow-hidden opacity-0 sm:opacity-100 sm:w-auto h-full sm:h-auto sm:gap-4 sm:pl-4  sm:py-1 font-serif text-md sm:text-lg sm:bg-[transparent] transition-all duration-500'>
-                <li className='text-white sm:text-black sm:bg-gradient-to-r sm:from-blue-200 sm:via-cyan-100 sm:to-blue-200  sm:hover:bg-gradient-to-r sm:hover:from-blue-300 sm:hover:via-cyan-200 sm:hover:to-blue-300 border-b border-gray-500 sm:border sm:border-gray-400 sm:rounded-full px-6 py-2 sm:py-[3px] cursor-pointer'><HomeIcon className='sm:text-blue-900'/></li>
-                <li className='text-white sm:text-black sm:bg-gradient-to-r sm:from-blue-200 sm:via-cyan-100 sm:to-blue-200  sm:hover:bg-gradient-to-r sm:hover:from-blue-300 sm:hover:via-cyan-200 sm:hover:to-blue-300 border-b border-gray-500 sm:border sm:border-gray-400 sm:rounded-full px-4 py-2 sm:py-1 cursor-pointer'>Doctor</li>
-                <li className='text-white sm:text-black sm:bg-gradient-to-r sm:from-blue-200 sm:via-cyan-100 sm:to-blue-200  sm:hover:bg-gradient-to-r sm:hover:from-blue-300 sm:hover:via-cyan-200 sm:hover:to-blue-300 border-b border-gray-500 sm:border sm:border-gray-400 sm:rounded-full px-4 py-2 sm:py-1 cursor-pointer'>Hospital</li>
-                <li className='text-white sm:text-black sm:bg-gradient-to-r sm:from-blue-200 sm:via-cyan-100 sm:to-blue-200  sm:hover:bg-gradient-to-r sm:hover:from-blue-300 sm:hover:via-cyan-200 sm:hover:to-blue-300 border-b border-gray-500 sm:border sm:border-gray-400 sm:rounded-full px-4 py-2 sm:py-1 cursor-pointer'>Treatment Cost</li>
-                <li className='text-white sm:text-black sm:bg-gradient-to-r sm:from-blue-200 sm:via-cyan-100 sm:to-blue-200  sm:hover:bg-gradient-to-r sm:hover:from-blue-300 sm:hover:via-cyan-200 sm:hover:to-blue-300 border-b border-gray-500 sm:border sm:border-gray-400 sm:rounded-full px-4 py-2 sm:py-1 cursor-pointer'>Medical Visa</li>
-                <li className='text-white sm:text-black sm:bg-gradient-to-r sm:from-blue-200 sm:via-cyan-100 sm:to-blue-200  sm:hover:bg-gradient-to-r sm:hover:from-blue-300 sm:hover:via-cyan-200 sm:hover:to-blue-300 border-b border-gray-500 sm:border sm:border-gray-400 sm:rounded-full px-4 py-2 sm:py-1 cursor-pointer'>Contact us</li>
-                <li className='text-white sm:text-black sm:bg-gradient-to-r sm:from-blue-200 sm:via-cyan-100 sm:to-blue-200  sm:hover:bg-gradient-to-r sm:hover:from-blue-300 sm:hover:via-cyan-200 sm:hover:to-blue-300 border-b border-gray-500 sm:border sm:border-gray-400 sm:rounded-full px-4 py-2 sm:py-1 cursor-pointer'>About us</li>
-                <li className='text-white sm:text-black sm:bg-gradient-to-r sm:from-blue-200 sm:via-cyan-100 sm:to-blue-200  sm:hover:bg-gradient-to-r sm:hover:from-blue-300 sm:hover:via-cyan-200 sm:hover:to-blue-300 border-b border-gray-500 sm:border sm:border-gray-400 sm:rounded-full px-4 py-2 sm:py-1 cursor-pointer'>Blogs</li>
+                <Link to='/'><li className='text-white sm:text-black sm:bg-gradient-to-r sm:from-blue-200 sm:via-cyan-100 sm:to-blue-200  sm:hover:bg-gradient-to-r sm:hover:from-blue-300 sm:hover:via-cyan-200 sm:hover:to-blue-300 border-b border-gray-500 sm:border sm:border-gray-400 sm:rounded-full px-6 py-2 sm:py-[3px] cursor-pointer'><HomeIcon className='sm:text-blue-900'/></li></Link>
+                <Link to='/'><li className='text-white sm:text-black sm:bg-gradient-to-r sm:from-blue-200 sm:via-cyan-100 sm:to-blue-200  sm:hover:bg-gradient-to-r sm:hover:from-blue-300 sm:hover:via-cyan-200 sm:hover:to-blue-300 border-b border-gray-500 sm:border sm:border-gray-400 sm:rounded-full px-4 py-2 sm:py-1 cursor-pointer'>Doctor</li></Link>
+                <Link to='/'><li className='text-white sm:text-black sm:bg-gradient-to-r sm:from-blue-200 sm:via-cyan-100 sm:to-blue-200  sm:hover:bg-gradient-to-r sm:hover:from-blue-300 sm:hover:via-cyan-200 sm:hover:to-blue-300 border-b border-gray-500 sm:border sm:border-gray-400 sm:rounded-full px-4 py-2 sm:py-1 cursor-pointer'>Hospital</li></Link>
+                <Link to='/'><li className='text-white sm:text-black sm:bg-gradient-to-r sm:from-blue-200 sm:via-cyan-100 sm:to-blue-200  sm:hover:bg-gradient-to-r sm:hover:from-blue-300 sm:hover:via-cyan-200 sm:hover:to-blue-300 border-b border-gray-500 sm:border sm:border-gray-400 sm:rounded-full px-4 py-2 sm:py-1 cursor-pointer'>Treatment Cost</li></Link>
+                <Link to='/'><li className='text-white sm:text-black sm:bg-gradient-to-r sm:from-blue-200 sm:via-cyan-100 sm:to-blue-200  sm:hover:bg-gradient-to-r sm:hover:from-blue-300 sm:hover:via-cyan-200 sm:hover:to-blue-300 border-b border-gray-500 sm:border sm:border-gray-400 sm:rounded-full px-4 py-2 sm:py-1 cursor-pointer'>Medical Visa</li></Link>
+                <Link to='/'><li className='text-white sm:text-black sm:bg-gradient-to-r sm:from-blue-200 sm:via-cyan-100 sm:to-blue-200  sm:hover:bg-gradient-to-r sm:hover:from-blue-300 sm:hover:via-cyan-200 sm:hover:to-blue-300 border-b border-gray-500 sm:border sm:border-gray-400 sm:rounded-full px-4 py-2 sm:py-1 cursor-pointer'>Contact us</li></Link>
+                <Link to='/'><li className='text-white sm:text-black sm:bg-gradient-to-r sm:from-blue-200 sm:via-cyan-100 sm:to-blue-200  sm:hover:bg-gradient-to-r sm:hover:from-blue-300 sm:hover:via-cyan-200 sm:hover:to-blue-300 border-b border-gray-500 sm:border sm:border-gray-400 sm:rounded-full px-4 py-2 sm:py-1 cursor-pointer'>About us</li></Link>
+                <Link to='/'><li className='text-white sm:text-black sm:bg-gradient-to-r sm:from-blue-200 sm:via-cyan-100 sm:to-blue-200  sm:hover:bg-gradient-to-r sm:hover:from-blue-300 sm:hover:via-cyan-200 sm:hover:to-blue-300 border-b border-gray-500 sm:border sm:border-gray-400 sm:rounded-full px-4 py-2 sm:py-1 cursor-pointer'>Blogs</li></Link>
             </div>
             </ol>
 
