@@ -3,10 +3,10 @@ import WestIcon from '@mui/icons-material/West';
 
 function OurServices() {
     const items = [
-        {name: 'Talk To Expert',        img: '/img/talkToExpert.png'},
-        {name: 'Book Oppintment',       img: '/img/appointment.png'},
-        {name: 'Video Consultation',    img: '/img/video-consultation.png'},
-        {name: 'Second Opinion',        img: '/img/second-openion.png'},
+        {name: 'Talk To Expert',        img: './img/talkToExpert.png'},
+        {name: 'Book Oppintment',       img: './img/appointment.png'},
+        {name: 'Video Consultation',    img: './img/video-consultation.png'},
+        {name: 'Second Opinion',        img: './img/second-openion.png'},
     ];
     useEffect(()=> {
         let cardSpace = 0;

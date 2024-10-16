@@ -3,11 +3,13 @@ import UserInfo from "./UserInfo";
 import hospitalsData from "../data/hospitalsData";
 import OurServices from "./OurServices";
 import Treatment from "./Treatment";
+import treatmentCard from '../data/treatmentCard';
 
 
 function HospitalInfo({ name }) {
 
   const hospitalInfo = hospitalsData[name];
+  const particularTreatmentCard = treatmentCard[name];
 
   return (
     <>
@@ -38,14 +40,14 @@ function HospitalInfo({ name }) {
             {hospitalInfo.contents.map((content, index) => (
               <div key={index}>
                 {content.heading && <h2 className="text-sm sm:text-xl font-bold pt-4 sm:pt-8 text-blue-950">{content.heading}</h2>}
-                {content.subHeading && <p className="sm:text-justify text-cyan-950 text-sm sm:text-sm pl-1 pt-1" >{content.subHeading}</p>}
-                {content.description && <p className={`sm:text-justify text-cyan-950 text-sm sm:text-sm pl-1 pt-1 ${!content.subHeading && !content.heading &&('pt-3')}`}>{content.description}</p>}
+                {content.subHeading && <p className="sm:text-justify text-sm sm:text-sm pl-1 pt-1" >{content.subHeading}</p>}
+                {content.description && <p className={`sm:text-justify text-sm sm:text-sm pl-1 pt-1 ${!content.subHeading && !content.heading &&('pt-3')}`}>{content.description}</p>}
                 {content.points && (
                   <ul className="list-disc pl-5 mt-2" >
                     {
                       content.points.map((point, idx) => {
                         return (
-                          <li key={idx} className="sm:text-justify text-sm sm:text-sm text-[#2b190c]">{point}</li>
+                          <li key={idx} className="sm:text-justify text-sm sm:text-sm text-[#1f1209]">{point}</li>
                         )
                       })
                     }
@@ -56,11 +58,11 @@ function HospitalInfo({ name }) {
 
             <div className="w-[85%] py-6">
               <h2 className="text-xl font-bold text-[#111b3d]">Contact Us</h2>
-              <p className="ml-1 text-sm text-[#0c232c]">{hospitalInfo.name}</p>
-              <p className="ml-1 text-sm text-[#0c232c] text-justify">{hospitalInfo.location.address}</p>
-              <p className="ml-1 text-sm text-[#2b190c]">Phone: <span className="text-blue-950">+918090124099</span></p>
-              <p className="ml-1 text-sm text-[#2b190c]">Email: <span className="text-blue-950">noman@gmail.com</span></p>
-              <p className="ml-1 text-sm text-[#2b190c]">Website: <span className="text-blue-950">www.rootmedix.com</span></p>
+              <p className="ml-1 text-sm">{hospitalInfo.name}</p>
+              <p className="ml-1 text-sm text-justify">{hospitalInfo.location.address}</p>
+              <p className="ml-1 text-sm">Phone: <span className="text-blue-950">+918090124099</span></p>
+              <p className="ml-1 text-sm">Email: <span className="text-blue-950">noman@gmail.com</span></p>
+              <p className="ml-1 text-sm">Website: <span className="text-blue-950">www.rootmedix.com</span></p>
             </div>
           </div>
         </div>
@@ -71,7 +73,7 @@ function HospitalInfo({ name }) {
         </div>
       </div>
 
-      <Treatment />
+      <Treatment heading={`${hospitalInfo.name} - Treatments`} treatments={particularTreatmentCard}/>
       <OurServices />
     </>
   );

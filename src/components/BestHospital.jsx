@@ -5,10 +5,10 @@ import { Link } from "react-router-dom";
 
 function BestHospital() {
     const items = [
-        {name: 'Max Hospital, Saket',   img: '/img/max-saket.jpg',      place: 'New Delhi', link: '/hospital/maxsaket'},
-        {name: 'BLK Max Hospital',      img: '/img/blk-max.jpg',        place: 'New Delhi', link: '/hospital/blkmax'},
-        {name: 'Max Hospital Dwarka',   img: '/img/max-dwarka.jpg',     place: 'New Delhi', link: '/hospital/maxdwarka'},
-        {name: 'Aakash Hospital',       img: '/img/aakash-dwarka.jpg',  place: 'New Delhi', link: '/hospital/aakash'},
+        {name: 'Max Hospital, Saket',   img: './img/max-saket.jpg',      place: 'New Delhi', link: '/hospital/maxsaket'},
+        {name: 'BLK Max Hospital',      img: './img/blk-max.jpg',        place: 'New Delhi', link: '/hospital/blkmax'},
+        {name: 'Max Hospital Dwarka',   img: './img/max-dwarka.jpg',     place: 'New Delhi', link: '/hospital/maxdwarka'},
+        {name: 'Aakash Hospital',       img: './img/aakash-dwarka.jpg',  place: 'New Delhi', link: '/hospital/aakash'},
     ];
 
     useEffect(()=> {
