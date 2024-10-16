@@ -2,6 +2,7 @@ const express = require('express');
 const cors = require('cors');
 const bodyParser = require('body-parser');
 const nodeMailer = require('nodemailer');
+env.config() = required('env');
 
 const app = express();
 
