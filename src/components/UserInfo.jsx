@@ -50,7 +50,7 @@ function UserInfo() {
         if(formData.contact || formData.email) {
             setIsLoading(true);
             try{
-                await axios.post('http://localhost:5000/user-details/send-mail', formData);
+                await axios.post('https://root-medix.onrender.com/user-details/send-mail', formData);
                 setFormData({name: '', email: '', country: '', contact: '', std: '', msg: ''});
                 setActiveAlert(true);
 
