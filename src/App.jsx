@@ -4,6 +4,7 @@ import {Routes, Route, useLocation} from 'react-router-dom';
 import { useEffect } from 'react';
 import Navbar from './components/Navbar';
 import Footer from './components/footer';
+import InTreatment from './components/InTreatment';
 
 function App() {
   const {pathname} = useLocation();
@@ -20,6 +21,7 @@ function App() {
         <Route exact path='/hospital/blkmax' Component={()=><HospitalInfo name='blkmax'/>}/>
         <Route exact path='/hospital/maxdwarka' Component={()=><HospitalInfo name='maxdwarka'/>}/>
         <Route exact path='/hospital/aakash' Component={()=><HospitalInfo name='aakash'/>}/>
+        <Route exact path='/treatment/cardiology' Component ={()=><InTreatment name={'cardiology'}/>} />
       </Routes>
     <Footer/>
     </>
