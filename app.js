@@ -8,6 +8,12 @@ const app = express();
 
 app.use(cors());
 app.use(bodyParser.json());
+app.get('/', (req, res)=>{
+    res.send(`
+      <h1>Yeah it Works</h1>
+      <p>My Mail is: ${process.env.MY_MAIL}</P>
+    `);
+});
 app.post('/user-details/send-mail', async (req, res)=> {
     const { name, email, msg, contact, country, std } = req.body;
     const transporter = nodeMailer.createTransport({
