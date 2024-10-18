@@ -10,7 +10,7 @@ const treatmentCard = {
         {name: 'Endocrine',         img: './img/treatment/endocronology.jpg'},
         {name: 'Nephrology',        img: './img/treatment/nephrology.jpg'},
         {name: 'Oncology',          img: './img/treatment/oncology.png'},
-        {name: 'Pulmonology',       img: './img/treatment/pulmonology.jpeg'},
+        {name: 'Pulmonology',       img: './img/treatment/pulmonology.png'},
         {name: 'Neorology',         img: './img/treatment/neorology.jpg'},
     ],
 
@@ -24,7 +24,7 @@ const treatmentCard = {
         {name: 'Endocrine',         img: './img/treatment/endocronology.jpg'},
         {name: 'Nephrology',        img: './img/treatment/nephrology.jpg'},
         {name: 'Oncology',          img: './img/treatment/oncology.png'},
-        {name: 'Pulmonology',       img: './img/treatment/pulmonology.jpeg'},
+        {name: 'Pulmonology',       img: './img/treatment/pulmonology.png'},
         {name: 'Neorology',         img: './img/treatment/neorology.jpg'},
     ],
 
@@ -38,7 +38,7 @@ const treatmentCard = {
         {name: 'Endocrine',         img: './img/treatment/endocronology.jpg'},
         {name: 'Nephrology',        img: './img/treatment/nephrology.jpg'},
         {name: 'Oncology',          img: './img/treatment/oncology.png'},
-        {name: 'Pulmonology',       img: './img/treatment/pulmonology.jpeg'},
+        {name: 'Pulmonology',       img: './img/treatment/pulmonology.png'},
         {name: 'Neorology',         img: './img/treatment/neorology.jpg'},
     ],
 
@@ -52,7 +52,7 @@ const treatmentCard = {
         {name: 'Endocrine',         img: './img/treatment/endocronology.jpg'},
         {name: 'Nephrology',        img: './img/treatment/nephrology.jpg'},
         {name: 'Oncology',          img: './img/treatment/oncology.png'},
-        {name: 'Pulmonology',       img: './img/treatment/pulmonology.jpeg'},
+        {name: 'Pulmonology',       img: './img/treatment/pulmonology.png'},
         {name: 'Neorology',         img: './img/treatment/neorology.jpg'},
     ],
     
