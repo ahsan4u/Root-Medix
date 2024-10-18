@@ -1,11 +1,11 @@
 const treatmentCard = {
     
     'maxsaket':[
-        {name: 'Cardiology',        img: './img/treatment/T-cardiology.jpg'},
+        {name: 'Cardiology',        img: './img/treatment/cardiology.jpg'},
         {name: 'Spine',             img: './img/treatment/spine.png'},
-        {name: 'Gastroenterology',  img: './img/treatment/T-gastroenterology.png'},
-        {name: 'Orthopadic',        img: './img/treatment/T-orthopadic.png'},
-        {name: 'Urology',           img: './img/treatment/T-urology.png'},
+        {name: 'Gastroenterology',  img: './img/treatment/gastroenterology.png'},
+        {name: 'Orthopadic',        img: './img/treatment/orthopadic.png'},
+        {name: 'Urology',           img: './img/treatment/urology.png'},
         {name: 'Hematology',        img: './img/treatment/hematology.jpg'},
         {name: 'Endocrine',         img: './img/treatment/endocronology.jpg'},
         {name: 'Nephrology',        img: './img/treatment/nephrology.jpg'},
@@ -15,11 +15,11 @@ const treatmentCard = {
     ],
 
     'blkmax':[
-        {name: 'Cardiology',        img: './img/treatment/T-cardiology.jpg'},
+        {name: 'Cardiology',        img: './img/treatment/cardiology.jpg'},
         {name: 'Spine',             img: './img/treatment/spine.png'},
-        {name: 'Gastroenterology',  img: './img/treatment/T-gastroenterology.png'},
-        {name: 'Orthopadic',        img: './img/treatment/T-orthopadic.png'},
-        {name: 'Urology',           img: './img/treatment/T-urology.png'},
+        {name: 'Gastroenterology',  img: './img/treatment/gastroenterology.png'},
+        {name: 'Orthopadic',        img: './img/treatment/orthopadic.png'},
+        {name: 'Urology',           img: './img/treatment/urology.png'},
         {name: 'Hematology',        img: './img/treatment/hematology.jpg'},
         {name: 'Endocrine',         img: './img/treatment/endocronology.jpg'},
         {name: 'Nephrology',        img: './img/treatment/nephrology.jpg'},
@@ -29,11 +29,11 @@ const treatmentCard = {
     ],
 
     'maxdwarka':[
-        {name: 'Cardiology',        img: './img/treatment/T-cardiology.jpg'},
+        {name: 'Cardiology',        img: './img/treatment/cardiology.jpg'},
         {name: 'Spine',             img: './img/treatment/spine.png'},
-        {name: 'Gastroenterology',  img: './img/treatment/T-gastroenterology.png'},
-        {name: 'Orthopadic',        img: './img/treatment/T-orthopadic.png'},
-        {name: 'Urology',           img: './img/treatment/T-urology.png'},
+        {name: 'Gastroenterology',  img: './img/treatment/gastroenterology.png'},
+        {name: 'Orthopadic',        img: './img/treatment/orthopadic.png'},
+        {name: 'Urology',           img: './img/treatment/urology.png'},
         {name: 'Hematology',        img: './img/treatment/hematology.jpg'},
         {name: 'Endocrine',         img: './img/treatment/endocronology.jpg'},
         {name: 'Nephrology',        img: './img/treatment/nephrology.jpg'},
@@ -43,11 +43,11 @@ const treatmentCard = {
     ],
 
     'aakash':[
-        {name: 'Cardiology',        img: './img/treatment/T-cardiology.jpg'},
+        {name: 'Cardiology',        img: './img/treatment/cardiology.jpg'},
         {name: 'Spine',             img: './img/treatment/spine.png'},
-        {name: 'Gastroenterology',  img: './img/treatment/T-gastroenterology.png'},
-        {name: 'Orthopadic',        img: './img/treatment/T-orthopadic.png'},
-        {name: 'Urology',           img: './img/treatment/T-urology.png'},
+        {name: 'Gastroenterology',  img: './img/treatment/gastroenterology.png'},
+        {name: 'Orthopadic',        img: './img/treatment/orthopadic.png'},
+        {name: 'Urology',           img: './img/treatment/urology.png'},
         {name: 'Hematology',        img: './img/treatment/hematology.jpg'},
         {name: 'Endocrine',         img: './img/treatment/endocronology.jpg'},
         {name: 'Nephrology',        img: './img/treatment/nephrology.jpg'},

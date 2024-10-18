@@ -1,7 +1,7 @@
 const hospitalsData = {
     'maxsaket':{
         name: 'Max Super Speciality Hospital, Saket',
-        img: './img/max-saket.jpg',
+        img: './img/hospital/max-saket.jpg',
         location: {
           address: `Q Press Enclave Marg, Saket Institutional Area, New Delhi, 110017`,
           beds: `530+ (including 267 ICU beds)`,
@@ -73,7 +73,7 @@ const hospitalsData = {
 
     'maxdwarka': {
         name: 'Max Super Specialty Hospital, Dwarka',
-        img: './img/max-dwarka.jpg',
+        img: './img/hospital/max-dwarka.jpg',
         location: {
           address: `Plot No. 1 Sector 10, Dwarka, New Delhi, India`,
           beds: `300+ (including 120 ICU beds)`,
@@ -150,7 +150,7 @@ const hospitalsData = {
 
     'blkmax': {
         name: 'BLK-Max Super Specialty Hospital',
-        img: './img/blk-max.jpg',
+        img: './img/hospital/blk-max.jpg',
         location: {
           address: `Pusa Rd., Radha Soami Satsang, Rajendra Place, New Delhi, Delhi, 110005`,
           beds: `650  (including 170 ICU beds)`,
@@ -228,7 +228,7 @@ const hospitalsData = {
 
     'aakash': {
         name: 'Aakash Healthcare Super Speciality Hospital',
-        img: './img/aakash-dwarka.jpg',
+        img: './img/hospital/aakash-dwarka.jpg',
         location: {
           address: `Road No. 201, Sector 3, Dwarka, Delhi, India`,
           beds: `230+ (including 70 ICU beds)`,
@@ -296,7 +296,7 @@ const hospitalsData = {
 
     // '': {
     //     name: '',
-    //     img: './img/',
+    //     img: './img/hospital/',
     //     location: {
     //       address: ``,
     //       beds: ``,

@@ -18,6 +18,8 @@ const intreatmentData = {
         {name: 'ASD', info: 'Atrial Septal Defect', img: './img/asd.png'},
         {name: 'ASD', info: 'Atrial Septal Defect', img: './img/asd.png'},
         {name: 'ASD', info: 'Atrial Septal Defect', img: './img/asd.png'},
+        {name: 'ASD', info: 'Atrial Septal Defect', img: './img/asd.png'},
+        {name: 'ASD', info: 'Atrial Septal Defect', img: './img/asd.png'},
     ],
     
 };

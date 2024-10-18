@@ -6,19 +6,13 @@
     user-select: none;
 }
 
-body, html {
-    overflow-x: hidden;
-}
-
 input[type=number]::-webkit-inner-spin-button,
 input[type=number]::-webkit-outer-spin-button {
     -webkit-appearance: none;
     margin: 0;
 }
 
-::-webkit-scrollbar {
-    width: 0;
-}
+::-webkit-scrollbar { width: 0; }
 
 .scroll-treatment .treatment:hover .treatment-name {
     background-color: rgb(59, 98, 134);

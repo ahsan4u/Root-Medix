@@ -11,32 +11,12 @@ function Navbar() {
     // Scroll to hide Navbar in mobile view
     useEffect(()=> {
         if(window.innerWidth < 640) {
-            document.querySelector('.topBar').style.width = '100vw';
             document.querySelector('.topBar').style.position = 'fixed';
+            document.querySelector('.topBar').style.width = '100vw';
             document.querySelector('.MobileSearchCont .inputDiv').style.background = 'transparent';    
             document.querySelector('.forMargin').style.marginTop = `${document.querySelector('.topBar').offsetHeight}px`
         }
     },[window.innerWidth]);
-
-    window.onscroll = ()=> {
-        const topBar = document.querySelector('.topBar');
-        const navBar = document.querySelector('.navBar');
-        const marginDiv = document.querySelector('.forMargin');
-        
-        if(window.innerWidth > 640) {
-            if(window.scrollY >= topBar.offsetHeight) {
-                marginDiv.style.marginTop = `${navBar.offsetHeight}px`;
-                navBar.style.cssText = 'position: fixed; top: 0; background: rgba(255, 255, 255, 0.121); backdrop-filter: blur(6px);';
-            } else {
-                marginDiv.style.marginTop = `0`;
-                navBar.style.cssText = '';
-            }
-        } else {
-            if(document.querySelector('.navBarToggle').style.opacity == '1') {
-                window.scrollTo(window.scrollX, window.scrollY);
-            }
-        }
-    }
     
     function toggleNavbar(e) {
         menubarRef.current.setSpeed(2);
@@ -95,7 +75,7 @@ function Navbar() {
     return (
         <>
             <div className="topBar z-20 bg-gradient-to-r from-cyan-200 via-blue-300 to-blue-400 h-16 flex justify-between items-center sm:pr-3">
-                <img src="./img/logo.png" alt="Root-Medix" className=' h-10 ml-0  sm:hue-rotate-90 sm:h-14 sm:ml-2'/>
+                <Link to='/'><img src="./img/logo.png" alt="Root-Medix" className=' h-10 ml-0  sm:hue-rotate-90 sm:h-14 sm:ml-2'/></Link>
                 <div className='langSidebarDiv flex justify-between items-center w-[188px] sm:w-[550px] transition-all duration-500'>
                     <select name="language" id="lang" className='sm:shadow-none shadow-3dUnclicked active:shadow-3dClicked outline-none sm:border-none text-center text-sm sm:text-[16px] sm:w-28 w-[75px] h-10 sm:h-10 w rounded-xl bg-transparent sm:bg-gradient-to-r sm:from-blue-100 sm:via-cyan-50 sm:to-blue-100'>
                         <option value="eng">English</option>
@@ -132,8 +112,8 @@ function Navbar() {
                 </div>
             </div>)}
 
-            <ol className='navBar z-50 flex justify-end sm:justify-start w-full sm:transition-colors sm:duration-[0.5s]'>
-            <div className='navBarToggle sm:flex bg-[rgb(82,82,82)] fixed z-50 top-16 sm:static w-0 overflow-hidden opacity-0 sm:opacity-100 sm:w-auto h-full sm:h-auto sm:gap-4 sm:pl-4  sm:py-1 font-serif text-md sm:text-lg sm:bg-[transparent] transition-all duration-500'>
+            <ol className='navBar sm:sticky sm:top-0 z-50 flex justify-end sm:justify-start w-full sm:transition-colors sm:duration-[0.5s]'>
+            <div  style={{backdropFilter: 'blur(6px)'}} className='navBarToggle  sm:flex bg-[rgb(82,82,82)] fixed z-50 top-16 sm:static w-0 overflow-hidden opacity-0 sm:opacity-100 sm:w-full h-full sm:h-auto sm:gap-4 sm:pl-4  sm:py-1 font-serif text-md sm:text-lg sm:bg-[transparent] transition-all duration-500'>
                 <Link to='/'><li className='text-white sm:text-black sm:bg-gradient-to-r sm:from-blue-200 sm:via-cyan-100 sm:to-blue-200  sm:hover:bg-gradient-to-r sm:hover:from-blue-300 sm:hover:via-cyan-200 sm:hover:to-blue-300 border-b border-gray-500 sm:border sm:border-gray-400 sm:rounded-full px-6 py-2 sm:py-[3px] cursor-pointer'><HomeIcon className='sm:text-blue-900'/></li></Link>
                 <Link to='/'><li className='text-white sm:text-black sm:bg-gradient-to-r sm:from-blue-200 sm:via-cyan-100 sm:to-blue-200  sm:hover:bg-gradient-to-r sm:hover:from-blue-300 sm:hover:via-cyan-200 sm:hover:to-blue-300 border-b border-gray-500 sm:border sm:border-gray-400 sm:rounded-full px-4 py-2 sm:py-1 cursor-pointer'>Doctor</li></Link>
                 <Link to='/'><li className='text-white sm:text-black sm:bg-gradient-to-r sm:from-blue-200 sm:via-cyan-100 sm:to-blue-200  sm:hover:bg-gradient-to-r sm:hover:from-blue-300 sm:hover:via-cyan-200 sm:hover:to-blue-300 border-b border-gray-500 sm:border sm:border-gray-400 sm:rounded-full px-4 py-2 sm:py-1 cursor-pointer'>Hospital</li></Link>
@@ -144,8 +124,6 @@ function Navbar() {
                 <Link to='/'><li className='text-white sm:text-black sm:bg-gradient-to-r sm:from-blue-200 sm:via-cyan-100 sm:to-blue-200  sm:hover:bg-gradient-to-r sm:hover:from-blue-300 sm:hover:via-cyan-200 sm:hover:to-blue-300 border-b border-gray-500 sm:border sm:border-gray-400 sm:rounded-full px-4 py-2 sm:py-1 cursor-pointer'>Blogs</li></Link>
             </div>
             </ol>
-
-            <div className='forMargin'></div>
         </>
     )
 }
