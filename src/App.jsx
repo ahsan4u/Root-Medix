@@ -5,6 +5,7 @@ import { useEffect } from 'react';
 import Navbar from './components/Navbar';
 import Footer from './components/footer';
 import InTreatment from './components/InTreatment';
+import GivenTreatments from './components/GivenTreatments';
 
 function App() {
   const {pathname} = useLocation();
@@ -22,6 +23,7 @@ function App() {
         <Route exact path='/hospital/maxdwarka' Component={()=><HospitalInfo name='maxdwarka'/>}/>
         <Route exact path='/hospital/aakash' Component={()=><HospitalInfo name='aakash'/>}/>
         <Route exact path='/treatment/cardiology' Component ={()=><InTreatment name={'cardiology'}/>} />
+        <Route exact path='/giventreatments' Component = {()=><GivenTreatments type={'all'}/>}/>
       </Routes>
     <Footer/>
     </>

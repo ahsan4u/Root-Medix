@@ -1,4 +1,3 @@
-import react from 'react';
 import intreatmentData from '../data/intreatmentData';
 
 function InTreatment({name}) {

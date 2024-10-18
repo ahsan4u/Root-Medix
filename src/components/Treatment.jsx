@@ -1,20 +1,12 @@
 import React from "react";
 import { useEffect, useRef } from "react";
-import WestIcon from '@mui/icons-material/West';
 import { Link } from "react-router-dom";
+import TreatmentCard from "./TreatmentCard";
 
 function Treatment({heading, treatments}) {
     const treatmentsRef = useRef([]);
     const scrollTreatmentRef = useRef(null);
     const treatmentContainer = useRef(null);
-
-/* 
-    card total width: 152px
-    margin for 7 card is 322
-    margin for 8 card is 368
-    card width for 7 is 1064 min total 1386
-    card width for 8 is 1216 min total 1584
-*/
 
     useEffect(()=> {
         let cardSpace = 0;
@@ -73,6 +65,7 @@ function Treatment({heading, treatments}) {
                         <button onClick={nextTreatment} className="w-8 sm:w-11 h-6 sm:h-8 flex justify-center items-center bg-transparent text-xl font-bold shadow-3dUnclicked active:shadow-3dClicked rounded-md sm:rounded-full mr-4"><WestIcon className="text-white w-8 h-full" fontSize="small"/></button>
                         <button onClick={prevTreatment} className="w-8 sm:w-11 h-6 sm:h-8 flex justify-center items-center bg-transparent text-xl font-bold shadow-3dUnclicked active:shadow-3dClicked rounded-md sm:rounded-full "><WestIcon className="w-8 text-white rotate-180" fontSize="small"/></button>
                 </div> */}
+                <Link to='/giventreatments' className="font-bold">See More...</Link>
             </div>
 
             <div ref={treatmentContainer} className="treatment-container overflow-x-scroll">
@@ -81,10 +74,10 @@ function Treatment({heading, treatments}) {
                     treatments.map((treatment, idx) => {
                         return (
                             <Link  key={idx} to={`/treatment/cardiology`}>
-                            <div ref={elmnt=>treatmentsRef.current[idx]=elmnt} className="treatment inline-block sm:w-36 w-[105px] cursor-pointer shadow-[2px_2px_5px_gray] rounded-xl sm:p-2 p-1 my-2"> {/*total width: 152px */}
-                                <img src={treatment.img} alt="" className="w-[100%] aspect-[16/17.5] object-cover rounded-lg shadow-[2px_2px_5px_gray]" />
-                                <p className="treatment-name sm:text-[15px] text-[11px] text-center font-bold sm:mt-3 mt-2 mb-1 sm:p-0 p-1   text-cyan-900 border rounded-lg transition-colors duration-[0.5s]">{treatment.name}</p>
-                            </div>
+                            <TreatmentCard
+                                name={treatment.name}
+                                img={treatment.img} 
+                                ref={elmnt=>treatmentsRef.current[idx]=elmnt}/>
                             </Link>
                         );
                     })

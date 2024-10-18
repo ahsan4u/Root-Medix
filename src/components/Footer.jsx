@@ -1,6 +1,3 @@
-import react from 'react';
-import UserInfo from './UserInfo';
-
 function Footer() {
 
     return(

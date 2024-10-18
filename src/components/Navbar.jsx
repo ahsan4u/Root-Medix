@@ -7,16 +7,6 @@ import { Link } from 'react-router-dom';
 
 function Navbar() {
     const menubarRef = useRef(null);
-
-    // Scroll to hide Navbar in mobile view
-    useEffect(()=> {
-        if(window.innerWidth < 640) {
-            document.querySelector('.topBar').style.position = 'fixed';
-            document.querySelector('.topBar').style.width = '100vw';
-            document.querySelector('.MobileSearchCont .inputDiv').style.background = 'transparent';    
-            document.querySelector('.forMargin').style.marginTop = `${document.querySelector('.topBar').offsetHeight}px`
-        }
-    },[window.innerWidth]);
     
     function toggleNavbar(e) {
         menubarRef.current.setSpeed(2);
@@ -74,7 +64,7 @@ function Navbar() {
     
     return (
         <>
-            <div className="topBar z-20 bg-gradient-to-r from-cyan-200 via-blue-300 to-blue-400 h-16 flex justify-between items-center sm:pr-3">
+            <div className="topBar sticky top-0 sm:static z-20 bg-gradient-to-r from-cyan-200 via-blue-300 to-blue-400 h-16 flex justify-between items-center sm:pr-3">
                 <Link to='/'><img src="./img/logo.png" alt="Root-Medix" className=' h-10 ml-0  sm:hue-rotate-90 sm:h-14 sm:ml-2'/></Link>
                 <div className='langSidebarDiv flex justify-between items-center w-[188px] sm:w-[550px] transition-all duration-500'>
                     <select name="language" id="lang" className='sm:shadow-none shadow-3dUnclicked active:shadow-3dClicked outline-none sm:border-none text-center text-sm sm:text-[16px] sm:w-28 w-[75px] h-10 sm:h-10 w rounded-xl bg-transparent sm:bg-gradient-to-r sm:from-blue-100 sm:via-cyan-50 sm:to-blue-100'>
