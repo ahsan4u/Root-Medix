@@ -64,15 +64,15 @@ function Navbar() {
     
     return (
         <>
-            <div className="topBar sticky top-0 sm:static z-20 bg-gradient-to-r from-cyan-200 via-blue-300 to-blue-400 h-16 flex justify-between items-center sm:pr-3">
-                <Link to='/'><img src="./img/logo.png" alt="Root-Medix" className=' h-10 ml-0  sm:hue-rotate-90 sm:h-14 sm:ml-2'/></Link>
-                <div className='langSidebarDiv flex justify-between items-center w-[188px] sm:w-[550px] transition-all duration-500'>
-                    <select name="language" id="lang" className='sm:shadow-none shadow-3dUnclicked active:shadow-3dClicked outline-none sm:border-none text-center text-sm sm:text-[16px] sm:w-28 w-[75px] h-10 sm:h-10 w rounded-xl bg-transparent sm:bg-gradient-to-r sm:from-blue-100 sm:via-cyan-50 sm:to-blue-100'>
+            <div className="topBar sticky top-0 lg:static z-20 bg-gradient-to-r from-cyan-200 via-blue-300 to-blue-400 h-16 flex justify-between items-center lg:pr-3">
+                <Link to='/'><img src="./img/logo.png" alt="Root-Medix" className=' h-10 ml-0  lg:hue-rotate-90 lg:h-14 lg:ml-2'/></Link>
+                <div className='langSidebarDiv flex justify-between items-center w-[188px] lg:w-[550px] transition-all duration-500'>
+                    <select name="language" id="lang" className='lg:shadow-none shadow-3dUnclicked active:shadow-3dClicked outline-none lg:border-none text-center text-lg lg:text-[16px] lg:w-28 w-[75px] h-10 lg:h-10 w rounded-xl bg-transparent lg:bg-gradient-to-r lg:from-blue-100 lg:via-cyan-50 lg:to-blue-100'>
                         <option value="eng">English</option>
                         <option value="hin">Hindi</option>
                         <option value="arab">Arabic</option>
                     </select>
-                    {window.innerWidth > 640 && (
+                    {window.innerWidth > 1020 && (
                     <div className='bg-gradient-to-r from-blue-50 via-cyan-50 to-blue-50 rounded-full overflow-hidden flex items-center'>
                         <input type="text"
                         name="search"
@@ -82,7 +82,7 @@ function Navbar() {
                         <button className='bg-blue-400 aspect-[1/1] mx-0.5 w-9 rounded-full'><SearchIcon className='text-white'/></button>
                     </div>)}
 
-                    {window.innerWidth < 640 && (
+                    {window.innerWidth < 1020 && (
                         <button onClick={toggleNavbar} className='sidebarBtn p-[9px] bg-transparent mr-2 rounded-full shadow-3dUnclicked active:shadow-3dClicked z-50 transition-colors duration-500'>
                             <Lottie lottieRef={menubarRef} animationData={menuEffect} loop={false} autoplay={false} className='w-7 h-7'/>
                         </button>
@@ -90,7 +90,7 @@ function Navbar() {
                 </div>
             </div>
 
-            {window.innerWidth < 640 && (
+            {window.innerWidth < 1020 && (
                 <div className='MobileSearchCont fixed top-[11px] right-[62px] z-20'>
                 <div className='inputDiv rounded-full overflow-hidden w-[46px] flex justify-end items-center transition-all duration-500'>
                     <input type="text"
@@ -102,16 +102,16 @@ function Navbar() {
                 </div>
             </div>)}
 
-            <ol className='navBar sm:sticky sm:top-0 z-50 flex justify-end sm:justify-start w-full'>
-            <div  style={{backdropFilter: 'blur(6px)'}} className='navBarToggle  sm:flex bg-[rgb(82,82,82)] fixed z-50 top-16 sm:static w-0 overflow-hidden opacity-0 sm:opacity-100 sm:w-full h-full sm:h-auto sm:gap-4 sm:pl-4  sm:py-1 font-serif text-md sm:text-lg sm:bg-[transparent] transition-all duration-500'>
-                <Link to='/'><li className='text-white sm:text-black sm:bg-gradient-to-r sm:from-blue-200 sm:via-cyan-100 sm:to-blue-200  sm:hover:bg-gradient-to-r sm:hover:from-blue-300 sm:hover:via-cyan-200 sm:hover:to-blue-300 border-b border-gray-500 sm:border sm:border-gray-400 sm:rounded-full px-6 py-2 sm:py-[3px] cursor-pointer'><HomeIcon className='sm:text-blue-900'/></li></Link>
-                <Link to='/'><li className='text-white sm:text-black sm:bg-gradient-to-r sm:from-blue-200 sm:via-cyan-100 sm:to-blue-200  sm:hover:bg-gradient-to-r sm:hover:from-blue-300 sm:hover:via-cyan-200 sm:hover:to-blue-300 border-b border-gray-500 sm:border sm:border-gray-400 sm:rounded-full px-4 py-2 sm:py-1 cursor-pointer'>Doctor</li></Link>
-                <Link to='/'><li className='text-white sm:text-black sm:bg-gradient-to-r sm:from-blue-200 sm:via-cyan-100 sm:to-blue-200  sm:hover:bg-gradient-to-r sm:hover:from-blue-300 sm:hover:via-cyan-200 sm:hover:to-blue-300 border-b border-gray-500 sm:border sm:border-gray-400 sm:rounded-full px-4 py-2 sm:py-1 cursor-pointer'>Hospital</li></Link>
-                <Link to='/'><li className='text-white sm:text-black sm:bg-gradient-to-r sm:from-blue-200 sm:via-cyan-100 sm:to-blue-200  sm:hover:bg-gradient-to-r sm:hover:from-blue-300 sm:hover:via-cyan-200 sm:hover:to-blue-300 border-b border-gray-500 sm:border sm:border-gray-400 sm:rounded-full px-4 py-2 sm:py-1 cursor-pointer'>Treatment Cost</li></Link>
-                <Link to='/'><li className='text-white sm:text-black sm:bg-gradient-to-r sm:from-blue-200 sm:via-cyan-100 sm:to-blue-200  sm:hover:bg-gradient-to-r sm:hover:from-blue-300 sm:hover:via-cyan-200 sm:hover:to-blue-300 border-b border-gray-500 sm:border sm:border-gray-400 sm:rounded-full px-4 py-2 sm:py-1 cursor-pointer'>Medical Visa</li></Link>
-                <Link to='/'><li className='text-white sm:text-black sm:bg-gradient-to-r sm:from-blue-200 sm:via-cyan-100 sm:to-blue-200  sm:hover:bg-gradient-to-r sm:hover:from-blue-300 sm:hover:via-cyan-200 sm:hover:to-blue-300 border-b border-gray-500 sm:border sm:border-gray-400 sm:rounded-full px-4 py-2 sm:py-1 cursor-pointer'>Contact us</li></Link>
-                <Link to='/'><li className='text-white sm:text-black sm:bg-gradient-to-r sm:from-blue-200 sm:via-cyan-100 sm:to-blue-200  sm:hover:bg-gradient-to-r sm:hover:from-blue-300 sm:hover:via-cyan-200 sm:hover:to-blue-300 border-b border-gray-500 sm:border sm:border-gray-400 sm:rounded-full px-4 py-2 sm:py-1 cursor-pointer'>About us</li></Link>
-                <Link to='/'><li className='text-white sm:text-black sm:bg-gradient-to-r sm:from-blue-200 sm:via-cyan-100 sm:to-blue-200  sm:hover:bg-gradient-to-r sm:hover:from-blue-300 sm:hover:via-cyan-200 sm:hover:to-blue-300 border-b border-gray-500 sm:border sm:border-gray-400 sm:rounded-full px-4 py-2 sm:py-1 cursor-pointer'>Blogs</li></Link>
+            <ol className='navBar lg:sticky md:sticky lg:top-0 z-50 flex justify-end lg:justify-start w-full'>
+            <div  style={{backdropFilter: 'blur(6px)'}} className='navBarToggle  lg:flex bg-[rgb(82,82,82)] fixed z-50 top-16 lg:static w-0 overflow-hidden opacity-0 lg:opacity-100 lg:w-full h-full lg:h-auto lg:gap-4 lg:pl-4  lg:py-1 font-serif text-md lg:text-lg lg:bg-[transparent] transition-all duration-500'>
+                <Link to='/'><li className='text-white lg:text-black lg:bg-gradient-to-r lg:from-blue-200 lg:via-cyan-100 lg:to-blue-200  lg:hover:bg-gradient-to-r lg:hover:from-blue-300 lg:hover:via-cyan-200 lg:hover:to-blue-300 border-b border-gray-500 lg:border lg:border-gray-400 lg:rounded-full px-6 py-2 lg:py-[3px] cursor-pointer'><HomeIcon className='lg:text-blue-900'/></li></Link>
+                <Link to='/'><li className='text-white lg:text-black lg:bg-gradient-to-r lg:from-blue-200 lg:via-cyan-100 lg:to-blue-200  lg:hover:bg-gradient-to-r lg:hover:from-blue-300 lg:hover:via-cyan-200 lg:hover:to-blue-300 border-b border-gray-500 lg:border lg:border-gray-400 lg:rounded-full px-4 py-2 lg:py-1 cursor-pointer'>Doctor</li></Link>
+                <Link to='/'><li className='text-white lg:text-black lg:bg-gradient-to-r lg:from-blue-200 lg:via-cyan-100 lg:to-blue-200  lg:hover:bg-gradient-to-r lg:hover:from-blue-300 lg:hover:via-cyan-200 lg:hover:to-blue-300 border-b border-gray-500 lg:border lg:border-gray-400 lg:rounded-full px-4 py-2 lg:py-1 cursor-pointer'>Hospital</li></Link>
+                <Link to='/'><li className='text-white lg:text-black lg:bg-gradient-to-r lg:from-blue-200 lg:via-cyan-100 lg:to-blue-200  lg:hover:bg-gradient-to-r lg:hover:from-blue-300 lg:hover:via-cyan-200 lg:hover:to-blue-300 border-b border-gray-500 lg:border lg:border-gray-400 lg:rounded-full px-4 py-2 lg:py-1 cursor-pointer'>Treatment Cost</li></Link>
+                <Link to='/'><li className='text-white lg:text-black lg:bg-gradient-to-r lg:from-blue-200 lg:via-cyan-100 lg:to-blue-200  lg:hover:bg-gradient-to-r lg:hover:from-blue-300 lg:hover:via-cyan-200 lg:hover:to-blue-300 border-b border-gray-500 lg:border lg:border-gray-400 lg:rounded-full px-4 py-2 lg:py-1 cursor-pointer'>Medical Visa</li></Link>
+                <Link to='/'><li className='text-white lg:text-black lg:bg-gradient-to-r lg:from-blue-200 lg:via-cyan-100 lg:to-blue-200  lg:hover:bg-gradient-to-r lg:hover:from-blue-300 lg:hover:via-cyan-200 lg:hover:to-blue-300 border-b border-gray-500 lg:border lg:border-gray-400 lg:rounded-full px-4 py-2 lg:py-1 cursor-pointer'>Contact us</li></Link>
+                <Link to='/'><li className='text-white lg:text-black lg:bg-gradient-to-r lg:from-blue-200 lg:via-cyan-100 lg:to-blue-200  lg:hover:bg-gradient-to-r lg:hover:from-blue-300 lg:hover:via-cyan-200 lg:hover:to-blue-300 border-b border-gray-500 lg:border lg:border-gray-400 lg:rounded-full px-4 py-2 lg:py-1 cursor-pointer'>About us</li></Link>
+                <Link to='/'><li className='text-white lg:text-black lg:bg-gradient-to-r lg:from-blue-200 lg:via-cyan-100 lg:to-blue-200  lg:hover:bg-gradient-to-r lg:hover:from-blue-300 lg:hover:via-cyan-200 lg:hover:to-blue-300 border-b border-gray-500 lg:border lg:border-gray-400 lg:rounded-full px-4 py-2 lg:py-1 cursor-pointer'>Blogs</li></Link>
             </div>
             </ol>
         </>

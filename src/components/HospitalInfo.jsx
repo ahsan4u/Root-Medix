@@ -3,13 +3,13 @@ import UserInfo from "./UserInfo";
 import hospitalsData from "../data/hospitalsData";
 import OurServices from "./OurServices";
 import Treatment from "./Treatment";
-import treatmentCard from '../data/treatmentCard';
+import treatmentCardData from '../data/treatmentCardData';
 
 
 function HospitalInfo({ name }) {
 
   const hospitalInfo = hospitalsData[name];
-  const particularTreatmentCard = treatmentCard[name];
+  const particularTreatmentCard = treatmentCardData[name];
 
   return (
     <>

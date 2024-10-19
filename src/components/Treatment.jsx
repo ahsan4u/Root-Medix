@@ -9,7 +9,6 @@ function Treatment({heading, treatments}) {
     const treatmentContainer = useRef(null);
 
     useEffect(()=> {
-        let cardSpace = 0;
         treatmentsRef.current.forEach((treatmentCard)=> {
             const scrollCont = treatmentContainer.current.offsetWidth;
             let margin = 0;
@@ -26,9 +25,7 @@ function Treatment({heading, treatments}) {
             }
             treatmentCard.style.marginLeft = `${margin}px`;
             treatmentCard.style.marginRight = `${margin}px`;
-            cardSpace = treatmentCard.offsetWidth+(2*margin);
         });
-        scrollTreatmentRef.current.style.width = `${cardSpace * treatments.length}px`;
     }, [treatments.length])
 
     // function nextTreatment() {
@@ -69,11 +66,11 @@ function Treatment({heading, treatments}) {
             </div>
 
             <div ref={treatmentContainer} className="treatment-container overflow-x-scroll">
-                <div ref={scrollTreatmentRef} className="scroll-treatment">
+                <div ref={scrollTreatmentRef} className="scroll-treatment flex flex-nowrap">
                 {
                     treatments.map((treatment, idx) => {
                         return (
-                            <Link  key={idx} to={`/treatment/cardiology`}>
+                            <Link key={idx} to={`/treatment/cardiology`}>
                             <TreatmentCard
                                 name={treatment.name}
                                 img={treatment.img} 

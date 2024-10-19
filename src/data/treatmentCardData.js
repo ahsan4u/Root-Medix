@@ -1,4 +1,4 @@
-const treatmentCard = {
+export default {
     
     'maxsaket':[
         {name: 'Cardiology',        img: './img/treatment/cardiology.jpg'},
@@ -7,7 +7,7 @@ const treatmentCard = {
         {name: 'Orthopadic',        img: './img/treatment/orthopadic.png'},
         {name: 'Urology',           img: './img/treatment/urology.png'},
         {name: 'Hematology',        img: './img/treatment/hematology.jpg'},
-        {name: 'Endocrine',         img: './img/treatment/endocronology.jpg'},
+        {name: 'Endocrine',         img: './img/treatment/endocronology.png'},
         {name: 'Nephrology',        img: './img/treatment/nephrology.jpg'},
         {name: 'Oncology',          img: './img/treatment/oncology.png'},
         {name: 'Pulmonology',       img: './img/treatment/pulmonology.png'},
@@ -21,7 +21,7 @@ const treatmentCard = {
         {name: 'Orthopadic',        img: './img/treatment/orthopadic.png'},
         {name: 'Urology',           img: './img/treatment/urology.png'},
         {name: 'Hematology',        img: './img/treatment/hematology.jpg'},
-        {name: 'Endocrine',         img: './img/treatment/endocronology.jpg'},
+        {name: 'Endocrine',         img: './img/treatment/endocronology.png'},
         {name: 'Nephrology',        img: './img/treatment/nephrology.jpg'},
         {name: 'Oncology',          img: './img/treatment/oncology.png'},
         {name: 'Pulmonology',       img: './img/treatment/pulmonology.png'},
@@ -35,7 +35,7 @@ const treatmentCard = {
         {name: 'Orthopadic',        img: './img/treatment/orthopadic.png'},
         {name: 'Urology',           img: './img/treatment/urology.png'},
         {name: 'Hematology',        img: './img/treatment/hematology.jpg'},
-        {name: 'Endocrine',         img: './img/treatment/endocronology.jpg'},
+        {name: 'Endocrine',         img: './img/treatment/endocronology.png'},
         {name: 'Nephrology',        img: './img/treatment/nephrology.jpg'},
         {name: 'Oncology',          img: './img/treatment/oncology.png'},
         {name: 'Pulmonology',       img: './img/treatment/pulmonology.png'},
@@ -49,7 +49,7 @@ const treatmentCard = {
         {name: 'Orthopadic',        img: './img/treatment/orthopadic.png'},
         {name: 'Urology',           img: './img/treatment/urology.png'},
         {name: 'Hematology',        img: './img/treatment/hematology.jpg'},
-        {name: 'Endocrine',         img: './img/treatment/endocronology.jpg'},
+        {name: 'Endocrine',         img: './img/treatment/endocronology.png'},
         {name: 'Nephrology',        img: './img/treatment/nephrology.jpg'},
         {name: 'Oncology',          img: './img/treatment/oncology.png'},
         {name: 'Pulmonology',       img: './img/treatment/pulmonology.png'},
@@ -57,5 +57,3 @@ const treatmentCard = {
     ],
     
 };
-
-export default treatmentCard;

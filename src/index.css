@@ -19,6 +19,10 @@ input[type=number]::-webkit-outer-spin-button {
     color: white;
 }
 
+.doctors_card:hover .doctors_sub_card {
+    background-color: #4468cc;
+} 
+
 .scroll-hospital .bestHospital:hover .bestHospital-text {
     background-color: rgba(228, 243, 254, 0.913);
 }
