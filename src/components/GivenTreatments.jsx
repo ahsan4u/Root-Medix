@@ -1,6 +1,6 @@
 import React from "react";
 import TreatmentCard from "./TreatmentCard";
-import treatmentCardData from "../data/treatmentCardData";
+import treatmentCardData from "../data/treatmentData";
 import { Link } from "react-router-dom";
 function GivenTreatments({type}) {
     let treatments = null;

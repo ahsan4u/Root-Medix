@@ -23,16 +23,4 @@ export default {
         info: '15 years of experience, Gurgaon',
         type: 'Consultant',
     },
-    'vivekakum': {
-        name: 'Dr. Viveka Kumar',
-        img: './img/doctors/VivekaKumar.png',
-        info: '15 years of experience, Gurgaon',
-        type: 'Consultant',
-    },
-    'vivekaku': {
-        name: 'Dr. Viveka Kumar',
-        img: './img/doctors/VivekaKumar.png',
-        info: '15 years of experience, Gurgaon',
-        type: 'Consultant',
-    },
 }

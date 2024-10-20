@@ -3,7 +3,7 @@ import UserInfo from "./UserInfo";
 import hospitalsData from "../data/hospitalsData";
 import OurServices from "./OurServices";
 import Treatment from "./Treatment";
-import treatmentCardData from '../data/treatmentCardData';
+import treatmentCardData from '../data/treatmentData';
 
 
 function HospitalInfo({ name }) {
