@@ -6,6 +6,7 @@ import Navbar from './components/Navbar';
 import Footer from './components/footer';
 import InTreatment from './components/InTreatment';
 import GivenTreatments from './components/GivenTreatments';
+import DoctorsProfile from './components/DoctorsProfile';
 
 function App() {
   const {pathname} = useLocation();
@@ -24,6 +25,10 @@ function App() {
         <Route exact path='/hospital/aakash' Component={()=><HospitalInfo name='aakash'/>}/>
         <Route exact path='/treatment/cardiology' Component ={()=><InTreatment name={'cardiology'}/>} />
         <Route exact path='/giventreatments' Component = {()=><GivenTreatments type={'all'}/>}/>
+        <Route exact path='/best-doctors/doctor/anandkumar' Component={()=><DoctorsProfile name={'anandkumar'}/>} />
+        <Route exact path='/best-doctors/doctor/kumudrai' Component={()=><DoctorsProfile name={'kumudrai'}/>} />
+        <Route exact path='/best-doctors/doctor/vineetarya' Component={()=><DoctorsProfile name={'vineetarya'}/>} />
+        <Route exact path='/best-doctors/doctor/vivekakumar' Component={()=><DoctorsProfile name={'vivekakumar'}/>} />
       </Routes>
     <Footer/>
     </>

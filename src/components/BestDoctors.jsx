@@ -36,7 +36,7 @@ function OurDoctors({heading, doctors}) {
                 {
                     doctors.map((doctor, idx) => {
                         return (
-                            <Link key={idx} to={`/treatment/cardiology`}>
+                            <Link key={idx} to={doctor.link}>
                             <DoctorCard
                                 doctor={doctor}
                                 ref={elmnt=>doctorsRef.current[idx]=elmnt}/>
