@@ -14,7 +14,7 @@ function OurDoctors({heading, doctors}) {
             let margin = 0;
             if(scrollCont < 700) {
                 margin = (scrollCont - (doctorCard.offsetWidth*2))/4;
-            } else if(scrollCont < 1240) {
+            } else if(scrollCont < 1040) {
                 margin = (scrollCont - (doctorCard.offsetWidth*3))/6;
             } else {
                 margin = (scrollCont - (doctorCard.offsetWidth*4))/8;

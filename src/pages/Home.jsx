@@ -10,7 +10,7 @@ import OurDoctors from "../components/BestDoctors";
 
 function Home() {
     const allTreatmentCard = Object.keys(treatmentData).flatMap(key=> treatmentData[key]);
-    const allDoctors =  Object.keys(doctorsData).flatMap(key=> doctorsData[key]);
+    const allDoctors =  Object.keys(doctorsData['maxsaket']).flatMap(key=> doctorsData['maxsaket'][key]);
     return (
         <>
             <Poster/>
