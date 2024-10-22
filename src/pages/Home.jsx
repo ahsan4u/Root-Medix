@@ -17,7 +17,7 @@ function Home() {
     return (
         <>
             <Poster/>
-            <ScrollDiv heading={'Browse by Specialist'} cardsData = {allTreatmentCard} Card={TreatmentCard} count={6}/>
+            <ScrollDiv heading={'Browse by Specialist'} cardsData = {allTreatmentCard} Card={TreatmentCard} count={6} seeMore={true} scroll={true}/>
             <ScrollDiv heading={'Best Hospitals'} cardsData = {hospitalsData} Card={HospitalCard} count={4}/>
             <ScrollDiv heading={'Our Services'} cardsData = {servicesData} Card={ServiceCard} count={4}/>
             <ScrollDiv heading={'Best Doctors'} cardsData={allDoctors} Card={DoctorCard} count={4}/>
