@@ -10,7 +10,7 @@ import loadingEffect from '../animated Icon/loading.json';
 function UserInfo() {
     const suggestRef = useRef(null);
     const emailRef = useRef(null);
-    const [formData, setFormData] = useState({name: '', email: '', country: '', contact: '', std: '', msg: ''});
+    const [formData, setFormData] = useState({name: '', email: '', country: '', contact: '', std: '+1', msg: ''});
     const [isLoading, setIsLoading] = useState(false);
     const [activeAlert, setActiveAlert] = useState(false);
 
