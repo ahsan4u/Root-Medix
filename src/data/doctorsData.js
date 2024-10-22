@@ -36,9 +36,8 @@ export default {
             hospital: 'Max Hospital, Saket, Delhi',
             link: `/max-hospital-saket/best-doctors/doctor/vivekakumar`,
         },
-        // image change needed
         'vivekvasudeo': {
-            img: './img/doctors/VivekaKumar.png',
+            img: './img/doctors/vivekvasudeo.png',
             name: 'Dr. Vivek Vasudeo',
             type: `Consultant`,
             speciality: 'Urology',
@@ -46,9 +45,8 @@ export default {
             hospital: 'Max Hospital, Saket, Delhi',
             link: `/max-hospital-saket/best-doctors/doctor/vivekvasudeo`,
         },
-        // image change needed
         'rohitkaushal': {
-            img: './img/doctors/VivekaKumar.png',
+            img: './img/doctors/rohitkaushal.png',
             name: 'Dr. Rohit Kaushal',
             type: `Senior Consultant`,
             speciality: 'Uro-Oncology, Robotics',
@@ -56,9 +54,8 @@ export default {
             hospital: 'Max Hospital, Saket, Delhi',
             link: `/max-hospital-saket/best-doctors/doctor/rohitkaushal`,
         },
-        // image change needed
         'rayazahmed': {
-            img: './img/doctors/VivekaKumar.png',
+            img: './img/doctors/rayazahmad.png',
             name: 'Dr. Rayaz Ahmed',
             type: `Sr. Director`,
             speciality: 'Hematology Oncology',
@@ -66,9 +63,8 @@ export default {
             hospital: 'Max Hospital, Saket, Delhi',
             link: `/max-hospital-saket/best-doctors/doctor/rayazahmed`,
         },
-        // image change needed
         'pragneshdesai': {
-            img: './img/doctors/VivekaKumar.png',
+            img: './img/doctors/pragneshdesai.png',
             name: 'Dr. Pragnesh Desai',
             type: `Principal Consultant`,
             speciality: 'Urology, Robotic Surgery',
@@ -76,9 +72,8 @@ export default {
             hospital: 'Max Hospital, Saket, Delhi',
             link: `/max-hospital-saket/best-doctors/doctor/pragneshdesai`,
         },
-        // image change needed
         'mrigankshekharjha': {
-            img: './img/doctors/VivekaKumar.png',
+            img: './img/doctors/mrigankshekharjha.png',
             name: 'Dr. Mrigank Shekhar Jha',
             type: `Director`,
             speciality: 'Urology, Kidney Transplant',
@@ -94,6 +89,42 @@ export default {
             experiance: `Experience: 12+ Years`,
             hospital: 'Max Hospital, Saket, Delhi',
             link: `/max-hospital-saket/best-doctors/doctor/samitchaturvedi`,
+        },
+        'sandeepbatra': {
+            img: './img/doctors/sandeepbatra.png',
+            name: 'Dr. Sandeep Batra',
+            type: `Senior Director`,
+            speciality: 'Oncologist',
+            experiance: `Experience: 14+ Years`,
+            hospital: 'Max Hospital Saket, Delhi',
+            link: `/max-hospital-saket/best-doctors/doctor/sandeepbatra`,
+        },
+        'nagendersharma': {
+            img: './img/doctors/nagendersharma.png',
+            name: 'Dr. Nagender Sharma',
+            type: `Principal Consultant`,
+            speciality: 'Medical Oncology',
+            experiance: `Experience: 6+ Years`,
+            hospital: 'Max Hospital Saket, Delhi',
+            link: `/max-hospital-saket/best-doctors/doctor/nagendersharma`,
+        },
+        'vijaykumarchopra': {
+            img: './img/doctors/vijaykumarchopra.png',
+            name: 'Dr. Vijay Kumar Chopra',
+            type: `Executive Director`,
+            speciality: 'Cardiologist',
+            experiance: `Experience: 44+ Years`,
+            hospital: 'Max Hospital Saket, Delhi',
+            link: `/max-hospital-saket/best-doctors/doctor/vijaykumarchopra`,
+        },
+        'subhashkumarsinha': {
+            img: './img/doctors/subhashkumarsinha.png',
+            name: 'Dr. Subhash Kumar Sinha',
+            type: `Senior Executive`,
+            speciality: 'Cardiac Surgery (CTVS)',
+            experiance: `Experience: 37+ Years`,
+            hospital: 'Max Hospital Saket, Delhi',
+            link: `/max-hospital-saket/best-doctors/doctor/subhashkumarsinha`,
         },
     }
 }

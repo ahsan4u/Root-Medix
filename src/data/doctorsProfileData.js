@@ -535,7 +535,7 @@ export default {
         // image change needed
         'vivekvasudeo': {
             about : {
-                img: './img/doctors/VivekaKumar.png',
+                img: './img/doctors/vivekvasudeo.png',
                 name: 'Dr. Vivek Vasudeo',
                 type: `Consultant`,
                 speciality: 'Urology',
@@ -663,7 +663,7 @@ export default {
         // image change needed
         'rohitkaushal': {
             about : {
-                img: './img/doctors/VivekaKumar.png',
+                img: './img/doctors/rohitkaushal.png',
                 name: 'Dr. Rohit Kaushal',
                 type: `Senior Consultant`,
                 speciality: 'Uro-Oncology, Robotics',
@@ -835,7 +835,7 @@ export default {
         // image change needed
         'rayazahmed': {
             about : {
-                img: './img/doctors/VivekaKumar.png',
+                img: './img/doctors/rayazahmad.png',
                 name: 'Dr. Rayaz Ahmed',
                 type: `Sr. Director`,
                 speciality: 'Hematology Oncology',
@@ -945,7 +945,7 @@ export default {
         // image change needed
         'pragneshdesai': {
             about : {
-                img: './img/doctors/VivekaKumar.png',
+                img: './img/doctors/pragneshdesai.png',
                 name: 'Dr. Pragnesh Desai',
                 type: `Principal Consultant`,
                 speciality: 'Urology, Robotic Surgery',
@@ -1076,7 +1076,7 @@ export default {
         // image change needed
         'mrigankshekharjha': {
             about : {
-                img: './img/doctors/VivekaKumar.png',
+                img: './img/doctors/mrigankshekharjha.png',
                 name: 'Dr. Mrigank Shekhar Jha',
                 type: `Director`,
                 speciality: 'Urology, Kidney Transplant',
@@ -1212,7 +1212,6 @@ export default {
             ]
         },
 
-        // image change needed
         'samitchaturvedi': {
             about : {
                 img: './img/doctors/samitchaturvedi.png',
@@ -1301,6 +1300,516 @@ export default {
                         },
                         {
                             content: `Presented several papers at national and international conferences.`,
+                        },
+                    ],
+                },
+                
+                // Addition of Frequntly Asked Question is Needed
+                // {
+                //     heading: ``,
+                //     subheading: ``,
+                //     description: ``,
+                //     list: [
+                //         {
+                //             name: ``,
+                //             content: ``,
+                //         },
+                //     ],
+                // },
+            ]
+        },
+
+        'sandeepbatra': {
+            about : {
+                img: './img/doctors/sandeepbatra.png',
+                name: 'Dr. Sandeep Batra',
+                type: `Senior Director`,
+                speciality: 'Oncologist',
+                experiance: `Experience: 14+ Years`,
+                hospital: 'Max Hospital Saket, Delhi',
+            },
+            profile: [
+                {
+                    subheading: `About Dr. Sandeep Batra`,
+                    description: `Dr. Sandeep Batra is a senior executive in therapeutic oncology at Max Healthcare, to whom one can reach out for master cancer care. He has more than 14 years of involvement and has extraordinary preparation in the treatment of a wide range of cancers—the gastrointestinal, gynecologic, uro-oncologic, and thoracic cancers, for example. Whereas his patient-centric approach and concern for moving the field forward in terms of unused medications will offer assistance set him apart, it was moreover these characteristics that drew him to cancer inquire about initially.`,
+                },
+                {
+                    subheading: `Work Experience`,
+                    list: [
+                        {
+                            content: `BLK Super Strength Clinic, Delhi, Dec 2015 – Damage 2017`,
+                        },
+                        {
+                            content: `Medical Oncology & Hematology Consultant`,
+                        },
+                        {
+                            content: `Medanta, The Medicity, Gurgaon, Nov 2009 – Dec 2015`,
+                        },
+                        {
+                            content: `Associate Specialist, Therapeutic Oncology`,
+                        },
+                        {
+                            content: `Artemis Wellbeing Founded, Gurgaon, July 2009 – Oct 2009`,
+                        },
+                    ],
+                },
+                {
+                    subheading: `Education & Training`,
+                    list: [
+                        {
+                            content: `MBBS (Gold Decoration) : PGIMS, Rohtak`,
+                        },
+                        {
+                            content: `MD in Pharmaceutical: PGIMS, Rohtak`,
+                        },
+                        {
+                            content: `DNB (Medication): National Board of Examinations, Delhi`,
+                        },
+                        {
+                            content: `DNB (Therapeutic Oncology): National Board of Examinations, Delhi`,
+                        },
+                    ],
+                },
+                {
+                    subheading: `Specialty Interests`,
+                    description: `Dr. Batra's primary regions of interest are`,
+                    list: [
+                        {
+                            content: `Gastrointestinal Oncology`,
+                        },
+                        {
+                            content: `Gynecologic Oncology`,
+                        },
+                        {
+                            content: `Uro-Oncology`,
+                        },
+                    ],
+                },
+                
+                // Addition of Frequntly Asked Question is Needed
+                // {
+                //     heading: ``,
+                //     subheading: ``,
+                //     description: ``,
+                //     list: [
+                //         {
+                //             name: ``,
+                //             content: ``,
+                //         },
+                //     ],
+                // },
+            ]
+        },
+        
+        'nagendersharma': {
+            about : {
+                img: './img/doctors/nagendersharma.png',
+                name: 'Dr. Nagender Sharma',
+                type: `Principal Consultant`,
+                speciality: 'Medical Oncology',
+                experiance: `Experience: 6+ Years`,
+                hospital: 'Max Hospital Saket, Delhi',
+            },
+            profile: [
+                {
+                    subheading: `About Dr. Nagender Sharma`,
+                    description: `Dr. Nagender Sharma is a medical oncologist and is at present working as the Principal Consultant in Cancer Care with Max Healthcare. He had more than six years of experience diligently devoted to the field of oncology, has made some remarkable contributions, and has treated a wide variety of cancers, such as lung, gastrointestinal, breast, and head & neck cancers. It is with this vast academic background and clinical training that he has helped improve the understanding of cancer treatment. Dr. Sharma is known for patient-centric methods where he uses advanced cancer therapies such as immunotherapy, hormonal treatment, targeted therapy, and even cancer vaccination.`,
+                },
+                {
+                    subheading: `Work Experience`,
+                    list: [
+                        {
+                            content: `Consultant-Principal, Max Healthcare-Present`,
+                        },
+                        {
+                            content: `Medanta, The Medical Department of Medical Oncology & Hematology, Gurugram (Feb 2020-Aug 2022)`,
+                        },
+                        {
+                            content: `Associate Consultant, Medical Oncology & Hematology, Medanta The Medicity (2017 - 2020)66`,
+                        },
+                        {
+                            content: `Senior Resident, Medical Oncology & Hematology, Medanta The Medicity (2012 - 2013)`,
+                        },
+                    ],
+                },
+                {
+                    subheading: `Education & Training`,
+                    list: [
+                        {
+                            content: `MBBS, Kasturba Medical College, Mangalore, Karnataka`,
+                        },
+                        {
+                            content: `MD (Medicine), M. R. Medical College, Gulbarga, Karnataka`,
+                        },
+                        {
+                            content: `DM (Medical Oncology), Cancer Institute (WIA), Adyar, Chennai`,
+                        },
+                        {
+                            content: `DNB (Medical Oncology), National Board of Examination, New Delhi.`,
+                        },
+                    ],
+                },
+                {
+                    subheading: `Certifications & Memberships`,
+                    description: `Dr. Sharma holds certifications by the European Society of Medical Oncology (ESMO) and an active member of the following well-known oncology networks:`,
+                    list: [
+                        {
+                            content: `Indian Society of Medical & Paediatric Oncology (ISMPO)`,
+                        },
+                        {
+                            content: `Indian Cooperative Oncology Network (ICON)`,
+                        },
+                        {
+                            content: `American Society of Clinical Oncology (ASCO)`,
+                        },
+                    ],
+                },
+                {
+                    subheading: `Specialties/Interests`,
+                    list: [
+                        {
+                            content: `Malignancies of Thorax and Breast`,
+                        },
+                        {
+                            content: `Sarcomas`,
+                        },
+                        {
+                            content: `Gastrointestinal & Genitourinary Cancers`,
+                        },
+                        {
+                            content: `Head & Neck Malignancies`,
+                        },
+                        {
+                            content: `Rare Malignancies and Carcinomas of Unknown Origins`,
+                        },
+                        {
+                            content: `Advanced Cancer Treatments such as cancer immunotherapy and targeted therapies`,
+                        },
+                        {
+                            content: `With this kind of expertise, he can stay abreast of the most advanced ways to care for cancers, particularly those concerning such rare and complex diseases`,
+                        },
+                    ],
+                },
+                {
+                    subheading: `Research Contributions & Publications`,
+                    description: `He has been actively associated with cancer research, participated in international studies, and published his findings in peer-reviewed journals. He remains involved in the advancement of treatment for cancer with better outcomes in patients. Some of his research work includes the following:`,
+                    list: [
+                        {
+                            content: `Co-Principal Investigator in TALAPRO-III, a phase III international study aimed to treat prostate cancer.`,
+                        },
+                        {
+                            content: `Research on paralysis of the diaphragm post-SBRT treatment in patients with lung cancer (published in the Journal of Radiosurgery).`,
+                        },
+                        {
+                            content: `Observations on subclinical hyperthyroidism in post-immunotherapy lung cancer patients—published in the Indian Journal of Cancer; real-world studies on breast cancer treatment—on drug safety and effectiveness, specifically with the drugs like Palbociclib and Eribulin—published in the Journal of Clinical Oncology.`,
+                        },
+                    ],
+                },
+                
+                // Addition of Frequntly Asked Question is Needed
+                // {
+                //     heading: ``,
+                //     subheading: ``,
+                //     description: ``,
+                //     list: [
+                //         {
+                //             name: ``,
+                //             content: ``,
+                //         },
+                //     ],
+                // },
+            ]
+        },
+        
+        'vijaykumarchopra': {
+            about : {
+                img: './img/doctors/vijaykumarchopra.png',
+                name: 'Dr. Vijay Kumar Chopra',
+                type: `Executive Director`,
+                speciality: 'Cardiologist',
+                experiance: `Experience: 44+ Years`,
+                hospital: 'Max Hospital Saket, Delhi',
+            },
+            profile: [
+                {
+                    subheading: `About Dr. Vijay Kumar Chopra`,
+                    description: `Dr. Vijay Kumar Chopra is a highly experienced and distinguished cardiologist with more than four decades of service in this area. The subsequent career upraises into vital positions in clinical practice and research, notably including important responsibilities in the treatment of heart failure and interventional cardiology. Throughout his splendid career, he has associated himself with many of the most renowned institutions and contributed significantly towards the development of cardiology in India. He is known for both his clinical skills as well as his mentorship and leadership in cardiac care programs. Dr. Chopra is popularly known for his work in heart failure management, has key leadership positions in various national and international cardiology organizations, and is a prominent figure in his field.`,
+                },
+                {
+                    subheading: `Education & Training`,
+                    list: [
+                        {
+                            content: `MBBS, 1972`,
+                        },
+                        {
+                            content: `MD (Medicine), 1976`,
+                        },
+                        {
+                            content: `DM (Cardiology), 1979`,
+                        },
+                    ],
+                },
+                {
+                    subheading: `Work Experience`,
+                    description: `Dr. Vijay Kumar Chopra has served in several top positions throughout his long career.`,
+                    list: [
+                        {
+                            content: `Max Healthcare, Senior Director, Cardiac Sciences (Present)`,
+                        },
+                        {
+                            content: `Medanta—The Medicity, Gurgaon—Director, Heart Failure Program (2009-2019)`,
+                        },
+                        {
+                            content: `Escorts Heart Institute and Research Centre, New Delhi, Principal Consultant (Cardiology) (2005 - 2009)`,
+                        },
+                        {
+                            content: `Ganga Ram Hospital, New Delhi, Senior Consultant, Cardiology (1979 - 2005)`,
+                        },
+                        {
+                            content: `PGI, Chandigarh, Senior Resident, Cardiology (1977-1979)`,
+                        },
+                        {
+                            content: `PGI, Chandigarh, Senior Resident, Medicine (1976–1977)`,
+                        },
+                        {
+                            content: `PGI, Chandigarh, Resident, General Medicine (1974–1976)`,
+                        },
+                        {
+                            content: `PGI, Chandigarh, Junior Resident, Medicine (1973–1974)`,
+                        },
+                    ],
+                },
+                {
+                    subheading: `Awards & Honours`,
+                    list: [
+                        {
+                            content: `MBBS, 1972International Scholar, Cleveland Clinic`,
+                        },
+                        {
+                            content: `Founder President, Heart Failure Association of India (2013)`,
+                        },
+                    ],
+                },
+                {
+                    subheading: `Memberships`,
+                    list: [
+                        {
+                            content: `Life Member, Cardiological Society of India (CSI)—Nati    onal and Delhi Branch`,
+                        },
+                        {
+                            content: `Fellow, Cardiological Society of India (CSI)`,
+                        },
+                        {
+                            content: `Fellow, American College of Cardiology (ACC)`,
+                        },
+                        {
+                            content: `Fellow, European Society of Cardiology (ESC)`,
+                        },
+                        {
+                            content: `Fellow, ESC Heart Failure Association`,
+                        },
+                        {
+                            content: `Board of Governors, Heart Failure Association of India`,
+                        },
+                    ],
+                },
+                {
+                    subheading: `Interest in Specialty`,
+                    description: `Dr. Vijay Kumar Chopra is currently interested in the following specialty areas:`,
+                    list: [
+                        {
+                            content: `Management of heart failure`,
+                        },
+                        {
+                            content: `Interventional cardiology`,
+                        },
+                        {
+                            content: `Cardiac catheterization`,
+                        },
+                        {
+                            content: `High heart care and transplant`,
+                        },
+                        {
+                            content: `Rhythm disorders of heart`,
+                        },
+                    ],
+                },
+                
+                // Addition of Frequntly Asked Question is Needed
+                // {
+                //     heading: ``,
+                //     subheading: ``,
+                //     description: ``,
+                //     list: [
+                //         {
+                //             name: ``,
+                //             content: ``,
+                //         },
+                //     ],
+                // },
+            ]
+        },
+
+        'subhashkumarsinha': {
+            about : {
+                img: './img/doctors/subhashkumarsinha.png',
+                name: 'Dr. Subhash Kumar Sinha',
+                type: `Senior Executive`,
+                speciality: 'Cardiac Surgery (CTVS)',
+                experiance: `Experience: 37+ Years`,
+                hospital: 'Max Hospital Saket, Delhi',
+            },
+            profile: [
+                {
+                    subheading: `About Dr. Subhash Kumar Sinha`,
+                    description: `Dr. Subhash Kumar Sinha is one of the most experienced and presumed cardiac specialists with a track record of more than 37 a long time in the recorded of Cardiothoracic and Vascular Surgery (CTVS). He has made colossal commitments to cardiac surgery as a senior chief at Max Super Claim to Fame Healing Center, Saket. Dr. Sinha has performed various complicated heart surgeries, counting negligibly intrusive methods, repair of aortic aneurysms, and beating heart surgeries. Pioneering beating heart surgery made him unmistakable to the world at expansive, and his work talked for itself in terms of acknowledgment around the world. Amid his career, Dr. Sinha has prepared and mentored 75 restorative experts in both surgical procedures and healthcare management.`,
+                },
+                {
+                    subheading: `Education & Training`,
+                    list: [
+                        {
+                            content: `MBBS: Equipped Strengths Restorative College, Pune`,
+                        },
+                        {
+                            content: `Master of Surgery (MS): Patna Therapeutic College, Patna`,
+                        },
+                        {
+                            content: `M.Ch. (CTVS): Post Graduate Founded of Therapeutic Instruction and Investigate, Chandigarh`,
+                        },
+                        {
+                            content: `M.Ch. (CTVS): Post Graduate Founded of Therapeutic Instruction and Investigate, Chandigarh`,
+                        },
+                        {
+                            content: `Managing Healthcare Conveyance: Harvard Commerce School`,
+                        },
+                    ],
+                },
+                {
+                    subheading: `Work Experience`,
+                    list: [
+                        {
+                            content: `Director, CTVS Max Super Strength Healing center, Saket Delhi, April 2018—TILL DATE`,
+                        },
+                        {
+                            content: `Director, CTVS Max Keen Super Forte Healing center, Saket, Delhi, July 2016 to April 2018`,
+                        },
+                        {
+                            content: `Director, Cardiac Sciences (Walk 2014-June 2016) Paras Gather of Clinics, Gurgaon Patna & Darbhanga`,
+                        },
+                        {
+                            content: `Director, CTVS Max Super Claim to fame Healing center, Modern Delhi, May 2009 - Walk 2014`,
+                        },
+                        {
+                            content: `Chief Cardiac Specialist & Head of Office (Oct 1996-April 2009), Batra Healing center & Restorative Inquire about Middle, Modern Delhi`,
+                        },
+                        {
+                            content: `Chief Cardiac Specialist (July 1995-Oct 1996), Rule Healing center Ltd, Kanpur`,
+                        },
+                        {
+                            content: `Senior Specialist (May 1989-June 1995), Batra Clinic & Therapeutic Investigate Middle, Unused Delhi`,
+                        },
+                        {
+                            content: `Cardiac Specialist (July 1986-April 1989), Railroad Clinic, Chennai`,
+                        },
+                        {
+                            content: `Visiting Cooperation: Regal Children's Clinic, Melbourne, Australia (Aug - Sept 1992)`,
+                        },
+                    ],
+                },
+                {
+                    subheading: `Awards & Recognitions`,
+                    list: [
+                        {
+                            name: `Pioneer Beating Heart Surgery`,
+                            content: `Gotten universal acknowledgment for the advancement of unused procedures in heart surgery.`,
+                        },
+                        {
+                            name: `Training and Instructing`,
+                            content: `Prepared 75 specialists and paramedics and made them prepared in the administration and surgical work`,
+                        },
+                        {
+                            name: `Reviewer`,
+                            content: `Commentator for Indian Diary of Thoracic Cardiac Vascular Surgery.`,
+                        },
+                    ],
+                },
+                {
+                    subheading: `Specialty Interest`,
+                    list: [
+                        {
+                            name: `Minimal Get to Surgeries`,
+                            content: `ASD, MVR, AVR, LA myxomas`,
+                        },
+                        {
+                            name: `Aortic Surgery`,
+                            content: `Aortic dismemberment, aneurysm repairs, injury surgeries for bullet and wound injuries`,
+                        },
+                        {
+                            name: `Coronary Course Bypass Joining (CABG)`,
+                            content: `CABG with add-up to blood vessel joins on a beating heart`,
+                        },
+                        {
+                            name: `Minimally Obtrusive Cardiac Surgery`,
+                            content: `Right now, the head of the program of negligibly obtrusive methods at Max Super Forte Hospital`,
+                        },
+                    ],
+                },
+                {
+                    subheading: `Members`,
+                    list: [
+                        {
+                            name: `Life Part`,
+                            content: `Indian Affiliation of Cardiovascular and Thoracic Specialists of India`,
+                        },
+                        {
+                            name: `Life Part`,
+                            content: `Cardiological Society of India`,
+                        },
+                        {
+                            name: `Founder Par`,
+                            content: `Indian College of Cardiology`,
+                        },
+                        {
+                            name: `Peer Commentator`,
+                            content: `Indian Diary of Thoracic Cardiac Vascular Surgery (IJCTS)`,
+                        },
+                    ],
+                },
+                
+                // Addition of Frequntly Asked Question is Needed
+                // {
+                //     heading: ``,
+                //     subheading: ``,
+                //     description: ``,
+                //     list: [
+                //         {
+                //             name: ``,
+                //             content: ``,
+                //         },
+                //     ],
+                // },
+            ]
+        },
+
+        '': {
+            about : {
+                img: './img/doctors/',
+                name: '',
+                type: `Director`,
+                speciality: '',
+                experiance: ``,
+                hospital: '',
+            },
+            profile: [
+                {
+                    subheading: ``,
+                    description: ``,
+                },
+                {
+                    subheading: ``,
+                    list: [
+                        {
+                            content: ``,
                         },
                     ],
                 },

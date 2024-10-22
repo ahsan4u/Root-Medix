@@ -17,10 +17,10 @@ function Home() {
     return (
         <>
             <Poster/>
-            <ScrollDiv heading={'Browse by Specialist'} cardsData = {allTreatmentCard} Card={TreatmentCard} count={6} seeMore={true} scroll={true}/>
-            <ScrollDiv heading={'Best Hospitals'} cardsData = {hospitalsData} Card={HospitalCard} count={4}/>
-            <ScrollDiv heading={'Our Services'} cardsData = {servicesData} Card={ServiceCard} count={4}/>
-            <ScrollDiv heading={'Best Doctors'} cardsData={allDoctors} Card={DoctorCard} count={4}/>
+            <ScrollDiv heading={'Browse by Specialist'} cardsData={allTreatmentCard} Card={TreatmentCard} count={6} seeMore={true} scroll={true}/>
+            <ScrollDiv heading={'Best Hospitals'} cardsData={hospitalsData} Card={HospitalCard} count={4}/>
+            <ScrollDiv heading={'Our Services'} cardsData={servicesData} Card={ServiceCard} count={4}/>
+            <ScrollDiv heading={'Best Doctors'} cardsData={allDoctors} Card={DoctorCard} count={4} scroll={true}/>
 
             {window.innerWidth < 640 && (
             <div className="bg-gradient-to-b from-white via-blue-50 to-blue-300 overflow-hidden rounded-[20px] border border-dotted border-[#64748b] w-[100vw] sm:mt-2 sm:mb-0 mb-20 m-auto">
