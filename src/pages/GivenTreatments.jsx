@@ -1,5 +1,5 @@
 import React from "react";
-import TreatmentCard from "./TreatmentCard";
+import TreatmentCard from "../components/TreatmentCard";
 import treatmentCardData from "../data/treatmentData";
 import { Link } from "react-router-dom";
 function GivenTreatments({type}) {
@@ -12,10 +12,7 @@ function GivenTreatments({type}) {
         {
             treatments.map((treatment, idx)=> (
                 <Link  key={idx} to={`/treatment/cardiology`}>
-                    <TreatmentCard 
-                        name={treatment.name}
-                        img={treatment.img} 
-                    />
+                    <TreatmentCard data={treatment}/>
                 </Link>
             ))
         }

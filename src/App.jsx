@@ -1,12 +1,12 @@
 import Home from './pages/Home';
-import HospitalInfo from './components/HospitalInfo';
+import HospitalInfo from './pages/HospitalInfo';
 import {Routes, Route, useLocation} from 'react-router-dom';
 import { useEffect } from 'react';
 import Navbar from './components/Navbar';
 import Footer from './components/footer';
-import InTreatment from './components/InTreatment';
-import GivenTreatments from './components/GivenTreatments';
-import DoctorsProfile from './components/DoctorsProfile';
+import InTreatment from './pages/InTreatment';
+import GivenTreatments from './pages/GivenTreatments';
+import DoctorsProfile from './pages/DoctorsProfile';
 
 function App() {
   const {pathname} = useLocation();

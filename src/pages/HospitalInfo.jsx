@@ -1,15 +1,15 @@
 import React from "react";
-import UserInfo from "./UserInfo";
+import UserInfo from "../components/UserInfo";
 import hospitalsData from "../data/hospitalsData";
-import OurServices from "./OurServices";
-import Treatment from "./Treatment";
-import treatmentCardData from '../data/treatmentData';
+import treatmentData from '../data/treatmentData';
+import TreatmentCard from "../components/TreatmentCard";
+import ScrollDiv from "../components/ScrollDiv";
 
 
 function HospitalInfo({ name }) {
 
   const hospitalInfo = hospitalsData[name];
-  const particularTreatmentCard = treatmentCardData[name];
+  const newTreatment = treatmentData[name];
 
   return (
     <>
@@ -74,8 +74,7 @@ function HospitalInfo({ name }) {
         </div>
       </div>
 
-      <Treatment heading={`${hospitalInfo.name} - Treatments`} treatments={particularTreatmentCard}/>
-      <OurServices />
+      <ScrollDiv heading={'Browse by Specialist'} cardsData = {newTreatment} Card={TreatmentCard} count={6}/>
     </>
   );
 }

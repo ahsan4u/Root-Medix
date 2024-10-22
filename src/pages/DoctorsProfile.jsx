@@ -1,7 +1,9 @@
 import React, { useEffect, useRef } from "react";
 import doctorsProfileData from '../data/doctorsProfileData';
-import OurServices from "./OurServices";
-import UserInfo from "./UserInfo";
+import ServiceCard from "../components/ServiceCard";
+import servicesCardData from "../data/servicesCardData";
+import ScrollDiv from "../components/ScrollDiv";
+import UserInfo from "../components/UserInfo";
 
 export default function DoctorsProfile({doctor}) {
     const popupForm = useRef(null);
@@ -102,7 +104,7 @@ export default function DoctorsProfile({doctor}) {
                 <UserInfo/>
             </div>)}
 
-            <OurServices/>
+            <ScrollDiv heading={'Our Services'} cardsData = {servicesCardData} Card={ServiceCard} count={4}/>
         </>
     )
 }
