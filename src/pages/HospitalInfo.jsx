@@ -74,7 +74,9 @@ function HospitalInfo({ name }) {
         </div>
       </div>
 
-      <ScrollDiv heading={'Browse by Specialist'} cardsData = {newTreatment} Card={TreatmentCard} count={6}/>
+      <div className="mt-10">
+        <ScrollDiv heading={'Browse by Specialist'} cardsData = {newTreatment} Card={TreatmentCard} count={6}/>          
+      </div>
     </>
   );
 }

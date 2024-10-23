@@ -3,11 +3,31 @@ import SearchIcon from '@mui/icons-material/Search';
 import Lottie from 'lottie-react';
 import menuEffect from '../animated Icon/menuV2.json';
 import { useEffect, useRef } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 
 function Navbar() {
     const menubarRef = useRef(null);
+
+    useEffect(()=> {
+        if(document.querySelector('.navBarToggle').style.opacity) {
+            document.querySelector('.navBarToggle').style.width= '0';
+            document.querySelector('.navBarToggle').style.opacity= null;
+            document.querySelector('html').style.overflow = 'scroll';
+            menubarRef.current.playSegments([40, 0], true);
+        }
+    },[useLocation()])
     
+    useEffect(()=> {
+        document.querySelector('.navBarToggle').addEventListener('touchmove', ()=> {
+            if(document.querySelector('.navBarToggle').style.opacity) {
+                document.querySelector('.navBarToggle').style.width= '0';
+                document.querySelector('.navBarToggle').style.opacity= null;
+                document.querySelector('html').style.overflow = 'scroll';
+                menubarRef.current.playSegments([40, 0], true);
+            }
+        })
+    },[]);
+
     function toggleNavbar(e) {
         menubarRef.current.setSpeed(2);
         if(!document.querySelector('.navBarToggle').style.opacity) {
@@ -39,11 +59,13 @@ function Navbar() {
         const input = document.querySelector('.MobileSearchCont .inputDiv input');
         if(inputDiv.offsetWidth < 50) {
             // first remove sidebar if visible
-            document.querySelector('.navBarToggle').style.width= '0';
-            document.querySelector('.navBarToggle').style.opacity= null;
-            document.querySelector('.sidebarBtn').style.background='transparent';
-            document.querySelector('html').style.overflow = 'scroll';
-            menubarRef.current.playSegments([40, 0], true);
+            if(document.querySelector('.navBarToggle').style.opacity) {
+                document.querySelector('.navBarToggle').style.width= '0';
+                document.querySelector('.navBarToggle').style.opacity= null;
+                document.querySelector('.sidebarBtn').style.background='transparent';
+                document.querySelector('html').style.overflow = 'scroll';
+                menubarRef.current.playSegments([40, 0], true);
+            }
             
             inputDiv.style.width = '98vw';
             inputDiv.style.background = 'rgb(82,82,82)';
@@ -71,7 +93,7 @@ function Navbar() {
             <div className="topBar sticky top-0 lg:static z-20 bg-gradient-to-r from-cyan-200 via-blue-300 to-blue-400 h-16 flex justify-between items-center lg:pr-3">
                 <Link to='/'><img src="./img/logo.png" alt="Root-Medix" className=' h-10 ml-0  lg:hue-rotate-90 lg:h-14 lg:ml-2'/></Link>
                 <div className='langSidebarDiv flex justify-between items-center w-[188px] lg:w-[550px] transition-all duration-500'>
-                    <select name="language" id="lang" className='lg:shadow-none shadow-3dUnclicked active:shadow-3dClicked outline-none lg:border-none text-center text-lg lg:text-[16px] lg:w-28 w-[75px] h-10 lg:h-10 w rounded-xl bg-transparent lg:bg-gradient-to-r lg:from-blue-100 lg:via-cyan-50 lg:to-blue-100'>
+                    <select name="language" id="lang" style={{fontFamily: `convergence, 'sans-serif`}} className='lg:shadow-none shadow-3dUnclicked active:shadow-3dClicked outline-none lg:border-none text-center text-sm lg:text-[16px] lg:w-28 w-[75px] h-10 lg:h-10 w rounded-xl bg-transparent lg:bg-gradient-to-r lg:from-blue-100 lg:via-cyan-50 lg:to-blue-100'>
                         <option value="eng">English</option>
                         <option value="hin">Hindi</option>
                         <option value="arab">Arabic</option>
@@ -108,14 +130,14 @@ function Navbar() {
 
             <ol className='navBar lg:sticky md:sticky lg:top-0 z-50 flex justify-end lg:justify-start w-full'>
             <div  style={{backdropFilter: 'blur(6px)'}} className='navBarToggle  lg:flex bg-[rgb(82,82,82)] fixed z-50 top-16 lg:static w-0 overflow-hidden opacity-0 lg:opacity-100 lg:w-full h-full lg:h-auto lg:gap-4 lg:pl-4  lg:py-1 font-serif text-md lg:text-lg lg:bg-[transparent] transition-all duration-500'>
-                <Link to='/'><li className='text-white lg:text-black lg:bg-gradient-to-r lg:from-blue-200 lg:via-cyan-100 lg:to-blue-200  lg:hover:bg-gradient-to-r lg:hover:from-blue-300 lg:hover:via-cyan-200 lg:hover:to-blue-300 border-b border-gray-500 lg:border lg:border-gray-400 lg:rounded-full px-6 py-2 lg:py-[3px] cursor-pointer'><HomeIcon className='lg:text-blue-900'/></li></Link>
-                <Link to='/'><li className='text-white lg:text-black lg:bg-gradient-to-r lg:from-blue-200 lg:via-cyan-100 lg:to-blue-200  lg:hover:bg-gradient-to-r lg:hover:from-blue-300 lg:hover:via-cyan-200 lg:hover:to-blue-300 border-b border-gray-500 lg:border lg:border-gray-400 lg:rounded-full px-4 py-2 lg:py-1 cursor-pointer'>Doctor</li></Link>
-                <Link to='/'><li className='text-white lg:text-black lg:bg-gradient-to-r lg:from-blue-200 lg:via-cyan-100 lg:to-blue-200  lg:hover:bg-gradient-to-r lg:hover:from-blue-300 lg:hover:via-cyan-200 lg:hover:to-blue-300 border-b border-gray-500 lg:border lg:border-gray-400 lg:rounded-full px-4 py-2 lg:py-1 cursor-pointer'>Hospital</li></Link>
-                <Link to='/'><li className='text-white lg:text-black lg:bg-gradient-to-r lg:from-blue-200 lg:via-cyan-100 lg:to-blue-200  lg:hover:bg-gradient-to-r lg:hover:from-blue-300 lg:hover:via-cyan-200 lg:hover:to-blue-300 border-b border-gray-500 lg:border lg:border-gray-400 lg:rounded-full px-4 py-2 lg:py-1 cursor-pointer'>Treatment Cost</li></Link>
-                <Link to='/'><li className='text-white lg:text-black lg:bg-gradient-to-r lg:from-blue-200 lg:via-cyan-100 lg:to-blue-200  lg:hover:bg-gradient-to-r lg:hover:from-blue-300 lg:hover:via-cyan-200 lg:hover:to-blue-300 border-b border-gray-500 lg:border lg:border-gray-400 lg:rounded-full px-4 py-2 lg:py-1 cursor-pointer'>Medical Visa</li></Link>
-                <Link to='/'><li className='text-white lg:text-black lg:bg-gradient-to-r lg:from-blue-200 lg:via-cyan-100 lg:to-blue-200  lg:hover:bg-gradient-to-r lg:hover:from-blue-300 lg:hover:via-cyan-200 lg:hover:to-blue-300 border-b border-gray-500 lg:border lg:border-gray-400 lg:rounded-full px-4 py-2 lg:py-1 cursor-pointer'>Contact us</li></Link>
-                <Link to='/'><li className='text-white lg:text-black lg:bg-gradient-to-r lg:from-blue-200 lg:via-cyan-100 lg:to-blue-200  lg:hover:bg-gradient-to-r lg:hover:from-blue-300 lg:hover:via-cyan-200 lg:hover:to-blue-300 border-b border-gray-500 lg:border lg:border-gray-400 lg:rounded-full px-4 py-2 lg:py-1 cursor-pointer'>About us</li></Link>
-                <Link to='/'><li className='text-white lg:text-black lg:bg-gradient-to-r lg:from-blue-200 lg:via-cyan-100 lg:to-blue-200  lg:hover:bg-gradient-to-r lg:hover:from-blue-300 lg:hover:via-cyan-200 lg:hover:to-blue-300 border-b border-gray-500 lg:border lg:border-gray-400 lg:rounded-full px-4 py-2 lg:py-1 cursor-pointer'>Blogs</li></Link>
+                <Link to='/'><li className='text-white lg:text-black lg:bg-gradient-to-r lg:from-blue-200 lg:via-cyan-100 lg:to-blue-200  lg:hover:bg-gradient-to-r lg:hover:from-blue-300 lg:hover:via-cyan-200 lg:hover:to-blue-300 hover:bg-gray-500 border-b border-gray-500 lg:border lg:border-gray-400 lg:rounded-full px-6 py-4 lg:py-[3px] cursor-pointer'><HomeIcon className='lg:text-blue-900'/></li></Link>
+                <Link to='/'><li className='text-white lg:text-black lg:bg-gradient-to-r lg:from-blue-200 lg:via-cyan-100 lg:to-blue-200  lg:hover:bg-gradient-to-r lg:hover:from-blue-300 lg:hover:via-cyan-200 lg:hover:to-blue-300 hover:bg-gray-500 border-b border-gray-500 lg:border lg:border-gray-400 lg:rounded-full px-4 py-4 lg:py-1 cursor-pointer'>Doctors</li></Link>
+                <Link to='/'><li className='text-white lg:text-black lg:bg-gradient-to-r lg:from-blue-200 lg:via-cyan-100 lg:to-blue-200  lg:hover:bg-gradient-to-r lg:hover:from-blue-300 lg:hover:via-cyan-200 lg:hover:to-blue-300 hover:bg-gray-500 border-b border-gray-500 lg:border lg:border-gray-400 lg:rounded-full px-4 py-4 lg:py-1 cursor-pointer'>Hospitals</li></Link>
+                <Link to='/'><li className='text-white lg:text-black lg:bg-gradient-to-r lg:from-blue-200 lg:via-cyan-100 lg:to-blue-200  lg:hover:bg-gradient-to-r lg:hover:from-blue-300 lg:hover:via-cyan-200 lg:hover:to-blue-300 hover:bg-gray-500 border-b border-gray-500 lg:border lg:border-gray-400 lg:rounded-full px-4 py-4 lg:py-1 cursor-pointer'>Treatment Cost</li></Link>
+                <Link to='/'><li className='text-white lg:text-black lg:bg-gradient-to-r lg:from-blue-200 lg:via-cyan-100 lg:to-blue-200  lg:hover:bg-gradient-to-r lg:hover:from-blue-300 lg:hover:via-cyan-200 lg:hover:to-blue-300 hover:bg-gray-500 border-b border-gray-500 lg:border lg:border-gray-400 lg:rounded-full px-4 py-4 lg:py-1 cursor-pointer'>Medical Visa</li></Link>
+                <Link to='/'><li className='text-white lg:text-black lg:bg-gradient-to-r lg:from-blue-200 lg:via-cyan-100 lg:to-blue-200  lg:hover:bg-gradient-to-r lg:hover:from-blue-300 lg:hover:via-cyan-200 lg:hover:to-blue-300 hover:bg-gray-500 border-b border-gray-500 lg:border lg:border-gray-400 lg:rounded-full px-4 py-4 lg:py-1 cursor-pointer'>Contact us</li></Link>
+                <Link to='/'><li className='text-white lg:text-black lg:bg-gradient-to-r lg:from-blue-200 lg:via-cyan-100 lg:to-blue-200  lg:hover:bg-gradient-to-r lg:hover:from-blue-300 lg:hover:via-cyan-200 lg:hover:to-blue-300 hover:bg-gray-500 border-b border-gray-500 lg:border lg:border-gray-400 lg:rounded-full px-4 py-4 lg:py-1 cursor-pointer'>About us</li></Link>
+                <Link to='/'><li className='text-white lg:text-black lg:bg-gradient-to-r lg:from-blue-200 lg:via-cyan-100 lg:to-blue-200  lg:hover:bg-gradient-to-r lg:hover:from-blue-300 lg:hover:via-cyan-200 lg:hover:to-blue-300 hover:bg-gray-500 border-b border-gray-500 lg:border lg:border-gray-400 lg:rounded-full px-4 py-4 lg:py-1 cursor-pointer'>Blogs</li></Link>
             </div>
             </ol>
         </>

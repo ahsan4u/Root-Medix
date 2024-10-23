@@ -2,9 +2,9 @@ function Footer() {
 
     return(
         <>
-            <div className="footer-container text-white bg-[rgb(61,61,61)]">
+            <div className="footer-container text-white bg-[rgb(61,61,61)] mt-20">
                 <button className='block m-auto text-xl rounded-full bg-[rgb(62,161,181)] px-8 py-2 relative bottom-5' style={{fontFamily: `"Ubuntu", sans-serif`, fontWeight: '500'}}>Consultant</button>
-                <div className="link-column grid sm:grid-cols-4 grid-cols-1 pb-10 justify-items-center">
+                <div style={{fontFamily: `convergence, 'sans-serif`}} className="link-column grid sm:grid-cols-4 grid-cols-1 pb-10 justify-items-center">
                     <div className="important-links w-[70%]  sm:mb-0 mb-8">
                         <h3 className='border-b-2 border-[rgb(255,118,60)] text-2xl pr-3 pb-1 mt-1 mb-5 font-mono' style={{fontFamily: `"Ubuntu", sans-serif`, fontWeight: '500'}}>Important Links</h3>
                         <p className='my-1 sm:text-[16px] text-[20px] text-slate-300'><span className='text-white'>•</span> Top Doctor</p>

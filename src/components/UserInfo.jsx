@@ -10,6 +10,8 @@ import loadingEffect from '../animated Icon/loading.json';
 function UserInfo() {
     const suggestRef = useRef(null);
     const emailRef = useRef(null);
+    const number = useRef(null);
+    const descriptionRef = useRef(null);
     const [formData, setFormData] = useState({name: '', email: '', country: '', contact: '', std: '+1', msg: ''});
     const [isLoading, setIsLoading] = useState(false);
     const [activeAlert, setActiveAlert] = useState(false);
@@ -17,11 +19,16 @@ function UserInfo() {
     function setValue(e) {
         const {name, value} = e.target;
         setFormData((preVal)=> ({...preVal, [name]: value}));
-        
+        if(name == 'email') {
+            if(emailRef.current.value.includes('.com')) {
+                descriptionRef.current.focus();
+            }
+        }
         if(name == 'country') {
             if(value == '') {
                 suggestRef.current.innerHTML = '';
-                setFormData((preVal)=> ({...preVal, std: ''}));
+                suggestRef.current.style.height = '0';
+                setFormData((preVal)=> ({...preVal, std: '+1'}));
                 return
             }
             const filterd = STDcode.filter(code=> code.name.toLocaleLowerCase().includes(value.toLocaleLowerCase())).slice(0, 5);
@@ -29,18 +36,24 @@ function UserInfo() {
             filterd.forEach((code)=> {
                 const option = document.createElement('div');
                 option.textContent = `⨀ ${code.name}`;
-                option.className = 'text-[14px] px-2 py-[4px] border-b border-[#64748b] hover:bg-[gray]';
+                option.className = 'px-2 py-[8px] text-xs border-b border-[#64748b] hover:bg-[gray]';
                 suggestRef.current.style.width = `${emailRef.current.offsetWidth}px`;
                 if(window.innerWidth < 640) {
-                    option.style.cssText = 'text-[20px] py-[5px] px-2 border-b border-[#64748b] hover:bg-[gray]'
+                    option.className = 'text-[20px] py-3 text-sm px-2 border-b border-[#64748b]'
                 }
                 option.onclick = ()=> {
                     setFormData((preVal)=> ({...preVal, [name]: code.name, std: code.code}));
                     suggestRef.current.innerHTML = '';
-                    emailRef.current.focus();
+                    number.current.focus();
+                    suggestRef.current.style.height = '0';
                 }
                 suggestRef.current.appendChild(option);
             })
+            if(filterd.length < 1 ) {
+                suggestRef.current.innerHTML = '';
+                suggestRef.current.style.height = '0';
+            }
+            suggestRef.current.style.height = `${suggestRef.current.querySelector('div').offsetHeight*filterd.length}px`;
         }
     }
 
@@ -71,7 +84,7 @@ function UserInfo() {
     return (
         <div className="w-[100%] py-4 bg-transparent">
             <h1 className="text-center text-2xl font-serif mb-3">Get free Consultation</h1>
-            <form onSubmit={handleSubmit}>
+            <form onSubmit={handleSubmit}  style={{fontFamily: `convergence, 'sans-serif`}}>
                 <input type="text"
                 autoComplete="off"
                 value={formData.name}
@@ -91,12 +104,13 @@ function UserInfo() {
                     className="block w-[100%] sm:mt-2 mt-5 py-1 text-lg sm:text-sm outline-none bg-transparent border-b-2 border-blue-400 placeholder-slate-500"
                     id="country"/>
                     
-                    <div ref={suggestRef} className="options overflow-hidden rounded-b-xl absolute bg-[#4d5a6b] text-white"></div>
+                    <div ref={suggestRef} className="options h-0 transition-all duration-500 overflow-hidden rounded-b-xl absolute bg-[#4d5a6b] text-white"></div>
                 </div>
                 
                 <div className="m-auto w-[80%] flex sm:mt-2 mt-5">
                     <p className="std border-b-2 border-blue-400 mr-1 w-[18%] text-lg sm:text-sm py-1">{formData.std}</p>
                     <input type="number"
+                    ref={number}
                     autoComplete="off"
                     value={formData.contact}
                     onChange={setValue}
@@ -118,6 +132,7 @@ function UserInfo() {
                 
                 <textarea
                 value={formData.msg}
+                ref={descriptionRef}
                 onChange={setValue}
                 name="msg"
                 rows= {window.innerWidth > 640? "3": "4"}
@@ -135,7 +150,7 @@ function UserInfo() {
                 }
                     {isLoading ? 'Sending...' : 'Submit'}</button>
                 
-                <p className="w-[79%] text-center m-auto text-sm font-semibold sm:mt-3 mt-6">By submitting this form,<br/> I agree to Root Medix's Terms & Privacy Policy.</p>
+                <p className="w-[82%] text-center m-auto text-sm font-semibold sm:mt-3 mt-6">By submitting this form,<br/> I agree to Root Medix's Terms & Privacy Policy.</p>
             </form>
             <Massage open={activeAlert} alertMsg='We Will get in touch with you soon !'/>
         </div>

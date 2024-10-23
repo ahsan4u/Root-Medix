@@ -2,7 +2,7 @@
 function DoctorCard({data}) {
     
     return(
-        <div className='doctors_card lg:w-60 w-[170px] shadow-lg overflow-hidden rounded-3xl lg:mb-4 mb-2 mt-2'>
+        <div className='doctors_card lg:w-60 w-[170px] shadow-lg overflow-hidden rounded-3xl lg:mb-4 my-3'>
             <div className='doctors_sub_card lg:aspect-[19/10] aspect-[19/9] bg-blue-500 rounded-3xl flex justify-center items-end transition-colors duration-500'>
                 <img src={data.img} alt={data.img} className='bg-cyan-400 aspect-[1/1] w-[45%] rounded-full border-[3px] border-white relative top-7'/>
             </div>

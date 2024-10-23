@@ -9,11 +9,10 @@ import GivenTreatments from './pages/GivenTreatments';
 import DoctorsProfile from './pages/DoctorsProfile';
 
 function App() {
-  const {pathname} = useLocation();
   useEffect(()=>{
     window.scrollTo(0, 0);
     document.querySelector('html').style.overflow = 'scroll';
-  },[pathname])
+  },[useLocation()])
 
   return (
     <>

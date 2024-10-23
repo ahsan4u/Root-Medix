@@ -34,13 +34,16 @@ export default function DoctorsProfile({doctor}) {
         document.querySelector('html').style.overflow= 'scroll';
     }
 
-    window.onscroll = ()=>{
-        if(window.scrollY > 500) {
-            doctorImgRef.current.classList.add('hidden');
-        } else {
-            doctorImgRef.current.classList.remove('hidden');
+    useEffect(()=> {
+        window.onscroll = ()=>{
+            if(window.scrollY > 500) {
+                doctorImgRef.current && doctorImgRef.current.classList.add('hidden');
+            } else {
+                doctorImgRef.current && doctorImgRef.current.classList.remove('hidden');
+            }
         }
-    }
+    },[]);
+
     return(
         <>
             {/* {(window.innerWidth > 1000) && ( */}
@@ -104,7 +107,7 @@ export default function DoctorsProfile({doctor}) {
             </div>
 
             {window.innerWidth < 640 && (
-            <div className="bg-gradient-to-b from-white via-blue-50 to-blue-300 overflow-hidden rounded-[20px] border border-dotted border-[#64748b] w-[100vw] sm:mt-2 sm:mb-0 mb-20 m-auto">
+            <div className="bg-gradient-to-b from-white via-blue-50 to-blue-300 overflow-hidden rounded-[20px] border-t border-dotted border-[#64748b] shadow-lg w-[95vw] mb-10 m-auto">
                 <UserInfo/>
             </div>)}
 
