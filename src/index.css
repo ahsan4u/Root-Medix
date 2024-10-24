@@ -18,7 +18,7 @@ input[type=number]::-webkit-outer-spin-button {
 
 ::-webkit-scrollbar { display: none; }
 
-.scroll-treatment .treatment:hover .treatment-name {
+.treatment_card_div:hover .treatment_name {
     background-color: rgb(59, 98, 134);
     color: white;
 }
@@ -27,10 +27,10 @@ input[type=number]::-webkit-outer-spin-button {
     background-color: #4468cc;
 } 
 
-.scroll-hospital .bestHospital:hover .bestHospital-text {
+.bestHospital:hover .bestHospital-text {
     background-color: rgba(228, 243, 254, 0.913);
 }
 
-.scroll-services .ourServices:hover .services-text {
+.ourServices:hover .services-text {
     background-color: rgba(228, 243, 254, 0.913);
 }

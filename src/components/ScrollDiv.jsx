@@ -40,6 +40,7 @@ function ScrollDiv({heading, cardsData, Card, count, seeMore, scroll}) {
         if(scroll) {
             startScrolling();
             cardsContainer.current.addEventListener('touchstart', ()=> {clearInterval(intervalID)});
+            cardsContainer.current.addEventListener('touchmove', ()=> {clearInterval(intervalID)});
             cardsContainer.current.addEventListener('touchend', ()=> {startScrolling()});
         }
 
@@ -54,7 +55,7 @@ function ScrollDiv({heading, cardsData, Card, count, seeMore, scroll}) {
                 {seeMore && <Link to='/giventreatments' className="font-bold">See More...</Link>}
             </div>
 
-            <div ref={cardsContainer} className="treatment-container overflow-x-scroll flex flex-nowrap snap-x snap-proximity">
+            <div ref={cardsContainer} className="treatment-container overflow-x-scroll overflow-y-hidden flex flex-nowrap snap-x snap-proximity">
                 {
                     cardsData.map((cardData, idx) => {
                         return (
@@ -62,7 +63,7 @@ function ScrollDiv({heading, cardsData, Card, count, seeMore, scroll}) {
                                 key={idx}
                                 to={cardData.link}
                                 ref={elmnt=>treatmentsRef.current[idx]=elmnt}
-                                className="snap-start"
+                                className="snap-start hover:scale-105 transition-all duration-500"
                             >
                             <Card data={cardData}/>
                             </Link>

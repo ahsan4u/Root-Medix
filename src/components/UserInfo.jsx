@@ -83,7 +83,7 @@ function UserInfo() {
 
     return (
         <div className="w-[100%] py-4 bg-transparent">
-            <h1 className="text-center text-2xl font-serif mb-3">Get free Consultation</h1>
+            <h1 className="text-center lg:text-2xl text-[27px] font-serif mb-3">Get free Consultation</h1>
             <form onSubmit={handleSubmit}  style={{fontFamily: `convergence, 'sans-serif`}}>
                 <input type="text"
                 autoComplete="off"

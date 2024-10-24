@@ -7,6 +7,7 @@ import Footer from './components/footer';
 import InTreatment from './pages/InTreatment';
 import GivenTreatments from './pages/GivenTreatments';
 import DoctorsProfile from './pages/DoctorsProfile';
+import TreatmentPage from './pages/TreatmentPage';
 
 function App() {
   useEffect(()=>{
@@ -24,6 +25,7 @@ function App() {
         <Route exact path='/hospital/maxdwarka' Component={()=><HospitalInfo name='maxdwarka'/>}/>
         <Route exact path='/hospital/aakash' Component={()=><HospitalInfo name='aakash'/>}/>
         <Route exact path='/treatment/cardiology' Component ={()=><InTreatment name={'cardiology'}/>} />
+        <Route exact path='/treatment/cardiology/heart-transplant' Component ={()=><TreatmentPage/>} />
         <Route exact path='/giventreatments' Component = {()=><GivenTreatments type={'all'}/>}/>
         <Route exact path='/max-hospital-saket/best-doctors/doctor/anandkumar' Component={()=><DoctorsProfile doctor={{name: 'anandkumar', hospital: 'maxsaket'}}/>} />
         <Route exact path='/max-hospital-saket/best-doctors/doctor/kumudrai' Component={()=><DoctorsProfile doctor={{name: 'kumudrai', hospital: 'maxsaket'}}/>} />

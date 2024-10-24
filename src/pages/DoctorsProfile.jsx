@@ -11,12 +11,6 @@ export default function DoctorsProfile({doctor}) {
     const doctorImgRef = useRef(null);
     const doctors = doctorsProfileData[doctor.hospital][doctor.name];
 
-    useEffect(()=> {
-        if(window.innerWidth < 1000) {
-            aboutRef.current.style.marginTop = `${doctorImgRef.current.offsetWidth-60}px`;            
-        }
-    },[])
-
     function popupWindow() {
         if(!popupForm.current.style.opacity) {
             popupForm.current.style.opacity= '1';
@@ -28,6 +22,7 @@ export default function DoctorsProfile({doctor}) {
             document.querySelector('html').style.overflow= 'scroll';
         }
     }
+    
     function removeWindow() {
         popupForm.current.style.opacity= null;
         popupForm.current.style.left= '-200px';
@@ -35,6 +30,10 @@ export default function DoctorsProfile({doctor}) {
     }
 
     useEffect(()=> {
+        if(window.innerWidth < 1000) {
+            aboutRef.current.style.marginTop = `${doctorImgRef.current.offsetWidth-60}px`;            
+        }
+
         window.onscroll = ()=>{
             if(window.scrollY > 500) {
                 doctorImgRef.current && doctorImgRef.current.classList.add('hidden');
@@ -46,14 +45,13 @@ export default function DoctorsProfile({doctor}) {
 
     return(
         <>
-            {/* {(window.innerWidth > 1000) && ( */}
-                <div ref={popupForm} className="opacity-0 flex z-50 fixed top-1/2 left-[-200px] lg:w-auto w-[100vw] translate-x-[-50%] translate-y-[-50%] transition-all duration-500" >
-                    <div className="lg:scale-110 lg:w-auto w-[100vw] shadow-2xl bg-gradient-to-b from-white via-purple-50 to-purple-300 overflow-hidden rounded-[20px]">
-                        <UserInfo/>
-                    </div>
-                    <button onClick={removeWindow} className="h-10 w-10 text-2xl pb-1 lg:scale-100 scale-150 rounded-full relative lg:right-6 lg:bottom-6 right-10 bottom-[-4px] hover:text-red-500">×</button>
+            <div ref={popupForm} className="opacity-0 flex z-50 fixed top-1/2 left-[-200px] lg:w-auto w-[100vw] translate-x-[-50%] translate-y-[-50%] transition-all duration-500" >
+                <div className="lg:scale-110 lg:w-auto w-[100vw] shadow-2xl bg-gradient-to-b from-white via-white to-blue-300 overflow-hidden rounded-[10px]">
+                    <UserInfo/>
                 </div>
-            {/* )} */}
+                <button onClick={removeWindow} className="h-10 w-10 text-2xl pb-1 lg:scale-100 scale-150 rounded-full relative lg:right-6 lg:bottom-6 right-10 bottom-[-4px] hover:text-red-500">×</button>
+            </div>
+
             <div style={{fontFamily: `convergence, sans-serif`}} className="mb-20 lg:px-4 lg:flex justify-around w-[98vw] rounded-lg m-auto shadow-lg lg:bg-gradient-to-r from-purple-300 via-purple-50 to-[#f3feff] ">
                 
                 <div className="lg:sticky lg:w-[28%] lg:h-[70vh] top-[35vh] bg-white rounded-t-3xl flex flex-col items-center">
@@ -107,7 +105,7 @@ export default function DoctorsProfile({doctor}) {
             </div>
 
             {window.innerWidth < 640 && (
-            <div className="bg-gradient-to-b from-white via-blue-50 to-blue-300 overflow-hidden rounded-[20px] border-t border-dotted border-[#64748b] shadow-lg w-[95vw] mb-10 m-auto">
+            <div className="bg-gradient-to-b from-white via-white to-blue-300 overflow-hidden rounded-[20px] border-t border-dotted border-[#64748b] shadow-lg w-[95vw] mb-10 m-auto">
                 <UserInfo/>
             </div>)}
 

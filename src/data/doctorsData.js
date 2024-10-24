@@ -37,7 +37,7 @@ export default {
             link: `/max-hospital-saket/best-doctors/doctor/vivekakumar`,
         },
         'vivekvasudeo': {
-            img: './img/doctors/vivekvasudeo.png',
+            img: './img/doctors/vivekvasudev.png',
             name: 'Dr. Vivek Vasudeo',
             type: `Consultant`,
             speciality: 'Urology',
