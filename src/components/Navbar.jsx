@@ -90,8 +90,8 @@ function Navbar() {
     
     return (
         <>
-            <div className="topBar sticky top-0 lg:static z-20 bg-gradient-to-r from-cyan-200 via-blue-300 to-blue-400 h-16 flex justify-between items-center lg:pr-3">
-                <Link to='/'><img src="./img/logo.png" alt="Root-Medix" className=' h-10 ml-0  lg:hue-rotate-90 lg:h-14 lg:ml-2'/></Link>
+            <div className="topBar sticky top-0 lg:static z-20 bg-gradient-to-r from-cyan-50 via-blue-100 to-blue-200 h-16 flex justify-between items-center lg:pr-3">
+                <Link to='/'><img src="./img/logo2.png" alt="Root-Medix" className=' h-12 ml-1 lg:h-14 lg:ml-2'/></Link>
                 <div className='langSidebarDiv flex justify-between items-center w-[188px] lg:w-[550px] transition-all duration-500'>
                     <select name="language" id="lang" style={{fontFamily: `convergence, 'sans-serif`}} className='lg:shadow-none shadow-3dUnclicked active:shadow-3dClicked outline-none lg:border-none text-center text-sm lg:text-[16px] lg:w-28 w-[75px] h-10 lg:h-10 w rounded-xl bg-transparent lg:bg-gradient-to-r lg:from-blue-100 lg:via-cyan-50 lg:to-blue-100'>
                         <option value="eng">English</option>
