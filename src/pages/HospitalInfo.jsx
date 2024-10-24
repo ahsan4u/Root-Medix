@@ -70,7 +70,7 @@ function HospitalInfo({ name }) {
           </div>
         </div>
         
-        <div className="w-72 flex-shrink-0 self-start sm:border-none mt-12 border-t border-dotted border-[#b6c0ce] sm:mt-0 sm:ml-5 shadow-xl overflow-hidden rounded-xl sticky top-12 bg-gradient-to-b from-white via-white to-blue-300">
+        <div className="lg:w-72 flex-shrink-0 self-start sm:border-none mt-12 border-t border-dotted border-[#b6c0ce] sm:mt-0 sm:ml-5 shadow-xl overflow-hidden rounded-xl sticky top-12 bg-gradient-to-b from-white via-white to-blue-300">
           <UserInfo />
         </div>
       </div>
