@@ -1,0 +1,160 @@
+import { maxsaketDoctors } from '../../../data/cardsData';
+
+export default {
+    about: maxsaketDoctors['anandkumar'],
+    profile: [
+        {
+            subheading: `About Dr. Anant Kumar`,
+            description: `With over 36 years of experience in the field of urology and renal transplantation, Dr. Anant Kumar is an accomplished urologist with professionalism in serving as the chairman of urology, renal transplant, and robotics at Max Hospital, Saket, and uro-oncology at Max Super Speciality Hospital, Saket. Dr. Anant Kumar counts amongst the best urologists and robotic surgeons practicing exclusively in kidney transplantation, laparoscopic urology, robotic-assisted surgeries, and uro-oncology.`,
+        },
+        {
+            description: `With more than 3,500 kidney transplants and over 500 robotic surgeries over the last five years, he is also known for being among the pioneers in laser urological surgery and laparoscopic donor nephrectomy. He has extensive experience in complex reconstructive urological surgery, with special talent for managing renal-vascular hypertension, prostate disorders, and urethral strictures.`,
+        },
+        {
+            subheading: `Education & Training `,
+            list: [
+                {
+                    content: `DNB (Urology)—PGIMER, Chandigarh, India`,
+                },
+                {
+                    content: `M.Ch. (Urology)—PGIMER, Chandigarh, India`,
+                },
+                {
+                    content: `M.S. (General Surgery)—PGIMER, Chandigarh, India`,
+                },
+                {
+                    content: `MBBS – King George Medical University, Lucknow, India`,
+                },
+            ],
+        },
+        {
+            subheading: `Professional Experience`,
+            list: [
+                {
+                    name: `Chairman`,
+                    content: `Urology, Renal Transplant, and Robotics, Max Saket Complex, New Delhi`,
+                },
+                {
+                    name: `Chairman`,
+                    content: `Uro-Oncology, Max Super Speciality Hospital, Saket, New Delhi`,
+                },
+                {
+                    name: `Professor and Head`,
+                    content: `Urology & Renal Transplantation, Sanjay Gandhi Post Graduate Institute of Medical Sciences (SGPGIMS), Lucknow`,
+                },
+                {
+                    name: `Director`,
+                    content: `Urology, Robotic & Kidney Transplantation, Fortis Group of Hospitals, Delhi & NCR`,
+                },
+                {
+                    name: `Senior Consultant`,
+                    content: `Urology & Transplantation, Indraprastha Apollo Hospital, New Delhi`,
+                },
+                {
+                    name: `Consultant Urologist`,
+                    content: `Addenbrooke's NHS Foundation, Cambridge, UK`,
+                },
+            ],
+        },
+        {
+            subheading: `Specialty Interests`,
+            description: ``,
+            list: [
+                {
+                    content: `Renal Transplant`,
+                },
+                {
+                    content: `Reno-Vascular Hypertension`,
+                },
+                {
+                    content: `Robotics & Laparoscopic Urology`,
+                },
+                {
+                    content: `Stricture Urethra Surgery`,
+                },
+                {
+                    content: `Uro-Oncology`,
+                },
+                {
+                    content: `Laser Prostate Surgery`,
+                },
+                {
+                    content: `Reconstructive Urology`,
+                },
+            ],
+        },
+        {
+            subheading: `Awards & Recognition`,
+            list: [
+                {
+                    content: `Bagged several accolades and recognitions during his medical school and training`,
+                },
+                {
+                    content: `Acclaimed by many for innovations in robotic & laparoscopic surgery`,
+                },
+            ],
+        },
+        {
+            subheading: `Membership`,
+            list: [
+                {
+                    content: `American Urological Association`,
+                },
+                {
+                    content: `British Association of Urological Surgeons`,
+                },
+                {
+                    content: `Société Internationale d'Urologie`,
+                },
+                {
+                    content: `International Transplant Society`,
+                },
+                {
+                    content: `International Society of Nephrology`,
+                },
+                {
+                    content: `European Association of Urology`,
+                },
+                {
+                    content: `Asian Society of Transplantation`,
+                },
+                {
+                    content: `Urological Society of India`,
+                },
+                {
+                    content: `Indian Society of Organ Transplantation`,
+                },
+                {
+                    content: `Indian Science Congress Society`,
+                },
+            ],
+        },
+        {
+            subheading: `Research & Publications`,
+            list: [
+                {
+                    content: `Delivered several high-prestige guest lectures at various conferences and institutions.`,
+                },
+                {
+                    content: `Published over 180 papers in national and international journals.`,
+                },
+                {
+                    content: `Book chapters and invited reviews`,
+                },
+            ],
+        },
+
+        // Addition of Frequntly Asked Question is Needed
+        // {
+        //     heading: ``,
+        //     subheading: `About Dr. Anant Kumar`,
+        //     description: ``,
+        //     list: [
+        //         {
+        //             name: ``,
+        //             content: ``,
+        //         },
+        //     ],
+        // },
+    ]
+}
