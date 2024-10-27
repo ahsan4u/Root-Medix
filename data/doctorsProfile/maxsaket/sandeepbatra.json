@@ -1,0 +1,71 @@
+[
+    {
+        "subheading": "About Dr. Sandeep Batra",
+        "description": "Dr. Sandeep Batra is a senior executive in therapeutic oncology at Max Healthcare, where patients can seek master cancer care. He has more than 14 years of experience and exceptional training in treating various cancers, including gastrointestinal, gynecologic, uro-oncologic, and thoracic cancers. His patient-centric approach and commitment to advancing the field with new treatments distinguish him, along with the characteristics that originally attracted him to cancer research."
+    },
+    {
+        "subheading": "Work Experience",
+        "list": [
+            {
+                "content": "BLK Super Specialty Hospital, Delhi, Dec 2015 – Dec 2017"
+            },
+            {
+                "content": "Medical Oncology & Hematology Consultant"
+            },
+            {
+                "content": "Medanta, The Medicity, Gurgaon, Nov 2009 – Dec 2015"
+            },
+            {
+                "content": "Associate Specialist, Therapeutic Oncology"
+            },
+            {
+                "content": "Artemis Health Institute, Gurgaon, July 2009 – Oct 2009"
+            }
+        ]
+    },
+    {
+        "subheading": "Education & Training",
+        "list": [
+            {
+                "content": "MBBS (Gold Medal): PGIMS, Rohtak"
+            },
+            {
+                "content": "MD in Medicine: PGIMS, Rohtak"
+            },
+            {
+                "content": "DNB (Medicine): National Board of Examinations, Delhi"
+            },
+            {
+                "content": "DNB (Therapeutic Oncology): National Board of Examinations, Delhi"
+            }
+        ]
+    },
+    {
+        "subheading": "Specialty Interests",
+        "description": "Dr. Batra's primary areas of interest are:",
+        "list": [
+            {
+                "content": "Gastrointestinal Oncology"
+            },
+            {
+                "content": "Gynecologic Oncology"
+            },
+            {
+                "content": "Uro-Oncology"
+            }
+        ]
+    },
+    {
+        "subheading": "Frequently Asked Questions",
+        "list": [
+            {
+                "name": "Question 1",
+                "content": "Answer to question 1."
+            },
+            {
+                "name": "Question 2",
+                "content": "Answer to question 2."
+            }
+        ]
+    }
+]
