@@ -1,0 +1,103 @@
+import { maxsaketDoctors } from '../../../data/cardsData';
+
+export default {
+    about: maxsaketDoctors['rayazahmed'],
+    profile: [
+        {
+            subheading: `About Dr. Rayaz Ahmed`,
+            description: `Dr. Rayaz Ahmed is one of the most veteran hematologists and oncologists, having over 17 years of experience in cancer care. He has done over 1,000 successful bone marrow transplants so far. He presently serves part of the renowned team at Max Healthcare. Dr. Ahmed has worked in some of the country's most prestigious posts and held positions such as Senior Consultant in Hematology at Rajiv Gandhi Cancer Institute and Research Centre, New Delhi, and Associate Professor at CMC Vellore.`,
+        },
+        {
+            subheading: `Education & Training`,
+            list: [
+                {
+                    content: `MBBS degree from Pt. Ravi Shanker University, Raipur, India, in 1999`,
+                },
+                {
+                    content: `MD Pathology from Shivaji University, Kolhapur, Maharashtra, in the year 2003`,
+                },
+                {
+                    content: `DM in Hematology from Christian Medical College & Hospital, Vellore, Tamil Nadu, in the year 2010`,
+                },
+            ],
+        },
+        {
+            subheading: `Awards & Achievements`,
+            list: [
+                {
+                    content: `Conducted many cases of Autologous and Allogeneic (MSD, MUD, Haplo) stem cell transplants successfully`,
+                },
+                {
+                    content: `University Gold Medal in MD Pathology (2003) from Shivaji University, Kolhapur.`,
+                },
+            ],
+        },
+        {
+            subheading: `Specialty Interests`,
+            description: `Dr. Ahmed practices with great expertise in treating complicated blood disorders and cancers, with a focus on the following conditions:`,
+            list: [
+                {
+                    content: `Stem Cell Transplants: Autologous, Allogeneic (Matched Sibling Donor), Haplo-Identical, and Matched Unrelated Donor transplants.`,
+                },
+                {
+                    content: `Aplastic Anemia, Thalassemia, Sickle Cell Anemia`,
+                },
+                {
+                    content: `Leukemia of various types, including AML, ALL, CML, and CLL`,
+                },
+                {
+                    content: `Lymphomas: Hodgkin and Non-Hodgkin`,
+                },
+                {
+                    content: `Multiple Myeloma`,
+                },
+            ],
+        },
+        {
+            subheading: `Research & Publications`,
+            description: `Dr. Ahmed is an active researcher who has published many papers, among them:`,
+            list: [
+                {
+                    content: `Long-term outcomes after splenectomy for chronic and persistent immune thrombocytopenia (ITP).`,
+                },
+                {
+                    content: `Factors predicting compliance to imatinib in chronic myeloid leukemia from India.`,
+                },
+                {
+                    content: `Studies on BRAF mutations in hairy cell leukemia.`,
+                },
+                {
+                    content: `Review of conditioning regimens, including fludarabine, for severe aplastic anemia: A retrospective analysis of outcome.`,
+                },
+                {
+                    content: `Two novel missense mutations affecting iron transport proteins with anemia and hemosiderosis.`,
+                },
+                {
+                    content: `Clinical advantages of HLA-matched sibling stem cell transplantations in high-risk thalassemia major patients.`,
+                },
+                {
+                    content: `Insights into BCR/ABL1 fusion patterns in chronic myelogenous leukemia.`,
+                },
+                {
+                    content: `Wiskott-Aldrich syndrome: Molecular analysis from Indian patients.`,
+                },
+                {
+                    content: `Carbonyl reductase 1: Assessing the metabolism of daunorubicin in acute myeloid leukemia`,
+                },
+            ],
+        },
+
+        // Addition of Frequntly Asked Question is Needed
+        // {
+        //     heading: ``,
+        //     subheading: ``,
+        //     description: ``,
+        //     list: [
+        //         {
+        //             name: ``,
+        //             content: ``,
+        //         },
+        //     ],
+        // },
+    ]
+}

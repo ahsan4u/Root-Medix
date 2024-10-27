@@ -41,6 +41,12 @@ function App() {
         <Route exact path='/max-hospital-saket/best-doctors/doctor/nagendersharma' Component={()=><DoctorsProfile doctor={{name: 'nagendersharma', hospital: 'maxsaket'}}/>} />
         <Route exact path='/max-hospital-saket/best-doctors/doctor/vijaykumarchopra' Component={()=><DoctorsProfile doctor={{name: 'vijaykumarchopra', hospital: 'maxsaket'}}/>} />
         <Route exact path='/max-hospital-saket/best-doctors/doctor/subhashkumarsinha' Component={()=><DoctorsProfile doctor={{name: 'subhashkumarsinha', hospital: 'maxsaket'}}/>} />
+        <Route exact path='/max-hospital-saket/best-doctors/doctor/colcproy' Component={()=><DoctorsProfile doctor={{name: 'colcproy', hospital: 'maxsaket'}}/>} />
+        <Route exact path='/max-hospital-saket/best-doctors/doctor/hkagarwal' Component={()=><DoctorsProfile doctor={{name: 'hkagarwal', hospital: 'maxsaket'}}/>} />
+        <Route exact path='/max-hospital-saket/best-doctors/doctor/balbirsingh' Component={()=><DoctorsProfile doctor={{name: 'balbirsingh', hospital: 'maxsaket'}}/>} />
+        <Route exact path='/max-hospital-saket/best-doctors/doctor/arvindmdas' Component={()=><DoctorsProfile doctor={{name: 'arvindmdas', hospital: 'maxsaket'}}/>} />
+        <Route exact path='/max-hospital-saket/best-doctors/doctor/rajneeshmalhotra' Component={()=><DoctorsProfile doctor={{name: 'rajneeshmalhotra', hospital: 'maxsaket'}}/>} />
+        <Route exact path='/max-hospital-saket/best-doctors/doctor/mohanbhargava' Component={()=><DoctorsProfile doctor={{name: 'mohanbhargava', hospital: 'maxsaket'}}/>} />
       </Routes>
     <Footer/>
     </>

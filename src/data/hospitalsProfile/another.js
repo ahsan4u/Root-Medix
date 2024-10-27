@@ -1,0 +1,26 @@
+
+    //export const dataName =  {
+    //     name: '',
+    //     img: './img/hospital/',
+    //     location: {
+    //       address: ``,
+    //       beds: ``,
+    //       airport: ``,
+    //     },
+    //     contents: [
+    //       {
+    //         heading: ``,
+    //         description: ``,
+    //       },
+    //       {
+    //         heading: ``,
+    //         subHeading: ``,
+    //         points: [
+    //           ``,
+    //           ``,
+    //           ``,
+    //           ``,
+    //         ]
+    //       },
+    //     ],
+    // },

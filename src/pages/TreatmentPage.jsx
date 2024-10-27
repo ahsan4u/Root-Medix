@@ -1,13 +1,12 @@
-import React from "react";
-import UserInfo from "../components/UserInfo";
-import ScrollDiv from '../components/ScrollDiv';
-import DoctorCard from '../components/DoctorCard';
-import doctorsData from '../data/doctorsData';
+import {services, maxsaketDoctors} from '../data/cardsData';
+import React       from "react";
+import UserInfo    from "../components/UserInfo";
+import ScrollDiv   from '../components/ScrollDiv';
+import DoctorCard  from '../components/DoctorCard';
 import ServiceCard from '../components/ServiceCard';
-import servicesData from '../data/servicesCardData';
 
 function TreatmentPage() {
-    const maxDoctors = Object.keys(doctorsData['maxsaket']).map(key=>doctorsData['maxsaket'][key]);
+    const maxDoctors = Object.keys(maxsaketDoctors).map(key=>maxsaketDoctors[key]);
 
     return(
         <>
@@ -42,7 +41,7 @@ function TreatmentPage() {
             <ScrollDiv heading={'Top Doctors For Heart Transplant'} cardsData={maxDoctors} Card={DoctorCard} scroll={true}/>
             
             <div className="mt-12">
-                <ScrollDiv heading={'Our Services'} cardsData={servicesData} Card={ServiceCard}/>
+                <ScrollDiv heading={'Our Services'} cardsData={services} Card={ServiceCard}/>
             </div>
         </>
     )

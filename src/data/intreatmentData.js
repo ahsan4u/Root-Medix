@@ -1,5 +1,4 @@
-const intreatmentData = {
-   'cardiology': [ 
+export const cardiology = [ 
         {name: 'ASD', info: 'Atrial Septal Defect', img: './img/asd.png'},
         {name: 'ASD', info: 'Atrial Septal Defect', img: './img/asd.png'},
         {name: 'ASD', info: 'Atrial Septal Defect', img: './img/asd.png'},
@@ -19,9 +18,4 @@ const intreatmentData = {
         {name: 'ASD', info: 'Atrial Septal Defect', img: './img/asd.png'},
         {name: 'ASD', info: 'Atrial Septal Defect', img: './img/asd.png'},
         {name: 'ASD', info: 'Atrial Septal Defect', img: './img/asd.png'},
-        {name: 'ASD', info: 'Atrial Septal Defect', img: './img/asd.png'},
-    ],
-    
-};
-
-export default intreatmentData;
+    ];

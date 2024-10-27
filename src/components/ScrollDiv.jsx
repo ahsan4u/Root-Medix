@@ -52,7 +52,7 @@ function ScrollDiv({heading, cardsData, Card, count, seeMore, scroll}) {
         <div className="border-b border-dotted border-gray-500 rounded-b-3xl w-[98vw] m-auto">
             <div className="flex justify-between bg-gradient-to-r from-cyan-200 via-blue-300 to-blue-400 rounded-t-lg overflow-hidden items-center px-3">
                 <h2 className="sm:text-3xl text-xl font-serif font-bold py-1" style={{fontFamily: `"Ubuntu", sans-serif`, fontWeight: '700', fontStyle: 'italic'}}>{heading}</h2>
-                {seeMore && <Link to='/giventreatments' className="font-bold">See More...</Link>}
+                {seeMore && <Link to='/giventreatments' className="font-bold"><img src="/img/seemore.png" alt="see-more" className="w-7 hover:scale-110"/></Link>}
             </div>
 
             <div ref={cardsContainer} className="treatment-container overflow-x-scroll overflow-y-hidden flex flex-nowrap snap-x snap-proximity">

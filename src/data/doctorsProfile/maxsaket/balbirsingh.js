@@ -1,0 +1,116 @@
+import { maxsaketDoctors } from '../../../data/cardsData';
+
+export default {
+    about: maxsaketDoctors['balbirsingh'],
+    profile: [
+        {
+            subheading: `About Dr. Balbir Singh`,
+            description: `Dr. Balbir Singh is a well-reputed and well-established cardiologist with more than 32 years of involvement in cardiology, especially in interventional cardiology and electrophysiology. He is the Bunch Chairman of Cardiac Sciences at Max Healthcare and leads the cardiology group over all Max Healing centers. His obligations include clinical hones, quality of care, inquire about, and doctor preparation, as well as other programs such as DNB in cardiology.`,
+        },
+        {
+            description: `In 2019, he joined Max Healthcare after completing a distinguished residency as the Chairman of Interventional Cardiology and Electrophysiology at Medanta Healing Center. He is a recognized master in both India and overseas. He has won numerous honors, counting the acclaimed Padma Shri grant for his work in medicine.`,
+        },
+        {
+            subheading: `Education & Training`,
+            list: [
+                {
+                    content: `MBBS, Maulana Azad Restorative College, Delhi (1983)`,
+                },
+                {
+                    content: `MD (Inside Pharmaceutical)—Maurana Azad Therapeutic College, Delhi (1987)`,
+                },
+                {
+                    content: `DM in Cardiology, Govind Ballabh Gasp Clinic, Modern Delhi (1992)`,
+                },
+                {
+                    content: `Fellowship, American College of Cardiology, USA (2005)`,
+                },
+            ],
+        },
+        {
+            subheading: `Work Experience`,
+            list: [
+                {
+                    content: `Max Healthcare, Gather Chairman, Cardiac Sciences, Chief of Interventional Cardiology and Electrophysiology (2019-to-now)`,
+                },
+                {
+                    content: `Medanta, The Medicity, Chairman of Cardiology & Electrophysiology (2009 - 2019)`,
+                },
+                {
+                    content: `Apollo Clinic, Senior Specialist, Cardiology (2007 – 2009)`,
+                },
+                {
+                    content: `Fortis Heart Organized & Inquire about Center: Vital Specialist, Cardiology (2004-2007)`,
+                },
+                {
+                    content: `Batra Hospital—Senior Expert, Cardiology (1998 – 2004)`,
+                },
+                {
+                    content: `AIIMS: Senior Teacher, Cardiology (1993–1997).`,
+                },
+            ],
+        },
+        {
+            subheading: `Specialty Interests`,
+            list: [
+                {
+                    name: `Interventional Cardiology`,
+                    content: `Skill in least intrusive heart illnesses, Angioplasty and stent placement`,
+                },
+                {
+                    name: `Cardiac Electrophysiology`,
+                    content: `Skill in demonstrative and restorative mediations for the clutters of heart beat, Pacemaker implantation, and removal therapies`,
+                },
+                {
+                    name: `Pacemaker Implantation`,
+                    content: `involvement in putting pacemakers in patients suffering from arrhythmias and other heart cadence disorders.`,
+                },
+                {
+                    name: `Coronary Care`,
+                    content: `Offers serious care to the quiet who endures from the infection of coronary course and other complicated cardiac disease`,
+                },
+            ],
+        },
+        {
+            subheading: `Memberships`,
+            list: [
+                {
+                    content: `President, Delhi Cardiological Society of India (CSI)`,
+                },
+                {
+                    content: `Past President Indian Heart Cadence Society (IHRS)`,
+                },
+            ],
+        },
+        {
+            subheading: `Awards & Recognition`,
+            list: [
+                {
+                    content: `Padma Shri Grant (2007)— One of the most prominent civilian grants in India, he got for his commitments in cardiology`,
+                },
+                {
+                    content: `Best Administrator at India Live (2016)—gotten for fabulousness in doing interventional cardiology procedures`,
+                },
+                {
+                    content: `Golden Hand Grant at AICT, Singapore (2012)— For his greatness in cardiac electrophysiology`,
+                },
+                {
+                    content: `Best Late-Breaking Trial Grant at APHRS, Taiwan (2018)—For spearheading work done in his inquiry about on cardiac sciences`,
+                },
+            ],
+        },
+
+        // Addition of Frequntly Asked Question is Needed
+        // {
+        //     heading: ``,
+        //     subheading: ``,
+        //     description: ``,
+        //     list: [
+        //         {
+        //             name: ``,
+        //             content: ``,
+        //         },
+        //     ],
+        // },
+    ]
+}
