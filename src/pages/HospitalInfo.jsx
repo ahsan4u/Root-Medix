@@ -1,4 +1,4 @@
-import {maxsaketTreatments, services}  from '../data/cardsData';
+import {maxsaketTreatments, services}  from '../../public/data/cardsData';
 import React, { useEffect, useState }         from "react";
 import UserInfo      from "../components/UserInfo";
 import TreatmentCard from "../components/TreatmentCard";
@@ -12,7 +12,9 @@ function HospitalInfo({ name }) {
   const newTreatment = maxsaketTreatments;
   useEffect(()=> {
     async function load() {
-      await import(`../data/hospitalsProfile/${name}`).then((res)=> { setHospitalInfo(res.default) });
+      await fetch(`/data/hospitalsProfile/${name}.json`).then(res=>res.json()).then((res)=> { console.log(res); setHospitalInfo(res) })
+      .catch((err)=> {console.log(err)});
+      console.log(hospitalInfo);
     } load();
   },[name]);
 

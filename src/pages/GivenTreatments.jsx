@@ -1,6 +1,6 @@
 import React from "react";
 import TreatmentCard from "../components/TreatmentCard";
-import {maxsaketTreatments, blkmaxTreatments, maxdwarkaTreatments, aakashTreatments} from "../data/cardsData";
+import {maxsaketTreatments, blkmaxTreatments, maxdwarkaTreatments, aakashTreatments} from "../../public/data/cardsData";
 import { Link } from "react-router-dom";
 function GivenTreatments({type}) {
     let treatments = null;

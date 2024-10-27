@@ -1,4 +1,4 @@
-import {hospitals, services, maxsaketDoctors, maxsaketTreatments, blkmaxTreatments} from '../data/cardsData';
+import {hospitals, services, maxsaketDoctors, maxsaketTreatments, blkmaxTreatments} from '../../public/data/cardsData';
 import React          from "react";
 import Poster         from '../components/Poster';
 import UserInfo       from "../components/UserInfo";

@@ -1,0 +1,127 @@
+[
+    {
+        "subheading": "About Dr. Subhash Kumar Sinha",
+        "description": "Dr. Subhash Kumar Sinha is one of the most experienced and renowned cardiac specialists, boasting a track record of over 37 years in Cardiothoracic and Vascular Surgery (CTVS). He has made significant contributions to cardiac surgery as a senior director at Max Super Specialty Hospital, Saket. Dr. Sinha has performed numerous complex heart surgeries, including minimally invasive procedures, aortic aneurysm repairs, and beating heart surgeries. His pioneering work in beating heart surgery has earned him global recognition, and he has trained and mentored 75 medical professionals in surgical procedures and healthcare management throughout his career."
+    },
+    {
+        "subheading": "Education & Training",
+        "list": [
+            {
+                "content": "MBBS: Armed Forces Medical College, Pune"
+            },
+            {
+                "content": "Master of Surgery (MS): Patna Medical College, Patna"
+            },
+            {
+                "content": "M.Ch. (CTVS): Post Graduate Institute of Medical Education and Research, Chandigarh"
+            },
+            {
+                "content": "Managing Healthcare Delivery: Harvard Business School"
+            }
+        ]
+    },
+    {
+        "subheading": "Work Experience",
+        "list": [
+            {
+                "content": "Director, CTVS, Max Super Specialty Hospital, Saket Delhi, April 2018—Present"
+            },
+            {
+                "content": "Director, CTVS, Max Smart Super Specialty Hospital, Saket, Delhi, July 2016 to April 2018"
+            },
+            {
+                "content": "Director, Cardiac Sciences, Paras Group of Hospitals, Gurgaon, Patna & Darbhanga, March 2014-June 2016"
+            },
+            {
+                "content": "Director, CTVS, Max Super Specialty Hospital, New Delhi, May 2009 - March 2014"
+            },
+            {
+                "content": "Chief Cardiac Surgeon & Head of Department, Batra Hospital & Medical Research Centre, New Delhi, Oct 1996-April 2009"
+            },
+            {
+                "content": "Chief Cardiac Surgeon, RML Hospital Ltd, Kanpur, July 1995-Oct 1996"
+            },
+            {
+                "content": "Senior Surgeon, Batra Hospital & Medical Research Centre, New Delhi, May 1989-June 1995"
+            },
+            {
+                "content": "Cardiac Surgeon, Railway Hospital, Chennai, July 1986-April 1989"
+            },
+            {
+                "content": "Visiting Fellow: Royal Children's Hospital, Melbourne, Australia (Aug - Sept 1992)"
+            }
+        ]
+    },
+    {
+        "subheading": "Awards & Recognitions",
+        "list": [
+            {
+                "name": "Pioneer Beating Heart Surgery",
+                "content": "Received international recognition for the development of new techniques in heart surgery."
+            },
+            {
+                "name": "Training and Teaching",
+                "content": "Trained 75 specialists and paramedics in management and surgical practices."
+            },
+            {
+                "name": "Reviewer",
+                "content": "Reviewer for Indian Journal of Thoracic Cardiac Vascular Surgery."
+            }
+        ]
+    },
+    {
+        "subheading": "Specialty Interests",
+        "list": [
+            {
+                "name": "Minimally Invasive Surgeries",
+                "content": "ASD, MVR, AVR, LA myxomas."
+            },
+            {
+                "name": "Aortic Surgery",
+                "content": "Aortic dissection, aneurysm repairs, trauma surgeries for gunshot and stab injuries."
+            },
+            {
+                "name": "Coronary Artery Bypass Grafting (CABG)",
+                "content": "CABG with total arterial grafts on a beating heart."
+            },
+            {
+                "name": "Minimally Invasive Cardiac Surgery",
+                "content": "Currently the head of the minimally invasive program at Max Super Specialty Hospital."
+            }
+        ]
+    },
+    {
+        "subheading": "Memberships",
+        "list": [
+            {
+                "name": "Life Member",
+                "content": "Indian Association of Cardiovascular and Thoracic Surgeons of India."
+            },
+            {
+                "name": "Life Member",
+                "content": "Cardiological Society of India."
+            },
+            {
+                "name": "Founding Member",
+                "content": "Indian College of Cardiology."
+            },
+            {
+                "name": "Peer Reviewer",
+                "content": "Indian Journal of Thoracic Cardiac Vascular Surgery (IJCTS)."
+            }
+        ]
+    },
+    {
+        "subheading": "Frequently Asked Questions",
+        "list": [
+            {
+                "name": "Question 1",
+                "content": "Answer to question 1."
+            },
+            {
+                "name": "Question 2",
+                "content": "Answer to question 2."
+            }
+        ]
+    }
+]

@@ -1,5 +1,5 @@
-import {maxsaketDoctors, services} from '../data/cardsData';
-import {cardiology} from '../data/intreatmentData';
+import {maxsaketDoctors, services} from '../../public/data/cardsData';
+import {cardiology} from '../../public/data/intreatmentData';
 import { Link } from 'react-router-dom';
 import ScrollDiv from '../components/ScrollDiv';
 import DoctorCard from '../components/DoctorCard';

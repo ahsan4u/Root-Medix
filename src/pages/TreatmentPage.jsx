@@ -1,4 +1,4 @@
-import {services, maxsaketDoctors} from '../data/cardsData';
+import {services, maxsaketDoctors} from '../../public/data/cardsData';
 import React       from "react";
 import UserInfo    from "../components/UserInfo";
 import ScrollDiv   from '../components/ScrollDiv';
@@ -12,7 +12,7 @@ function TreatmentPage() {
         <>
             <div className="lg:flex justify-between px-2 lg:px-7 pt-3 py-12 bg-[#fffbff]">
                 <div className="lg:w-[76%] lg:mr-4">
-                    <div className="shadow-lg border-r border-dotted border-gray-200 rounded-2xl overflow-hidden relative flex justify-between">
+                    <div className="shadow-lg border-r border-dotted border-gray-400 rounded-2xl overflow-hidden relative flex justify-between">
                         <div className="w-[100%] aspect-[16/6.5] text-white font-bold relative bg-[url(/img/treatment/treatmentTemp.png)] bg-[length:100%_100%] z-10">
                             <div className="w-[58%] text-white text-center font-bold h-full flex flex-col justify-center">
                                 <h1 className="lg:text-5xl text-xl">Heart Transplant</h1>
@@ -34,7 +34,7 @@ function TreatmentPage() {
                     </div>
                 </div>
 
-                <div className="lg:w-72 mt-14 border-t border-dotted border-gray-200 flex-shrink-0 self-start shadow-lg bg-gradient-to-t from-[#b2b9d4] via-white to bg-white rounded-3xl lg:rounded-xl sticky top-14">
+                <div className="lg:w-72 mt-14 lg:mt-0 border-t border-dotted border-gray-200 flex-shrink-0 self-start shadow-lg bg-gradient-to-t from-[#b2b9d4] via-white to bg-white rounded-3xl lg:rounded-xl sticky top-14">
                     <UserInfo/>
                 </div>
             </div>
