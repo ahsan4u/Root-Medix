@@ -5,48 +5,42 @@ import { useEffect } from 'react';
 import Navbar from './components/Navbar';
 import Footer from './components/footer';
 import InTreatment from './pages/InTreatment';
-import GivenTreatments from './pages/GivenTreatments';
+import GivenCard from './pages/GivenCard';
+import TreatmentCard from './components/TreatmentCard';
 import DoctorsProfile from './pages/DoctorsProfile';
 import TreatmentPage from './pages/TreatmentPage';
+import DoctorCard from './components/DoctorCard';
 
 function App() {
   useEffect(()=>{
     window.scrollTo(0, 0);
     document.querySelector('html').style.overflow = 'scroll';
   },[useLocation()])
+  
+  const hospitals = [ 'maxsaket', 'blkmax', 'maxdwarka', 'aakash', ];
+  const doctors = [
+    {name: 'anandkumar',        hospital: 'maxsaket'}, {name: 'kumudrai',          hospital: 'maxsaket'}, {name: 'vivekakumar',      hospital: 'maxsaket'},
+    {name: 'vivekvasudeo',      hospital: 'maxsaket'}, {name: 'rohitkaushal',      hospital: 'maxsaket'}, {name: 'rayazahmed',       hospital: 'maxsaket'},
+    {name: 'pragneshdesai',     hospital: 'maxsaket'}, {name: 'mrigankshekharjha', hospital: 'maxsaket'}, {name: 'samitchaturvedi',  hospital: 'maxsaket'},
+    {name: 'sandeepbatra',      hospital: 'maxsaket'}, {name: 'nagendersharma',    hospital: 'maxsaket'}, {name: 'vijaykumarchopra', hospital: 'maxsaket'},
+    {name: 'subhashkumarsinha', hospital: 'maxsaket'}, {name: 'colcproy',          hospital: 'maxsaket'}, {name: 'hkagarwal',        hospital: 'maxsaket'},
+    {name: 'balbirsingh',       hospital: 'maxsaket'}, {name: 'arvindmdas',        hospital: 'maxsaket'}, {name: 'rajneeshmalhotra', hospital: 'maxsaket'},
+    {name: 'mohanbhargava',     hospital: 'maxsaket'}, {name: 'vineetarya',        hospital: 'maxsaket'},
+  ];
 
   return (
     <>
     <Navbar/>
       <Routes>
         <Route exact path='/' Component={Home}/>
-        <Route exact path='/hospital/maxsaket' Component={()=><HospitalInfo name='maxsaket'/>}/>
-        <Route exact path='/hospital/blkmax' Component={()=><HospitalInfo name='blkmax'/>}/>
-        <Route exact path='/hospital/maxdwarka' Component={()=><HospitalInfo name='maxdwarka'/>}/>
-        <Route exact path='/hospital/aakash' Component={()=><HospitalInfo name='aakash'/>}/>
         <Route exact path='/treatment/cardiology' Component ={()=><InTreatment name={'cardiology'}/>} />
         <Route exact path='/treatment/cardiology/heart-transplant' Component ={()=><TreatmentPage/>} />
-        <Route exact path='/giventreatments' Component = {()=><GivenTreatments type={'all'}/>}/>
-        <Route exact path='/max-hospital-saket/best-doctors/doctor/anandkumar' Component={()=><DoctorsProfile doctor={{name: 'anandkumar', hospital: 'maxsaket'}}/>} />
-        <Route exact path='/max-hospital-saket/best-doctors/doctor/kumudrai' Component={()=><DoctorsProfile doctor={{name: 'kumudrai', hospital: 'maxsaket'}}/>} />
-        <Route exact path='/max-hospital-saket/best-doctors/doctor/vineetarya' Component={()=><DoctorsProfile doctor={{name: 'vineetarya', hospital: 'maxsaket'}}/>} />
-        <Route exact path='/max-hospital-saket/best-doctors/doctor/vivekakumar' Component={()=><DoctorsProfile doctor={{name: 'vivekakumar', hospital: 'maxsaket'}}/>} />
-        <Route exact path='/max-hospital-saket/best-doctors/doctor/vivekvasudeo' Component={()=><DoctorsProfile doctor={{name: 'vivekvasudeo', hospital: 'maxsaket'}}/>} />
-        <Route exact path='/max-hospital-saket/best-doctors/doctor/rohitkaushal' Component={()=><DoctorsProfile doctor={{name: 'rohitkaushal', hospital: 'maxsaket'}}/>} />
-        <Route exact path='/max-hospital-saket/best-doctors/doctor/rayazahmed' Component={()=><DoctorsProfile doctor={{name: 'rayazahmed', hospital: 'maxsaket'}}/>} />
-        <Route exact path='/max-hospital-saket/best-doctors/doctor/pragneshdesai' Component={()=><DoctorsProfile doctor={{name: 'pragneshdesai', hospital: 'maxsaket'}}/>} />
-        <Route exact path='/max-hospital-saket/best-doctors/doctor/mrigankshekharjha' Component={()=><DoctorsProfile doctor={{name: 'mrigankshekharjha', hospital: 'maxsaket'}}/>} />
-        <Route exact path='/max-hospital-saket/best-doctors/doctor/samitchaturvedi' Component={()=><DoctorsProfile doctor={{name: 'samitchaturvedi', hospital: 'maxsaket'}}/>} />
-        <Route exact path='/max-hospital-saket/best-doctors/doctor/sandeepbatra' Component={()=><DoctorsProfile doctor={{name: 'sandeepbatra', hospital: 'maxsaket'}}/>} />
-        <Route exact path='/max-hospital-saket/best-doctors/doctor/nagendersharma' Component={()=><DoctorsProfile doctor={{name: 'nagendersharma', hospital: 'maxsaket'}}/>} />
-        <Route exact path='/max-hospital-saket/best-doctors/doctor/vijaykumarchopra' Component={()=><DoctorsProfile doctor={{name: 'vijaykumarchopra', hospital: 'maxsaket'}}/>} />
-        <Route exact path='/max-hospital-saket/best-doctors/doctor/subhashkumarsinha' Component={()=><DoctorsProfile doctor={{name: 'subhashkumarsinha', hospital: 'maxsaket'}}/>} />
-        <Route exact path='/max-hospital-saket/best-doctors/doctor/colcproy' Component={()=><DoctorsProfile doctor={{name: 'colcproy', hospital: 'maxsaket'}}/>} />
-        <Route exact path='/max-hospital-saket/best-doctors/doctor/hkagarwal' Component={()=><DoctorsProfile doctor={{name: 'hkagarwal', hospital: 'maxsaket'}}/>} />
-        <Route exact path='/max-hospital-saket/best-doctors/doctor/balbirsingh' Component={()=><DoctorsProfile doctor={{name: 'balbirsingh', hospital: 'maxsaket'}}/>} />
-        <Route exact path='/max-hospital-saket/best-doctors/doctor/arvindmdas' Component={()=><DoctorsProfile doctor={{name: 'arvindmdas', hospital: 'maxsaket'}}/>} />
-        <Route exact path='/max-hospital-saket/best-doctors/doctor/rajneeshmalhotra' Component={()=><DoctorsProfile doctor={{name: 'rajneeshmalhotra', hospital: 'maxsaket'}}/>} />
-        <Route exact path='/max-hospital-saket/best-doctors/doctor/mohanbhargava' Component={()=><DoctorsProfile doctor={{name: 'mohanbhargava', hospital: 'maxsaket'}}/>} />
+        <Route exact path='/treatments' Component = {()=><GivenCard Card={TreatmentCard} data={{hospital: 'maxsaket', content: 'treatments', link: '/data/cards/treatments.json/'}}/>}/>
+        <Route exact path='/doctors' Component = {()=><GivenCard Card={DoctorCard} data={{hospital: 'maxsaket', content: 'doctors'}}/>}/>
+        { hospitals.map((name, idx)=>(<Route key={idx} exact path={`/hospital/${name}`} Component={()=><HospitalInfo name={name}/>}/>)) }
+        {doctors.map((dr, idx)=> (
+          <Route key={idx} exact path={`/${dr.hospital}/best-doctors/doctor/${dr.name}`} Component={()=><DoctorsProfile doctor={{name: dr.name, hospital: dr.hospital}}/>} />
+        ))}
       </Routes>
     <Footer/>
     </>

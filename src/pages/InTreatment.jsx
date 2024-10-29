@@ -1,14 +1,19 @@
-import {maxsaketDoctors, services} from '../../public/data/cardsData';
+import {services} from '../../public/data/cardsData';
 import {cardiology} from '../../public/data/intreatmentData';
 import { Link } from 'react-router-dom';
 import ScrollDiv from '../components/ScrollDiv';
 import DoctorCard from '../components/DoctorCard';
 import ServiceCard from '../components/ServiceCard';
+import { useState, useEffect } from 'react';
 
 function InTreatment({name}) {
+    const [maxDoctors, setDocotrs] = useState(null);
     const items = cardiology;
-    const maxDoctors = Object.keys(maxsaketDoctors).map(key=>maxsaketDoctors[key]).slice(0,6);
-
+    useEffect(()=> {
+        async function load() {
+          await fetch('/data/cards/maxsaket/doctors.json').then(res=>res.json()).then(data=>{setDocotrs(Object.keys(data).map(key=>data[key]))});
+        } load();
+      },[]);
     return (
         <>
             <div className='grid grid-cols-[repeat(auto-fit,minmax(195px,1fr))] sm:grid-cols-[repeat(auto-fit,minmax(300px,1fr))] justify-items-center w-full justify-around bg-[#faf6f6] pt-5 pb-12'>

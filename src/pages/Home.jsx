@@ -1,5 +1,5 @@
-import {hospitals, services, maxsaketDoctors, maxsaketTreatments, blkmaxTreatments} from '../../public/data/cardsData';
-import React          from "react";
+import {hospitals, services} from '../../public/data/cardsData';
+import React, { useEffect, useState }          from "react";
 import Poster         from '../components/Poster';
 import UserInfo       from "../components/UserInfo";
 import TreatmentCard  from "../components/TreatmentCard";
@@ -9,13 +9,22 @@ import ServiceCard    from '../components/ServiceCard';
 import ScrollDiv      from "../components/ScrollDiv";
 
 function Home() {
-    const someTreatments = [...maxsaketTreatments, ...blkmaxTreatments];
-    const allDoctors =  Object.keys(maxsaketDoctors).flatMap(key=> maxsaketDoctors[key]);
+    const [bestTreatments, setTreatment] = useState(null);
+    const [bestDoctors, setDoctors] = useState(null);
+    useEffect(()=> {
+        async function load() {
+            await fetch('/data/cards/maxsaket/treatment.json').then(res=>res.json()).then((data)=> { setTreatment(data)})
+            await fetch('/data/cards/maxsaket/doctors.json').then(res=>res.json()).then((data)=> { 
+                setDoctors(Object.keys(data).map(key=>data[key]));
+            });
+        } load();
+    },[])
+
     return (
         <>
             <Poster/>
             <div className="mt-1 mb-6 lg:mt-10 lg:mb-14">
-               <ScrollDiv heading={'Browse by Specialist'} cardsData={someTreatments} Card={TreatmentCard} count={6} seeMore={true} scroll={true}/>    
+               <ScrollDiv heading={'Browse by Specialist'} cardsData={bestTreatments} link={'/treatments'} Card={TreatmentCard} count={6} seeMore={true} scroll={true}/>    
             </div>
             <div className="mt-4 mb-6 lg:mt-10 lg:mb-14">
                 <ScrollDiv heading={'Best Hospitals'} cardsData={hospitals} Card={HospitalCard} count={4}/>
@@ -24,7 +33,7 @@ function Home() {
                 <ScrollDiv heading={'Our Services'} cardsData={services} Card={ServiceCard} count={4}/>
             </div>
             <div className="mt-4 mb-6 lg:mt-10 lg:mb-14">
-                <ScrollDiv heading={'Best Doctors'} cardsData={allDoctors} Card={DoctorCard} count={4} scroll={true}/>
+                <ScrollDiv heading={'Best Doctors'} cardsData={bestDoctors} link={'/doctors'} Card={DoctorCard} count={4} seeMore={true} scroll={true}/>
             </div>
 
             {window.innerWidth < 640 && (

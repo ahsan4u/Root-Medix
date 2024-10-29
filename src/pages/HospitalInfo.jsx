@@ -1,5 +1,5 @@
-import {maxsaketTreatments, services}  from '../../public/data/cardsData';
-import React, { useEffect, useState }         from "react";
+import {services}  from '../../public/data/cardsData';
+import React, { useEffect, useState } from "react";
 import UserInfo      from "../components/UserInfo";
 import TreatmentCard from "../components/TreatmentCard";
 import ScrollDiv     from "../components/ScrollDiv";
@@ -8,13 +8,13 @@ import ServiceCard   from '../components/ServiceCard';
 
 function HospitalInfo({ name }) {
   const [hospitalInfo, setHospitalInfo] = useState(null);
+  const [newTreatment, setTreatment] = useState(null);
 
-  const newTreatment = maxsaketTreatments;
+
   useEffect(()=> {
     async function load() {
-      await fetch(`/data/hospitalsProfile/${name}.json`).then(res=>res.json()).then((res)=> { console.log(res); setHospitalInfo(res) })
-      .catch((err)=> {console.log(err)});
-      console.log(hospitalInfo);
+      await fetch(`/data/hospitalsProfile/${name}.json`).then(res=>res.json()).then((res)=> { setHospitalInfo(res) });
+      await fetch('/data/cards/maxsaket/treatment.json').then(res=>res.json()).then(data=>{setTreatment(data)});
     } load();
   },[name]);
 
@@ -41,21 +41,21 @@ function HospitalInfo({ name }) {
                 </div>
               </div>
             </div>
-            <img src={hospitalInfo?.img} alt="Hospital" className="aspect-[16/9] rounded-lg sm:rounded-none sm:aspect-[16/12] w-full sm:w-56 object-cover" />
+            <img src={hospitalInfo?hospitalInfo.img: '/img/loading.gif'} alt="Hospital" className={`aspect-[16/9] rounded-lg sm:rounded-none sm:aspect-[16/12] w-full sm:w-56 object-cover`} />
           </div>
 
-          <div className=" px-2 sm:px-10 bg-white">
+          <div className=" px-2 sm:px-10 bg-white lg:bg-none tracking-tighter">
             {hospitalInfo?.contents?.map((content, index) => (
               <div key={index}>
-                {content.heading && <h2 className="text-sm sm:text-xl font-bold pt-4 sm:pt-8 text-blue-950">{content.heading}</h2>}
-                {content.subHeading && <p className="sm:text-justify text-sm sm:text-sm pl-1 pt-1" >{content.subHeading}</p>}
-                {content.description && <p className={`sm:text-justify text-sm sm:text-sm pl-1 pt-1 ${!content.subHeading && !content.heading &&('pt-3')}`}>{content.description}</p>}
+                {content.heading && <h2 className="tracking-tight text-[17px] sm:text-xl font-bold pt-4 sm:pt-8 text-blue-950">{content.heading}</h2>}
+                {content.subHeading && <p className="lg:text-justify  pl-1 pt-1" >{content.subHeading}</p>}
+                {content.description && <p className={`lg:text-justify pl-1 pt-1 ${!content.subHeading && !content.heading &&('pt-3')}`}>{content.description}</p>}
                 {content.points && (
                   <ul className="list-disc pl-5 mt-2" >
                     {
                       content.points.map((point, idx) => {
                         return (
-                          <li key={idx} className="sm:text-justify text-sm sm:text-sm text-[#1f1209]">{point}</li>
+                          <li key={idx} className="lg:text-justify text-[#1f1209]">{point}</li>
                         )
                       })
                     }

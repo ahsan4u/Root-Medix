@@ -5,16 +5,17 @@ import ScrollDiv from "../components/ScrollDiv";
 import UserInfo from "../components/UserInfo";
 
 export default  function DoctorsProfile({doctor}) {
+    const [doctorIntro, setIntro] = useState(null);
     const [doctorProfile, setProfile] = useState(null);
     const popupForm = useRef(null);
     const aboutRef = useRef(null);
     const doctorImgRef = useRef(null);
-    const doctorIntro = maxsaketDoctors[doctor.name];
-
+    
     useEffect(()=> {
         async function load() {
             await fetch(`/data/doctorsProfile/${doctor.hospital}/${doctor.name}.json`)
             .then((res)=>res.json()).then((res)=> {setProfile(res)});
+            await fetch(`/data/cards/${doctor.hospital}/doctors.json`).then(res=>res.json()).then(data=>{setIntro(data[doctor.name])});
         } load();
     },[doctor]);
 
@@ -91,7 +92,7 @@ export default  function DoctorsProfile({doctor}) {
                     
                     {
                         doctorProfile?.map((details, idx)=>(
-                            <div key={idx} className="text-green-950 px-2 lg:px-0 bg-white lg:bg-non">
+                            <div key={idx} className="text-green-950 px-2 lg:px-0 bg-white lg:bg-transparent">
                                 {details.heading && (<h1 className="mb-1 mt-3 text-4xl text-cyan-900 font-bold border-b-4 border-dashed border-cyan-500 inline-block pr-4 pb-2">{details.heading}</h1>)}
                                 {details.subheading && (<h2 className="text-xl lg:text-2xl text-cyan-900 font-semibold mt-5 lg:border-b-4 lg:border-dashed lg:border-cyan-500 inline-block pr-4 lg:pb-1">{details.subheading}</h2>)}
                                 {details.description && (<p className="lg:mt-3 mt-1">{details.description}</p>)}

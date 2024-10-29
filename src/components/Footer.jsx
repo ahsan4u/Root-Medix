@@ -2,7 +2,7 @@ function Footer() {
 
     return(
         <>
-            <div className="footer-container text-white bg-[rgb(61,61,61)] mt-20">
+            <div className="footer-container text-white bg-[#3d3d3d] mt-20">
                 <button className='block m-auto text-xl rounded-full bg-[rgb(62,161,181)] px-8 py-2 relative bottom-5' style={{fontFamily: `"Ubuntu", sans-serif`, fontWeight: '500'}}>Consultant</button>
                 <div style={{fontFamily: `convergence, 'sans-serif`}} className="link-column grid sm:grid-cols-4 grid-cols-1 pb-10 justify-items-center">
                     <div className="important-links w-[70%]  sm:mb-0 mb-8">
