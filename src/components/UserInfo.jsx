@@ -3,7 +3,7 @@
 import React from "react";
 import { useState, useRef } from "react";
 import Massage from "./massage";
-import STDcode from "../../public/data/STDcode";
+import STDcode from "../data/STDcode";
 import Lottie from 'lottie-react';
 import loadingEffect from '../../public/animated Icon/loading.json';
 
